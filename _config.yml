@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://maxisam.github.com
-title: My Learning note
+title: Thought, Code and Soul.
 subtitle:
-author: maxisam
+author: Sam Lin
 simple_search: http://google.com/search
 description:
 
@@ -62,7 +62,7 @@ default_asides: [asides/recent_posts.html, custom/asides/found_on.html]
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: maxisam
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
@@ -93,8 +93,14 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: maxisam
+disqus_show_comment_count: ture
+
+#stackoverflow
+stackoverflow_user: 667767
+
+#linkedin
+linkedin_user: maxisam
 
 # Google Analytics
 google_analytics_tracking_id: UA-37305366-1
