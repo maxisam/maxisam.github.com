@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://maxisam.github.com/atom.xml" rel="self"/>
+  <link href="http://maxisam.github.com/"/>
+  <updated>2013-01-01T17:32:09-06:00</updated>
+  <id>http://maxisam.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FirstTry]]></title>
+    <link href="http://maxisam.github.com/blog/2012/12/31/firsttry/"/>
+    <updated>2012-12-31T00:37:00-06:00</updated>
+    <id>http://maxisam.github.com/blog/2012/12/31/firsttry</id>
+    <content type="html"><![CDATA[<p><strong>Hello Octopress !</strong></p>
+]]></content>
+  </entry>
+  
+</feed>
