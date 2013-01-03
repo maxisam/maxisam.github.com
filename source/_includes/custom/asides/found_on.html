@@ -1,23 +1,21 @@
 <section>
     <h1>Found on</h1>
-    {% if site.github_user  %}
-    <a href="https://github.com/{{site.github_user}}/" rel="tooltip" title="Github"><img class="social_icon"
-                                                                                         title="Github"
-                                                                                         alt="github icon"
-                                                                                         src="{{ root_url }}/images/glyphicons_381_github.png"></a>
+    {% if site.github_user %}
+    <a href="https://github.com/{{site.github_user}}/" rel="tooltip" title="Github">
+        <i class="github"></i>
+    </a>
     {% endif %}
 
     {% if site.stackoverflow_user %}
-    <a href="http://stackoverflow.com/users/{{site.stackoverflow_user}}/" rel="tooltip" title="Stack Overflow"><img
-            class="social_icon" title="Stack Overflow" alt="stack overflow icon"
-            src="{{ root_url }}/images/glyphicons_400_stack_overflow.png"></a>
+    <a href="http://stackoverflow.com/users/{{site.stackoverflow_user}}/" rel="tooltip" title="Stack Overflow">
+        <i class="stack_overflow"></i>
+    </a>
     {% endif %}
 
     {% if site.linkedin_user %}
-    <a href="http://www.linkedin.com/in/{{site.linkedin_user}}" rel="tooltip" title="Linkedin"><img class="social_icon"
-                                                                                                    title="Linkedin"
-                                                                                                    alt="Linkedin icon"
-                                                                                                    src="{{ root_url }}/images/glyphicons_377_linked_in.png"></a>
+    <a href="http://www.linkedin.com/in/{{site.linkedin_user}}" rel="tooltip" title="Linkedin">
+        <i class="linked_in"></i>
+    </a>
     {% endif %}
 
     {% if site.twitter_user %}
@@ -28,9 +26,9 @@
     {% endif %}
 
     {% if site.googleplus_user %}
-    <a href="https://plus.google.com/{{site.googleplus_user}}?rel=author" rel="tooltip" title="Google Plus"><img
-            class="social_icon" title="Google Plus" alt="Google Plus icon"
-            src="{{ root_url }}/images/glyphicons_386_google_plus.png"></a>
+    <a href="https://plus.google.com/{{site.googleplus_user}}?rel=author" rel="tooltip" title="Google Plus">
+        <i class="google_plus"></i>
+    </a>
     {% endif %}
 
     {% if site.quora_user %}
