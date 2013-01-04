@@ -1,0 +1,20 @@
+---
+layout: post
+title: "2013"
+date: 2013-01-04 00:33
+comments: true
+categories: Random
+---
+New year, new resolutions.
+
+This time, my resolution is writting blog.
+
+It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.
+
+Not 100% but good enough for me to build this blog.
+
+Feeling a little embarrass that I haven't learnt Git for this whole time and stayed in the comfort room created by TFS.
+
+I guess that is why we need new resolutions to break some old habits :).
+
+Happy new year.
