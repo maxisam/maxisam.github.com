@@ -32,3 +32,13 @@
   background-position: -82px 0;
 }
 
+aside.sidebar a.sociallink {
+  text-decoration: none !important;
+  white-space: normal;
+  display: inline-block;
+  margin-top: 12px;
+  i:hover{
+    @include opacity(0.9);
+    @include transition(opacity .5s ease);
+  }
+}
