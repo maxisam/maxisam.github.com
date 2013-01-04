@@ -42,3 +42,13 @@ aside.sidebar a.sociallink {
     @include transition(opacity .5s ease);
   }
 }
+.titlecode{
+  color: gray;
+}
+.titlecodeText{
+  color: $solar-blue;
+}
+h1.title{
+  text-rendering: optimizelegibility;
+  text-shadow: rgba(0, 0, 0, 0.8) 0 1px;
+}
