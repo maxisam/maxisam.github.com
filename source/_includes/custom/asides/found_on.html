@@ -1,19 +1,19 @@
 <section>
     <h1>Found on</h1>
     {% if site.github_user %}
-    <a href="https://github.com/{{site.github_user}}/" rel="tooltip" title="Github">
+    <a class="sociallink"  href="https://github.com/{{site.github_user}}/" rel="tooltip" title="Github">
         <i class="github"></i>
     </a>
     {% endif %}
 
     {% if site.stackoverflow_user %}
-    <a href="http://stackoverflow.com/users/{{site.stackoverflow_user}}/" rel="tooltip" title="Stack Overflow">
+    <a class="sociallink"  href="http://stackoverflow.com/users/{{site.stackoverflow_user}}/" rel="tooltip" title="Stack Overflow">
         <i class="stack_overflow"></i>
     </a>
     {% endif %}
 
     {% if site.linkedin_user %}
-    <a href="http://www.linkedin.com/in/{{site.linkedin_user}}" rel="tooltip" title="Linkedin">
+    <a class="sociallink" href="http://www.linkedin.com/in/{{site.linkedin_user}}" rel="tooltip" title="Linkedin">
         <i class="linked_in"></i>
     </a>
     {% endif %}
@@ -26,7 +26,7 @@
     {% endif %}
 
     {% if site.googleplus_user %}
-    <a href="https://plus.google.com/{{site.googleplus_user}}?rel=author" rel="tooltip" title="Google Plus">
+    <a class="sociallink"  href="https://plus.google.com/{{site.googleplus_user}}?rel=author" rel="tooltip" title="Google Plus">
         <i class="google_plus"></i>
     </a>
     {% endif %}
