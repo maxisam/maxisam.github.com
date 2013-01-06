@@ -11,6 +11,7 @@ body > nav {
     @include background-clip(padding-box);
     margin: 0; padding: 0;
     .search {
+      margin-bottom: 0.1em;
       padding: .3em .5em 0;
       font-size: .85em;
       font-family: $sans;
@@ -74,6 +75,7 @@ body > nav {
       float: right;
       text-align: left;
       padding-left: .8em;
+      padding-top: .15em;
       width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium + 20px;
       .search {
         width: 93%;
