@@ -12,7 +12,7 @@
   background-position: 14px 14px;
   background-repeat: no-repeat;
   @include transition(opacity .5s ease);
-  @include opacity(0.6);
+  @include opacity(60);
 }
 
 .google_plus {
@@ -37,7 +37,7 @@ aside.sidebar a.sociallink {
   display: inline-block;
   margin-top: 12px;
   i:hover{
-    @include opacity(0.9);
+    @include opacity(90);
     @include transition(opacity .5s ease);
   }
 }
