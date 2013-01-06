@@ -48,22 +48,22 @@ body {
   max-width: $max-width;
   position: relative;
   margin: 0 auto;
-  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
+   > nav, > footer, #content > article, #content > div > article, #content > div > section {
     @extend .group;
-    padding-left: $pad-min;
-    padding-right: $pad-min;
-    @media only screen and (min-width: 480px) {
-      padding-left: $pad-narrow;
-      padding-right: $pad-narrow;
-    }
-    @media only screen and (min-width: 768px) {
-      padding-left: $pad-medium;
-      padding-right: $pad-medium;
-    }
-    @media only screen and (min-width: 992px) {
-      padding-left: $pad-wide;
-      padding-right: $pad-wide;
-    }
+        padding-left: $pad-min;
+        padding-right: $pad-min;
+        @media only screen and (min-width: 480px) {
+          padding-left: $pad-narrow;
+          padding-right: $pad-narrow;
+        }
+        @media only screen and (min-width: 768px) {
+          padding-left: $pad-medium;
+          padding-right: $pad-medium;
+        }
+        @media only screen and (min-width: 992px) {
+          padding-left: $pad-wide;
+          padding-right: $pad-wide;
+        }
   }
   div.pagination {
     @extend .group;
@@ -84,8 +84,8 @@ body {
   }
   > header {
     font-size: $header-font-size;
-    padding-top: $header-padding-top;
-    padding-bottom: $header-padding-bottom;
+/*    padding-top: $header-padding-top;
+    padding-bottom: $header-padding-bottom;*/
   }
 }
 
