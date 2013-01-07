@@ -1,11 +1,11 @@
 source "http://rubygems.org"
 
 group :development do
-  gem 'rake', '~> 0.9'
+  gem 'rake', '~> 10.0.3'
   gem 'rack', '~> 1.4.1'
   gem 'jekyll', '~> 0.12'
   gem 'rdiscount', '~> 1.6.8'
-  gem 'pygments.rb', '~> 0.3.4'
+  gem 'pygments.rb', '~> 0.3.7'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'
   gem 'compass', '~> 0.13.alpha.0'
