@@ -27,6 +27,9 @@ Here are some resource for Octopress beside the [official site][1].
 2. Themes : [3rd Party Octopress Themes][5] & [The ultimate Octopress themes & plugins collection][6]
 3. Plugins : [3rd party plugins][7]
 
+{% codeblock lang:javascript %}
+var test = 1;
+{% endcodeblock %}
 
 [1]:http://octopress.org/blog/2011/07/23/octopress-20-surfaces/ "Octopress"
 [2]:https://github.com/mojombo/jekyll#readme "Jekyll"
