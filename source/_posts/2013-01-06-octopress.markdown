@@ -14,6 +14,7 @@ It has several good things I like.
 1. I can write blog in [Markdown][3] format.
 2. I can have a lot of control of your blog.
 3. Using it with GitHub means you can have verison control for your blog.
+4. It is easy to insert code snippt into your blog post.
 
 However, there are few things I don't like either
 
