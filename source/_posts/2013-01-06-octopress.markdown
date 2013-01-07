@@ -7,7 +7,7 @@ categories: Octopress
 ---
 I never used Ruby but heard a lot of nice thing about it.
 
-[Octopress][1] is Ruby-based blogging framework for [Jekyll][2], which is supported by GitHub.
+[Octopress][1] is Ruby-based blogging framework for [Jekyll][2], which is [supported by GitHub][10].
 
 It has several good things I like.
 
@@ -37,3 +37,4 @@ Here are some resource for Octopress beside the [official site][1].
 [7]:https://github.com/imathis/octopress/wiki/3rd-party-plugins
 [8]:http://www.viggiosoft.com/blog/blog/2011/09/28/setting-up-a-blog-with-octopress/
 [9]:http://sass-lang.com/
+[10]:https://help.github.com/articles/using-jekyll-with-pages
