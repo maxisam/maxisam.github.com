@@ -27,6 +27,8 @@ Here are some resource for Octopress beside the [official site][1].
 1. Install and setup : [Creating a Github Blog Using Octopress][4] & [Setting Up a Blog With Octopress][8]
 2. Themes : [3rd Party Octopress Themes][5] & [The ultimate Octopress themes & plugins collection][6]
 3. Plugins : [3rd party plugins][7]
+4. Tip:
+    1. [How to exclude yourself from Google Analytics][11]
 
 [1]:http://octopress.org/blog/2011/07/23/octopress-20-surfaces/ "Octopress"
 [2]:https://github.com/mojombo/jekyll#readme "Jekyll"
@@ -38,3 +40,4 @@ Here are some resource for Octopress beside the [official site][1].
 [8]:http://www.viggiosoft.com/blog/blog/2011/09/28/setting-up-a-blog-with-octopress/
 [9]:http://sass-lang.com/
 [10]:https://help.github.com/articles/using-jekyll-with-pages
+[11]:http://webmasters.stackexchange.com/questions/15552/how-do-you-exclude-yourself-from-google-analytics-on-your-website-using-cookies
