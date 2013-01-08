@@ -106,7 +106,7 @@ linkedin_user: maxisam
 google_analytics_tracking_id: UA-37305366-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: ture
 
 #Top_category:
 top_category_limit: 0
