@@ -14,7 +14,7 @@ However, it doesn't work on my Windows 7 machine.
 
 It always throw out the following error
 
-{% codeblock "Error message" %}
+{% codeblock Error message %}
  $ rake generate
  ## Generating Site with Jekyll
  unchanged sass/screen.scss
