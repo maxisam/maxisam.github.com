@@ -3,7 +3,7 @@ layout: post
 title: "Using tabs reorder table"
 date: 2013-01-09 22:49
 comments: true
-categories: AngularJS "AngularJS Filter"
+categories: AngularJS AngularJS_Filter
 ---
 
 ####Objective:####
