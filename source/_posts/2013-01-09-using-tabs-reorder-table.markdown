@@ -12,7 +12,7 @@ categories: AngularJS AngularJS_Filter
 
 <iframe style="margin:20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/fMrhagVKl2nehzTOHriF" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-{% codeblock Mark up for Twitter bootstrap tab lang:html https://github.com/maxisam/AngularJSExample/blob/master/ng002/Index.html View all in Github %}
+{% codeblock Mark up for Twitter bootstrap tab lang:html https://github.com/maxisam/AngularJSExample/blob/master/ng002/Index.html Github %}
 <body ng-controller="MainCtrl">
 <ul class="nav nav-pills">
     <li ng-class="{'active': order=='name'}">
@@ -30,7 +30,7 @@ categories: AngularJS AngularJS_Filter
 </ul>
 {% endcodeblock %}
 
-{% codeblock AngularJS controller lang:javascript https://github.com/maxisam/AngularJSExample/blob/master/ng002/app.js View all in Github%}
+{% codeblock AngularJS controller lang:javascript https://github.com/maxisam/AngularJSExample/blob/master/ng002/app.js Github%}
 app.controller('MainCtrl', ['$scope', function ($scope) {
     'use strict';
     $scope.order = 'name';
