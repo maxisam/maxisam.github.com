@@ -50,3 +50,4 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     }, true);
 }]);
 {% endcodeblock %}
+[0]:http://docs.angularjs.org/api/ng.$compile.directive.Attributes
