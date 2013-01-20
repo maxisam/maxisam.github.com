@@ -30,7 +30,7 @@ var app = angular.module('ngApp', [])
                     console.log('change !');
                     scope.x = newVal.x;
                     scope.y = newVal.y;
-                }, false);
+                }, true);
             }
         };
     });
