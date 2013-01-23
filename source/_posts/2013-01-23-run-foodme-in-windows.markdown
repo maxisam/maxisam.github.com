@@ -3,7 +3,7 @@ layout: post
 title: "Run Foodme in windows"
 date: 2013-01-23 10:12
 comments: true
-categories: AngularJS AngularJS_LearningResource
+categories: AngularJS AngularJS_LearningResource node.js
 ---
 
 Lately I finially have some time to check the awesome example, [FoodMe][0], created by AngularJS team.
