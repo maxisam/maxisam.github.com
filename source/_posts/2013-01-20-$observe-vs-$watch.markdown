@@ -52,7 +52,5 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
 {% endcodeblock %}
 
 
-
-
 [0]:http://docs.angularjs.org/guide/directive
 [1]:http://docs.angularjs.org/api/ng.$rootScope.Scope#$eval
