@@ -366,10 +366,11 @@
         
           
             <p>How to refresh the file index so the files I want ignored get ignored ?</p>
-<h2>Signal file</h2>
+<h4>Signal file</h4>
 <p><code>git rm --cached filename</code></p>
 <p>to undo <code>use git add filename</code></p>
-<h2>Redo the whole .gitignore</h2>
+<hr>
+<h4>Redo the whole .gitignore</h4>
 <p><strong>First commit any outstanding code changes</strong>, and then, run this command:</p>
 <p><code>git rm -r --cached .</code></p>
 <p>This removes any changed files from the index(staging area), then just run:</p>

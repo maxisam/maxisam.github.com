@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-08-28T06:11:16.554Z</updated>
+  <updated>2016-08-28T06:50:55.755Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -20,13 +20,14 @@
     <link href="http://maxisam.github.com/2016/08/28/gitignore/"/>
     <id>http://maxisam.github.com/2016/08/28/gitignore/</id>
     <published>2016-08-28T05:55:27.000Z</published>
-    <updated>2016-08-28T06:11:16.554Z</updated>
+    <updated>2016-08-28T06:50:55.755Z</updated>
     
     <content type="html"><![CDATA[<p>How to refresh the file index so the files I want ignored get ignored ?</p>
-<h2>Signal file</h2>
+<h4>Signal file</h4>
 <p><code>git rm --cached filename</code></p>
 <p>to undo <code>use git add filename</code></p>
-<h2>Redo the whole .gitignore</h2>
+<hr>
+<h4>Redo the whole .gitignore</h4>
 <p><strong>First commit any outstanding code changes</strong>, and then, run this command:</p>
 <p><code>git rm -r --cached .</code></p>
 <p>This removes any changed files from the index(staging area), then just run:</p>
@@ -39,7 +40,7 @@
     <summary type="html">
     
       &lt;p&gt;How to refresh the file index so the files I want ignored get ignored ?&lt;/p&gt;
-&lt;h2&gt;Signal file&lt;/h2&gt;
+&lt;h4&gt;Signal file&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;git rm --cached filename&lt;/code&gt;
     
     </summary>
