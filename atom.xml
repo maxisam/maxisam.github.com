@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Thought &amp; code</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://maxisam.github.com/"/>
+  <updated>2016-08-28T04:41:31.134Z</updated>
+  <id>http://maxisam.github.com/</id>
+  
+  <author>
+    <name>Sam Lin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo tags &amp; categories</title>
+    <link href="http://maxisam.github.com/2016/08/27/hexo-tags-categories/"/>
+    <id>http://maxisam.github.com/2016/08/27/hexo-tags-categories/</id>
+    <published>2016-08-28T04:31:52.000Z</published>
+    <updated>2016-08-28T04:41:31.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>It takes me a while to figure out how to create tags and categories pages</p>
+<p>You need to have  </p>
+<ol>
+<li><p>Supported theme</p>
+</li>
+<li><p>Add type attribute to tags &amp; categories pages as tags and categories respectfully</p>
+</li>
+<li><p>Add tags and categories pages to the menu   </p>
+</li>
+</ol>
+<p><a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">Official docs</a>  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;It takes me a while to figure out how to create tags and categories pages&lt;/p&gt;
+&lt;p&gt;You need to have  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Supported theme&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
+    
+    
+      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Migrate to Hexo</title>
+    <link href="http://maxisam.github.com/2016/08/26/newblog/"/>
+    <id>http://maxisam.github.com/2016/08/26/newblog/</id>
+    <published>2016-08-26T05:12:42.000Z</published>
+    <updated>2016-08-28T04:44:30.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>Migrate everything to Hexo from Octopress!</p>
+<p>It is actually very smooth.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Migrate everything to Hexo from Octopress!&lt;/p&gt;
+&lt;p&gt;It is actually very smooth.&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Run Foodme in windows</title>
+    <link href="http://maxisam.github.com/2013/01/23/run-foodme-in-windows/"/>
+    <id>http://maxisam.github.com/2013/01/23/run-foodme-in-windows/</id>
+    <published>2013-01-23T16:12:00.000Z</published>
+    <updated>2016-08-28T04:25:25.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lately I finally have some time to check the awesome example, <a href="https://github.com/IgorMinar/foodme" target="_blank" rel="external">FoodMe</a>, created by AngularJS team.</p>
+<p>First of all, I am not a node.js user. So when I try to run foodme, it took me some time.</p>
+<p>And this <a href="https://docs.google.com/document/pub?id=1Fzq60IBaSf5mnsLWhig5nhZ9cJT85sresp0NqNIwh1I" target="_blank" rel="external">doc</a> doesn’t really help on this. They probably never image someone doesn’t know this. lol</p>
+<p>This tutorial is for people like me, a node.js newbie,</p>
+<p>Doesn’t know what to do with this kinda message:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">module.js:340</div><div class="line">    throw err;</div><div class="line">          ^</div><div class="line">Error: Cannot find module &apos;express&apos;</div><div class="line">    at Function.Module._resolveFilename (module.js:338:15)</div><div class="line">    at Function.Module._load (module.js:280:25)</div><div class="line">    at Module.require (module.js:362:17)</div><div class="line">    at require (module.js:378:17)</div><div class="line">    at Object.&lt;anonymous&gt; (H:\Work\MyProject\foodme\server\index.js:1:77)</div><div class="line">    at Module._compile (module.js:449:26)</div><div class="line">    at Object.Module._extensions..js (module.js:467:10)</div><div class="line">    at Module.load (module.js:356:32)</div><div class="line">    at Function.Module._load (module.js:312:12)</div><div class="line">    at Module.require (module.js:362:17)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>To run Foodme on Windows, you need to do the following step.</p>
+<ol>
+<li>Install <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a></li>
+</ol>
+<p>–The following steps are running in command line.–</p>
+<ol>
+<li>Input <code>npm install -g express</code></li>
+</ol>
+<p>This step will install <a href="https://npmjs.org/package/express" target="_blank" rel="external">express</a></p>
+<ol>
+<li>Input <code>npm install -g open</code></li>
+</ol>
+<p>This step will install <a href="https://npmjs.org/package/open" target="_blank" rel="external">open</a></p>
+<ol>
+<li><p>Go to  Your Path\foodme\server\</p>
+</li>
+<li><p>Input <code>npm link express</code></p>
+</li>
+<li><p>Input <code>npm link open</code></p>
+</li>
+<li><p>Input <code>node start.js</code></p>
+</li>
+</ol>
+<p>If you see the following message, you are good to go !</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">GET / 200 4ms - 1.58kb</div><div class="line">GET /css/app.css 200 6ms - 2.02kb</div><div class="line">GET /js/app.js 200 6ms - 650</div><div class="line">GET /lib/angular/angular-resource.js 200 8ms - 15.93kb</div><div class="line">GET /js/controllers/CustomerController.js 200 8ms - 401</div><div class="line">GET /css/bootstrap-united.css 200 13ms - 126.41kb</div><div class="line">GET /js/controllers/NavbarController.js 200 8ms - 207</div><div class="line">GET /js/controllers/RestaurantsController.js 200 8ms - 295</div><div class="line">GET /js/services/customer.js 200 7ms - 476</div><div class="line">GET /js/services/localStorage.js 200 6ms - 72</div><div class="line">GET /js/services/Restaurant.js 200 5ms - 134</div><div class="line">GET /lib/angular/angular.js 200 19ms - 479.29kb</div><div class="line">GET /css/Ubuntu.font 200 1ms - 148</div><div class="line">GET /views/restaurants.html 200 8ms - 3.11kb</div><div class="line">GET /favicon.ico 200 2ms - 1.12kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /api/restaurant 200 3ms - 14.71kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /views/customer.html 200 4ms - 1.18kb</div><div class="line">GET /img/restaurants/tofuparadise.jpg 200 6ms - 15.89kb</div><div class="line">GET /img/restaurants/robatayaki.jpg 200 8ms - 12.82kb</div><div class="line">GET /img/restaurants/khartoum.jpg 200 8ms - 17.16kb</div><div class="line">GET /img/restaurants/bateaurouge.jpg 200 11ms - 15.08kb</div><div class="line">GET /img/restaurants/sallys.jpg 200 9ms - 17.59kb</div><div class="line">GET /img/restaurants/saucy.jpg 200 9ms - 14.33kb</div><div class="line">GET /img/restaurants/speisewagen.jpg 200 7ms - 15.26kb</div><div class="line">GET /img/restaurants/czechpoint.jpg 200 9ms - 10.95kb</div><div class="line">GET /img/restaurants/beijing.jpg 200 7ms - 17.54kb</div><div class="line">GET /img/restaurants/satay.jpg 200 9ms - 14.89kb</div><div class="line">GET /img/restaurants/cancun.jpg 200 10ms - 15.07kb</div><div class="line">GET /img/restaurants/curryup.jpg 200 8ms - 18.66kb</div><div class="line">GET /img/restaurants/carthage.jpg 200 9ms - 10.24kb</div><div class="line">GET /img/restaurants/burgerama.jpg 200 9ms - 11.76kb</div><div class="line">GET /img/restaurants/littleprague.jpg 200 5ms - 13.13kb</div><div class="line">GET /img/restaurants/dragon.jpg 200 5ms - 16.72kb</div><div class="line">GET /img/restaurants/kohlhaus.jpg 200 7ms - 13.66kb</div><div class="line">GET /img/restaurants/babythai.jpg 200 6ms - 17.35kb</div><div class="line">GET /img/restaurants/wholetamale.jpg 200 8ms - 14.32kb</div><div class="line">GET /img/restaurants/taqueria.jpg 200 6ms - 11.74kb</div><div class="line">GET /img/restaurants/pedros.jpg 200 7ms - 12.42kb</div><div class="line">GET /img/restaurants/bhangra.jpg 200 10ms - 14.03kb</div><div class="line">GET /img/restaurants/superwonton.jpg 200 8ms - 16.15kb</div><div class="line">GET /img/restaurants/sakura.jpg 200 7ms - 11.27kb</div><div class="line">GET /img/restaurants/naansequitur.jpg 200 8ms - 16.77kb</div><div class="line">GET /img/restaurants/shandong.jpg 200 8ms - 14.4kb</div><div class="line">GET /img/restaurants/currygalore.jpg 200 7ms - 10.26kb</div><div class="line">GET /img/restaurants/esthers.jpg 200 55ms - 11.85kb</div><div class="line">GET /img/restaurants/beans.jpg 200 9ms - 15.7kb</div><div class="line">GET /img/restaurants/north.jpg 200 11ms - 11.78kb</div><div class="line">GET /img/restaurants/jeeves.jpg 200 9ms - 11.19kb</div><div class="line">GET /img/restaurants/zardoz.jpg 200 10ms - 16.09kb</div><div class="line">GET /img/restaurants/angular.jpg 200 7ms - 13.72kb</div><div class="line">GET /img/restaurants/littlepigs.jpg 200 43ms - 12.64kb</div><div class="line">GET /img/restaurants/flavia.jpg 200 11ms - 14.19kb</div><div class="line">GET /img/restaurants/luigis.jpg 200 10ms - 16.36kb</div><div class="line">GET /img/restaurants/thick.jpg 200 8ms - 14.13kb</div><div class="line">GET /img/restaurants/wheninrome.jpg 200 8ms - 20.15kb</div><div class="line">GET /img/restaurants/pizza76.jpg 200 5ms - 20.44kb</div><div class="line">GET /favicon.ico 304 1ms</div><div class="line">GET /img/customer_bkg.jpg 200 2ms - 32.42kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /robots.txt 404 1ms</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lately I finally have some time to check the awesome example, &lt;a href=&quot;https://github.com/IgorMinar/foodme&quot;&gt;FoodMe&lt;/a&gt;, created by AngularJS team.&lt;/p&gt;
+&lt;p&gt;First of all, I am not a node.js user. So when I try to run foodme, it took me some time.&lt;/p&gt;
+&lt;p&gt;And this &lt;a href=&quot;https://docs.google.com/document/pub?id=1Fzq60IBaSf5mnsLWhig5nhZ9cJT85sresp0NqNIwh1I&quot;&gt;doc&lt;/a&gt; doesn’t really help on this. They probably never image someone doesn’t know this. lol&lt;/p&gt;
+&lt;p&gt;This tutorial is for people like me, a node.js newbie,&lt;/p&gt;
+&lt;p&gt;Doesn’t know what to do with this kinda message:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;module.js:340&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    throw err;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;          ^&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Error: Cannot find module &amp;apos;express&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Function.Module._resolveFilename (module.js:338:15)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Function.Module._load (module.js:280:25)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Module.require (module.js:362:17)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at require (module.js:378:17)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Object.&amp;lt;anonymous&amp;gt; (H:\Work\MyProject\foodme\server\index.js:1:77)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Module._compile (module.js:449:26)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Object.Module._extensions..js (module.js:467:10)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Module.load (module.js:356:32)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Function.Module._load (module.js:312:12)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    at Module.require (module.js:362:17)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Learning Resource" scheme="http://maxisam.github.com/categories/AngularJS/Learning-Resource/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+      <category term="learning" scheme="http://maxisam.github.com/tags/learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Filtering by Multiple Specific Model Properties</title>
+    <link href="http://maxisam.github.com/2013/01/20/filtering-by-multiple-specific-model-properties/"/>
+    <id>http://maxisam.github.com/2013/01/20/filtering-by-multiple-specific-model-properties/</id>
+    <published>2013-01-20T20:12:00.000Z</published>
+    <updated>2016-08-27T18:19:05.099Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of showing to filter by Multiple Specific Model Properties by using <a href="http://docs.angularjs.org/api/ng.filter:filter" target="_blank" rel="external">filter function</a></li>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.filter:currency" target="_blank" rel="external">currency filter</a><a id="more"></a>
+<iframe style="width: 100%; height: 320px" src="http://embed.plnkr.co/scuPYt" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+</li>
+</ol>
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng009/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"span4 pull-right"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Search for smartphone in model and brand"</span> <span class="attr">ng-model</span>=<span class="string">"query"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"results"</span> <span class="attr">class</span>=<span class="string">"table table-striped table-bordered table-hover"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Brand<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Model<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">ng-repeat</span>=<span class="string">"smartphone in smartphones | filter: search "</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"brand"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"model"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"price"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng009/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, []);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.smartphones = [</div><div class="line">        &#123;brand: <span class="string">'Apple'</span>, model: <span class="string">'iPhone 4S'</span>, price: <span class="string">'999'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'Samsung'</span>, model: <span class="string">'SIII'</span>, price: <span class="string">'888'</span> &#125;,</div><div class="line">        &#123;brand: <span class="string">'LG'</span>, model: <span class="string">'Optimus'</span>, price: <span class="string">'777'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'htc'</span>, model: <span class="string">'Desire'</span>, price: <span class="string">'666'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'Nokia'</span>, model: <span class="string">'N9'</span>, price: <span class="string">'555'</span>&#125;</div><div class="line">    ];</div><div class="line">    $scope.search = <span class="function"><span class="keyword">function</span> (<span class="params">row</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> !!((row.brand.indexOf($scope.query || <span class="string">''</span>) !== <span class="number">-1</span> || row.model.indexOf($scope.query || <span class="string">''</span>) !== <span class="number">-1</span>));</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of showing to filter by Multiple Specific Model Properties by using &lt;a href=&quot;http://docs.angularjs.org/api/ng.filter:filter&quot;&gt;filter function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Example of &lt;a href=&quot;http://docs.angularjs.org/api/ng.filter:currency&quot;&gt;currency filter&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Filter" scheme="http://maxisam.github.com/categories/AngularJS/Filter/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>$observe vs $watch</title>
+    <link href="http://maxisam.github.com/2013/01/20/$observe-vs-$watch/"/>
+    <id>http://maxisam.github.com/2013/01/20/$observe-vs-$watch/</id>
+    <published>2013-01-20T08:09:00.000Z</published>
+    <updated>2016-08-27T18:18:32.291Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of showing the difference between <a href="http://docs.angularjs.org/guide/directive" target="_blank" rel="external">observe</a> and <a href="http://docs.angularjs.org/guide/directive" target="_blank" rel="external">watch</a></li>
+<li>Example of showing <a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$eval" target="_blank" rel="external">$eval</a></li>
+</ol>
+<a id="more"></a>
+<iframe style="margin: 20px 0; width: 100%; height: 250px" src="http://embed.plnkr.co/jxGl8aLKy1snCMlRbRxC" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng008/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"xinput"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">my-dir</span> <span class="attr">textinput</span>=<span class="string">'xinput'</span> <span class="attr">valinput</span>=<span class="string">''</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng008/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'myDir'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            scope: <span class="literal">true</span>,</div><div class="line">            template: <span class="string">'&lt;div&gt;observe-textinput: &lt;/div&gt;&lt;div&gt;observe-valinput: &lt;/div&gt;&lt;div&gt;eval: &lt;/div&gt;&lt;div&gt;eval2: &lt;/div&gt;&lt;div&gt;watch: &lt;/div&gt;'</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, iElement, iAttrs</span>) </span>&#123;</div><div class="line">                iAttrs.$observe(<span class="string">'textinput'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">                    scope.observe1 = value;</div><div class="line">                &#125;);</div><div class="line">                iAttrs.$observe(<span class="string">'valinput'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">                    scope.observe2 = value;</div><div class="line">                &#125;);</div><div class="line">                scope.$watch(iAttrs.textinput, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal, scope</span>) </span>&#123;</div><div class="line">                    scope.evalVal = scope.$<span class="built_in">eval</span>(iAttrs.textinput);</div><div class="line">                    scope.evalVal2 = scope.$<span class="built_in">eval</span>(<span class="string">'xinput'</span>);</div><div class="line">                    scope.watchVal = newVal;</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.xinput = <span class="string">'test'</span>;</div><div class="line">&#125;]);</div><div class="line"></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of showing the difference between &lt;a href=&quot;http://docs.angularjs.org/guide/directive&quot;&gt;observe&lt;/a&gt; and &lt;a href=&quot;http://docs.angularjs.org/guide/directive&quot;&gt;watch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Example of showing &lt;a href=&quot;http://docs.angularjs.org/api/ng.$rootScope.Scope#$eval&quot;&gt;$eval&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+      <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
+    
+      <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
+    
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
+    
+      <category term="$observe" scheme="http://maxisam.github.com/tags/observe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scope and Isolated scope in directive</title>
+    <link href="http://maxisam.github.com/2013/01/18/scope-and-isolated-scope-in-directive/"/>
+    <id>http://maxisam.github.com/2013/01/18/scope-and-isolated-scope-in-directive/</id>
+    <published>2013-01-18T17:31:00.000Z</published>
+    <updated>2016-08-27T18:17:46.647Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of showing the relationship between scope and <a href="http://docs.angularjs.org/guide/directive" target="_blank" rel="external">isolated scope</a></li>
+<li>Example of using instance <a href="http://docs.angularjs.org/api/ng.$compile.directive.Attributes" target="_blank" rel="external">attributes</a> in link function in directive and interacting with parent scope</li>
+</ol>
+<p>####Notice####</p>
+<ol>
+<li>There are 3 scopes in this example.</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin: 20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/uQSLHhv6uz2mCdmtPWSg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng007/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-my-component</span> <span class="attr">attribute-foo</span>=<span class="string">""</span> <span class="attr">binding-foo</span>=<span class="string">"foo"</span></span></div><div class="line">     <span class="attr">isolated-expression-foo</span>=<span class="string">"updateFoo(newFoo)"</span> <span class="attr">non-iso-attribute</span>=<span class="string">"foo"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Attribute <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"badge badge-important"</span>&gt;</span>@<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">strong</span>&gt;</span>get:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span3"</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>set:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"isolatedAttributeFoo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span6 text-success"</span>&gt;</span>  <span class="tag">&lt;<span class="name">i</span>&gt;</span> This does not update the parent scope.<span class="tag">&lt;/<span class="name">i</span>&gt;</span>  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Binding <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"badge badge-important"</span>&gt;</span>=<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">strong</span>&gt;</span>get:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span3"</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>set:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"isolatedBindingFoo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span6 text-success"</span>&gt;</span> <span class="tag">&lt;<span class="name">i</span>&gt;</span> This does update the parent scope.<span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Expression <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"badge badge-important"</span>&gt;</span>&amp;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span3 input-append"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input-medium"</span> <span class="attr">ng-model</span>=<span class="string">"isolatedFoo"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">ng-click</span>=<span class="string">"isolatedExpressionFoo(&#123;newFoo:isolatedFoo&#125;)"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span6 text-success"</span>&gt;</span> <span class="tag">&lt;<span class="name">i</span>&gt;</span> And this calls a function on the parent scope.<span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Non Isolated Attribute<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span3"</span>&gt;</span> <span class="tag">&lt;<span class="name">strong</span>&gt;</span>get:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span6 text-success"</span>&gt;</span> <span class="tag">&lt;<span class="name">i</span>&gt;</span> This reflects parent scope<span class="tag">&lt;/<span class="name">i</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng007/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'myComponent'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            scope: &#123;</div><div class="line">                isolatedAttributeFoo: <span class="string">'@attributeFoo'</span>,</div><div class="line">                isolatedBindingFoo: <span class="string">'=bindingFoo'</span>,</div><div class="line">                isolatedExpressionFoo: <span class="string">'&amp;'</span></div><div class="line">            &#125;,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, iElement, iAttrs</span>) </span>&#123;</div><div class="line">                scope.$parent.$watch(iAttrs.nonIsoAttribute, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal, scope</span>) </span>&#123;</div><div class="line">                    scope.nonIsoAttribute = newVal;</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.foo = <span class="string">'Hello!'</span>;</div><div class="line">    $scope.updateFoo = <span class="function"><span class="keyword">function</span> (<span class="params">newFoo</span>) </span>&#123;</div><div class="line">        $scope.foo = newFoo;</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of showing the relationship between scope and &lt;a href=&quot;http://docs.angularjs.org/guide/directive&quot;&gt;isolated scope&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Example of using instance &lt;a href=&quot;http://docs.angularjs.org/api/ng.$compile.directive.Attributes&quot;&gt;attributes&lt;/a&gt; in link function in directive and interacting with parent scope&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;####Notice####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There are 3 scopes in this example.&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+      <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
+    
+      <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
+    
+      <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Observe two variables in one $watch</title>
+    <link href="http://maxisam.github.com/2013/01/16/watch-2-variables-w-slash-1-$watch/"/>
+    <id>http://maxisam.github.com/2013/01/16/watch-2-variables-w-slash-1-$watch/</id>
+    <published>2013-01-16T06:04:00.000Z</published>
+    <updated>2016-08-28T04:25:40.439Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$watch" target="_blank" rel="external">$watch</a></li>
+</ol>
+<a id="more"></a>
+<iframe style="margin: 20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/o3cnXm" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng006/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>X: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">ng-model</span>=<span class="string">'x'</span>/&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Y: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">ng-model</span>=<span class="string">'y'</span>/&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-xng-watcher</span> <span class="attr">x</span>=<span class="string">''</span> <span class="attr">y</span>=<span class="string">''</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng006/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'xngWatcher'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            template: <span class="string">'&lt;span&gt;X:, Y:&lt;/span&gt;'</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, elm, iAttrs</span>) </span>&#123;</div><div class="line">                scope.$watch(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">return</span> &#123;x: iAttrs.x, y: iAttrs.y&#125;;</div><div class="line">                &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal, scope</span>) </span>&#123;</div><div class="line">                    <span class="built_in">console</span>.log(<span class="string">'change !'</span>);</div><div class="line">                    scope.x = newVal.x;</div><div class="line">                    scope.y = newVal.y;</div><div class="line">                &#125;, <span class="literal">true</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of &lt;a href=&quot;http://docs.angularjs.org/api/ng.$rootScope.Scope#$watch&quot;&gt;$watch&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using directive to work with highlight.js</title>
+    <link href="http://maxisam.github.com/2013/01/15/using-directive-to-work-with-highlight-dot-js/"/>
+    <id>http://maxisam.github.com/2013/01/15/using-directive-to-work-with-highlight-dot-js/</id>
+    <published>2013-01-15T06:59:00.000Z</published>
+    <updated>2016-08-27T18:16:57.471Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>Example of ussing directive to work with <a href="http://softwaremaniacs.org/soft/highlight/en/" target="_blank" rel="external">highlight.js</a>, or any other jQuery plugin.</li>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.directive:ngTransclude" target="_blank" rel="external">ng-transclude</a>.</li>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.$interpolate" target="_blank" rel="external">$interpolate</a>. (It is different from <a href="http://docs.angularjs.org/api/ng.$compile" target="_blank" rel="external">$compile</a>)</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin:20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/3rtp1v" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">snippet</span>&gt;</span>&amp;lt;!--[if IE]&amp;gt;&amp;lt;script src="/js/gaig-ui-ie.js"&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;![endif]--&amp;gt;</div><div class="line">    &amp;lt;link rel="stylesheet" href="/css/gaig-bootstrap.css" /&amp;gt;</div><div class="line">    &amp;lt;script src="/js/gaig-ui.js"&amp;gt;&amp;lt;/script&amp;gt;<span class="tag">&lt;/<span class="name">snippet</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'snippet'</span>, [<span class="string">'$timeout'</span>, <span class="string">'$interpolate'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$timeout, $interpolate</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'E'</span>,</div><div class="line">            template: <span class="string">'<pre><code ng-transclude=""></code></pre>'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            transclude: <span class="literal">true</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, elm</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> tmp = $interpolate(elm.find(<span class="string">'code'</span>).text())(scope);</div><div class="line">                elm.find(<span class="string">'code'</span>).html(hljs.highlightAuto(tmp).value);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.cdnPath = <span class="string">"//path/to/cdn/"</span>;</div><div class="line">    $scope.version = <span class="string">"1.0"</span>;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;Example of ussing directive to work with &lt;a href=&quot;http://softwaremaniacs.org/soft/highlight/en/&quot;&gt;highlight.js&lt;/a&gt;, or any other jQuery plugin.&lt;/li&gt;
+&lt;li&gt;Example of &lt;a href=&quot;http://docs.angularjs.org/api/ng.directive:ngTransclude&quot;&gt;ng-transclude&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Example of &lt;a href=&quot;http://docs.angularjs.org/api/ng.$interpolate&quot;&gt;$interpolate&lt;/a&gt;. (It is different from &lt;a href=&quot;http://docs.angularjs.org/api/ng.$compile&quot;&gt;$compile&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Access factory from directive</title>
+    <link href="http://maxisam.github.com/2013/01/11/access-factory-from-directive/"/>
+    <id>http://maxisam.github.com/2013/01/11/access-factory-from-directive/</id>
+    <published>2013-01-12T05:21:00.000Z</published>
+    <updated>2016-08-27T18:15:52.180Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of showing directive accesses service (factory).</li>
+<li>Example of ng-src</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin:20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/qGAvEtXmkJ3opTRvZUMQ" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Avatar url : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"url"</span> <span class="attr">placeholder</span>=<span class="string">'input url'</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> result:</div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">my-avatar</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, [])</div><div class="line">    .factory(<span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">var</span> user = &#123;</div><div class="line">            avatarUrl: <span class="string">''</span></div><div class="line">        &#125;, srv = &#123;&#125;;</div><div class="line">        srv.getCurrentUser = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> user;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> srv;</div><div class="line">    &#125;).directive(<span class="string">'myAvatar'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'A'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            template: <span class="string">'&lt;img class="avatar" ng-src="" alt="" title=""&gt; '</span>,</div><div class="line">            controller: <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line">                $scope.url = CurrentUserService.getCurrentUser().avatarUrl;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">    app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        CurrentUserService.getCurrentUser().avatarUrl = $scope.url;</div><div class="line">    &#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of showing directive accesses service (factory).&lt;/li&gt;
+&lt;li&gt;Example of ng-src&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+      <category term="factory" scheme="http://maxisam.github.com/tags/factory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Checkbox w/ auto focus textbox</title>
+    <link href="http://maxisam.github.com/2013/01/10/checkbox-w-slash-auto-focus-textbox/"/>
+    <id>http://maxisam.github.com/2013/01/10/checkbox-w-slash-auto-focus-textbox/</id>
+    <published>2013-01-11T05:35:00.000Z</published>
+    <updated>2016-08-27T18:09:21.966Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Show the different between Controller and Directive</li>
+<li>Example of using instance <a href="http://docs.angularjs.org/api/ng.$compile.directive.Attributes" target="_blank" rel="external">attributes</a> with watch in link function in directive</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin:20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/84NRZHlGeL3LqS4XgTGY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng004/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'row'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span4'</span>&gt;</span></div><div class="line">      controller version</div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span8'</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">'checkbox'</span> <span class="attr">ng-model</span>=<span class="string">"isChecked"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'row'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span4'</span>&gt;</span></div><div class="line">      directive version</div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span8'</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-model</span>=<span class="string">"isChecked2"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">xng-focus</span>=<span class="string">'isChecked2'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng004/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'xngFocus'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, iattrs</span>) </span>&#123;</div><div class="line">            scope.$watch(iattrs.xngFocus,</div><div class="line">                <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">                    newValue &amp;&amp; element.focus();</div><div class="line">                &#125;, <span class="literal">true</span>);</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.$watch(<span class="string">'isChecked'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newV</span>) </span>&#123;</div><div class="line">        newV &amp;&amp; $(<span class="string">'#name'</span>).focus();</div><div class="line">    &#125;, <span class="literal">true</span>);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Show the different between Controller and Directive&lt;/li&gt;
+&lt;li&gt;Example of using instance &lt;a href=&quot;http://docs.angularjs.org/api/ng.$compile.directive.Attributes&quot;&gt;attributes&lt;/a&gt; with watch in link function in directive&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using directive to indicate a textbox become a required field</title>
+    <link href="http://maxisam.github.com/2013/01/10/using-directive-to-indicate-a-textbox-become-a-required-field/"/>
+    <id>http://maxisam.github.com/2013/01/10/using-directive-to-indicate-a-textbox-become-a-required-field/</id>
+    <published>2013-01-10T06:54:00.000Z</published>
+    <updated>2016-08-27T18:09:59.921Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective####</p>
+<ol>
+<li>Example of ng-required</li>
+<li>Example of using instance <a href="http://docs.angularjs.org/api/ng.$compile.directive.Attributes" target="_blank" rel="external">attributes</a> in link function in directive</li>
+<li>Example of having key:element mapping attribute</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin: 20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/83wZy086dHDl1r9EDAcS" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng003/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">ng-submit</span>=<span class="string">"submit()"</span> <span class="attr">name</span>=<span class="string">"form"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-model</span>=<span class="string">"partner"</span> <span class="attr">checked</span>/&gt;</span></div><div class="line">    Are you bringing along a partner?<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    Partner name:</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"partnerName"</span> <span class="attr">xng-placeholder</span>=<span class="string">"&#123; 'required': partner &#125;"</span> <span class="attr">ng-required</span>=<span class="string">"partner"</span>/&gt;</span> <span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"save"</span> <span class="attr">ng-disabled</span>=<span class="string">"form.$invalid"</span> <span class="attr">class</span>=<span class="string">"btn"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng003/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app.directive(<span class="string">'xngPlaceholder'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        restrict: <span class="string">'A'</span>,</div><div class="line">        link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, attrs</span>) </span>&#123;</div><div class="line">            scope.$watch(attrs.xngPlaceholder, <span class="function"><span class="keyword">function</span> (<span class="params">newVal</span>) </span>&#123;</div><div class="line">                element.removeAttr(<span class="string">'placeholder'</span>);</div><div class="line">                <span class="keyword">var</span> att = <span class="string">''</span>;</div><div class="line">                angular.forEach(newVal, <span class="function"><span class="keyword">function</span> (<span class="params">elm, key</span>) </span>&#123;</div><div class="line">                    att += elm ? (key + <span class="string">' '</span>) : <span class="string">''</span>;</div><div class="line">                &#125;);</div><div class="line">                element.attr(<span class="string">'placeholder'</span>, att);</div><div class="line">            &#125;, <span class="literal">true</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example of ng-required&lt;/li&gt;
+&lt;li&gt;Example of using instance &lt;a href=&quot;http://docs.angularjs.org/api/ng.$compile.directive.Attributes&quot;&gt;attributes&lt;/a&gt; in link function in directive&lt;/li&gt;
+&lt;li&gt;Example of having key:element mapping attribute&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
+    
+    
+      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using tabs reorder table</title>
+    <link href="http://maxisam.github.com/2013/01/09/using-tabs-reorder-table/"/>
+    <id>http://maxisam.github.com/2013/01/09/using-tabs-reorder-table/</id>
+    <published>2013-01-10T04:49:00.000Z</published>
+    <updated>2016-08-27T06:01:42.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>####Objective:####</p>
+<ol>
+<li>Example for using filter to set order by certain column with tab UI.</li>
+<li>Exampe for using ng-class to switch twitter bootstrap tabs.</li>
+</ol>
+<a id="more"></a>
+<iframe style="margin:20px 0; width: 100%; height: 300px" src="http://embed.plnkr.co/fMrhagVKl2nehzTOHriF" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<figure class="highlight html"><figcaption><span>Mark up for Twitter bootstrap tab</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/Index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"MainCtrl"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav nav-pills"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='name'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('name')"</span>&gt;</span>name<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='phone'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('phone')"</span>&gt;</span>phone<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-ng-repeat</span>=<span class="string">"friend in friends|orderBy:order"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"phone"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS controller</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.order = <span class="string">'name'</span>;</div><div class="line">    $scope.friends = [</div><div class="line">        &#123;name: <span class="string">'John'</span>, phone: <span class="string">'555-1276'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mary'</span>, phone: <span class="string">'800-BIG-MARY'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mike'</span>, phone: <span class="string">'555-4321'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Adam'</span>, phone: <span class="string">'555-5678'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Julie'</span>, phone: <span class="string">'555-8765'</span>&#125;</div><div class="line">    ];</div><div class="line">    $scope.setOrder = <span class="function"><span class="keyword">function</span> (<span class="params">order</span>) </span>&#123;</div><div class="line">        $scope.order = order;</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;####Objective:####&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Example for using filter to set order by certain column with tab UI.&lt;/li&gt;
+&lt;li&gt;Exampe for using ng-class to switch twitter bootstrap tabs.&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
+    
+      <category term="Filter" scheme="http://maxisam.github.com/categories/AngularJS/Filter/"/>
+    
+    
+      <category term="filter" scheme="http://maxisam.github.com/tags/filter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Code block in Octopress</title>
+    <link href="http://maxisam.github.com/2013/01/07/code-block-in-octopress/"/>
+    <id>http://maxisam.github.com/2013/01/07/code-block-in-octopress/</id>
+    <published>2013-01-07T17:12:00.000Z</published>
+    <updated>2016-08-28T04:48:06.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>One of the highlight feature of Octopress is <a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="external">Code block</a></p>
+<p>It can let you share the code with syntax highlight easily.</p>
+<p>However, it doesn’t work on my Windows 7 machine.</p>
+<p>It always throw out the following error</p>
+<a id="more"></a>
+<figure class="highlight plain"><figcaption><span>Error message</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ rake generate</div><div class="line">## Generating Site with Jekyll</div><div class="line">unchanged sass/screen.scss</div><div class="line">Configuration from d:/MyProject/Git/octopress/_config.yml</div><div class="line">Building site: source -&gt; public</div><div class="line">Liquid Exception: No such file or directory - python c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/mentos.py in 2013-01-06-octopress.markdown</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:307:in &apos;popen4&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:41:in &apos;start&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:203:in &apos;mentos&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:192:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:24:in &apos;pygments&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:14:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/code_block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:94:in &apos;block in render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;collect&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/template.rb:124:in &apos;render&apos;</div></pre></td></tr></table></figure>
+<p>I followed exactly the steps of installation that I found. No one mentions this problem.</p>
+<p>Moreover, I can’t find anyone else having this issue.</p>
+<p>I guess I am on my own.</p>
+<p>First I need to figure out how Octopress does this feature.</p>
+<p>It seems like Octopress use <a href="http://octopress.org/docs/blogging/code/" target="_blank" rel="external">Pygments</a> from this error message.</p>
+<p>So I tried to update pyments to the latest version. But it doesn’t work.</p>
+<p>Then I found out <a href="http://pygments.org/docs/installation/" target="_blank" rel="external">Pygments</a> uses Python to work.</p>
+<p>And I didn’t have Python installed.</p>
+<p>Well, I guess that should be it.</p>
+<p>But thing doesn’t seem like that easy. It still doesn’t work after I installed <a href="http://www.python.org/download/" target="_blank" rel="external">Python 2.7 / 3.3</a>.</p>
+<p>After hours and hours thinking, I noticed I can’t run Python beside its folder.</p>
+<p>OMG ! It is PATH !</p>
+<p>After I add correct path to windows environment, IT STILL REFUSED WORK.</p>
+<p>I entered <code>path</code> in the cmd. It doesn’t show the path I just added.</p>
+<p>Apparently, I need to reboot my machine to get it to work.</p>
+<p>(another way is use SET PATH=%PATH%;C:\pathoftheprogram to avoid reboot.)</p>
+<p>Finally ! It works like a charm after reboot.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloWorld</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"Hello World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;One of the highlight feature of Octopress is &lt;a href=&quot;http://octopress.org/docs/plugins/codeblock/&quot;&gt;Code block&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It can let you share the code with syntax highlight easily.&lt;/p&gt;
+&lt;p&gt;However, it doesn’t work on my Windows 7 machine.&lt;/p&gt;
+&lt;p&gt;It always throw out the following error&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
+    
+    
+      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Octopress</title>
+    <link href="http://maxisam.github.com/2013/01/06/octopress/"/>
+    <id>http://maxisam.github.com/2013/01/06/octopress/</id>
+    <published>2013-01-07T01:54:00.000Z</published>
+    <updated>2016-08-28T04:47:57.003Z</updated>
+    
+    <content type="html"><![CDATA[<p>I never used Ruby but heard a lot of nice thing about it.</p>
+<p><a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">Octopress</a> is Ruby-based blogging framework for <a href="https://github.com/mojombo/jekyll#readme" title="Jekyll" target="_blank" rel="external">Jekyll</a>, which is <a href="https://help.github.com/articles/using-jekyll-with-pages" target="_blank" rel="external">supported by GitHub</a>.</p>
+<a id="more"></a>
+<p>It has several good things I like.</p>
+<ol>
+<li>I can write blog in <a href="http://en.wikipedia.org/wiki/Markdown" title="Markdown Wiki" target="_blank" rel="external">Markdown</a> format.</li>
+<li>I can have a lot of control of your blog.</li>
+<li>Using it with GitHub means you can have verison control for your blog.</li>
+<li>It is easy to insert code snippt into your blog post.</li>
+</ol>
+<p>However, there are few things I don’t like either</p>
+<ol>
+<li>It uses <a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a> instead of LESS. They are similar tho.</li>
+<li>It doesn’t really use twitter bootstrap way to build the framework.<br>(Well, I can change it, but it takes time. )</li>
+</ol>
+<p>Here are some resource for Octopress beside the <a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">official site</a>.</p>
+<ol>
+<li>Install and setup : <a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/" target="_blank" rel="external">Creating a Github Blog Using Octopress</a> &amp; <a href="http://www.viggiosoft.com/blog/blog/2011/09/28/setting-up-a-blog-with-octopress/" target="_blank" rel="external">Setting Up a Blog With Octopress</a></li>
+<li>Themes : <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes" target="_blank" rel="external">3rd Party Octopress Themes</a> &amp; <a href="http://octopressthemes.com/" target="_blank" rel="external">The ultimate Octopress themes &amp; plugins collection</a></li>
+<li>Plugins : <a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins" target="_blank" rel="external">3rd party plugins</a></li>
+<li>Tip:<ol>
+<li><a href="http://webmasters.stackexchange.com/questions/15552/how-do-you-exclude-yourself-from-google-analytics-on-your-website-using-cookies" target="_blank" rel="external">How to exclude yourself from Google Analytics</a></li>
+</ol>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I never used Ruby but heard a lot of nice thing about it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://octopress.org/blog/2011/07/23/octopress-20-surfaces/&quot; title=&quot;Octopress&quot;&gt;Octopress&lt;/a&gt; is Ruby-based blogging framework for &lt;a href=&quot;https://github.com/mojombo/jekyll#readme&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;supported by GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
+    
+    
+      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2013</title>
+    <link href="http://maxisam.github.com/2013/01/04/2013/"/>
+    <id>http://maxisam.github.com/2013/01/04/2013/</id>
+    <published>2013-01-04T06:33:00.000Z</published>
+    <updated>2016-08-28T04:46:38.429Z</updated>
+    
+    <content type="html"><![CDATA[<p>New year, new resolutions.</p>
+<p>This time, my resolution is writing blog.</p>
+<p>It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.</p>
+<p>Not 100% but good enough for me to build this blog.</p>
+<p>Feeling a little embarrass that I haven’t learnt Git for this whole time and stayed in the comfort room created by TFS.</p>
+<p>I guess that is why we need new resolutions to break some old habits :).</p>
+<p>Happy new year.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;New year, new resolutions.&lt;/p&gt;
+&lt;p&gt;This time, my resolution is writing blog.&lt;/p&gt;
+&lt;p&gt;It took me like a weekish to figure out the whole thin
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+    
+      <category term="personal" scheme="http://maxisam.github.com/tags/personal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>First Try</title>
+    <link href="http://maxisam.github.com/2012/12/31/firsttry/"/>
+    <id>http://maxisam.github.com/2012/12/31/firsttry/</id>
+    <published>2012-12-31T06:37:00.000Z</published>
+    <updated>2016-08-27T18:08:41.503Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Hello Octopress !</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Hello Octopress !&lt;/strong&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
+    
+    
+      <category term="random" scheme="http://maxisam.github.com/tags/random/"/>
+    
+  </entry>
+  
+</feed>
