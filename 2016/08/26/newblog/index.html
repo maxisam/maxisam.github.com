@@ -90,6 +90,9 @@
 
 
 
+  <meta property="fb:admins" content="maxisam@gmail.com" />
+  <meta property="fb:app_id" content="924242317701508" />
+
 
 
 <meta name="description" content="Migrate everything to Hexo from Octopress!
@@ -133,6 +136,24 @@ It is actually very smooth.">
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '924242317701508',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 <script>
@@ -348,6 +369,9 @@ It is actually very smooth.">
             
           
 
+          
+            &nbsp; | &nbsp;
+            <div class="fb-like" data-layout="button_count" data-share="true"></div>
           
 
           
