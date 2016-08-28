@@ -254,11 +254,11 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
     
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
+    
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
     
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
-    
-      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
     
       <category term="$observe" scheme="http://maxisam.github.com/tags/observe/"/>
     
