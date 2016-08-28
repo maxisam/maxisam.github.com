@@ -120,6 +120,7 @@ Example of $interpolate. (It is different from $compile)
 
 &amp;lt;!-- more --&amp;gt;
 &amp;lt;iframe s">
+<link rel="publisher" href="[object Object]">
 
 
 
@@ -156,14 +157,6 @@ Example of $interpolate. (It is different from $compile)
       version    : 'v2.6'
     });
   };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
 </script>
 
 
@@ -392,12 +385,6 @@ Example of $interpolate. (It is different from $compile)
               </span>
             
           
-
-          
-            &nbsp; | &nbsp;
-            <div class="fb-like" data-layout="button_count" data-share="true"></div>
-          
-
           
           
 
@@ -477,6 +464,24 @@ Example of $interpolate. (It is different from $compile)
 
 
     <div class="post-spread">
+      
+      
+        <!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="g-plusone" data-size="medium"></div>
+      
+      
+        <!-- Place this tag in your head or just before your close body tag. -->
+<script>
+ (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-like" data-layout="button_count" data-share="true"></div>
       
     </div>
   </div>
