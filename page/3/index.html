@@ -71,7 +71,7 @@
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.4" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -85,7 +85,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.4" />
 
 
 
@@ -101,6 +101,7 @@
 <meta property="og:site_name" content="Thought &amp; &lt;/code&gt;">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thought &amp; &lt;/code&gt;">
+<meta name="twitter:creator" content="@[object Object]">
 <link rel="publisher" href="[object Object]">
 
 
@@ -294,6 +295,280 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/01/15/using-directive-to-work-with-highlight-dot-js/" itemprop="url">
+                  Using directive to work with highlight.js
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2013-01-15T00:59:00-06:00" content="2013-01-15">
+              2013-01-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
+                    <span itemprop="name">AngularJS</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
+                    <span itemprop="name">Directive</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/01/15/using-directive-to-work-with-highlight-dot-js/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/15/using-directive-to-work-with-highlight-dot-js/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>Example of ussing directive to work with <a href="http://softwaremaniacs.org/soft/highlight/en/" target="_blank" rel="external">highlight.js</a>, or any other jQuery plugin.</li>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.directive:ngTransclude" target="_blank" rel="external">ng-transclude</a>.</li>
+<li>Example of <a href="http://docs.angularjs.org/api/ng.$interpolate" target="_blank" rel="external">$interpolate</a>. (It is different from <a href="http://docs.angularjs.org/api/ng.$compile" target="_blank" rel="external">$compile</a>)</li>
+</ol>
+<p>&lt;!-- more --&gt;
+&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/3rtp1v&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
+<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">snippet</span>&gt;</span>&amp;lt;!--[if IE]&amp;gt;&amp;lt;script src="/js/gaig-ui-ie.js"&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;![endif]--&amp;gt;</div><div class="line">    &amp;lt;link rel="stylesheet" href="/css/gaig-bootstrap.css" /&amp;gt;</div><div class="line">    &amp;lt;script src="/js/gaig-ui.js"&amp;gt;&amp;lt;/script&amp;gt;<span class="tag">&lt;/<span class="name">snippet</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'snippet'</span>, [<span class="string">'$timeout'</span>, <span class="string">'$interpolate'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$timeout, $interpolate</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'E'</span>,</div><div class="line">            template: <span class="string">'<pre><code ng-transclude=""></code></pre>'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            transclude: <span class="literal">true</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, elm</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> tmp = $interpolate(elm.find(<span class="string">'code'</span>).text())(scope);</div><div class="line">                elm.find(<span class="string">'code'</span>).html(hljs.highlightAuto(tmp).value);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.cdnPath = <span class="string">"//path/to/cdn/"</span>;</div><div class="line">    $scope.version = <span class="string">"1.0"</span>;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/01/11/access-factory-from-directive/" itemprop="url">
+                  Access factory from directive
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2013-01-11T23:21:00-06:00" content="2013-01-11">
+              2013-01-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
+                    <span itemprop="name">AngularJS</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
+                    <span itemprop="name">Directive</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/01/11/access-factory-from-directive/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/11/access-factory-from-directive/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>####Objective####</p>
+<ol>
+<li>Example of showing directive accesses service (factory).</li>
+<li>Example of ng-src</li>
+</ol>
+<p>&lt;!-- more --&gt;
+&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/qGAvEtXmkJ3opTRvZUMQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
+<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Avatar url : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"url"</span> <span class="attr">placeholder</span>=<span class="string">'input url'</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> result:</div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">my-avatar</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, [])</div><div class="line">    .factory(<span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">var</span> user = &#123;</div><div class="line">            avatarUrl: <span class="string">''</span></div><div class="line">        &#125;, srv = &#123;&#125;;</div><div class="line">        srv.getCurrentUser = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> user;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> srv;</div><div class="line">    &#125;).directive(<span class="string">'myAvatar'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'A'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            template: <span class="string">'&lt;img class="avatar" ng-src="" alt="" title=""&gt; '</span>,</div><div class="line">            controller: <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line">                $scope.url = CurrentUserService.getCurrentUser().avatarUrl;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">    app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        CurrentUserService.getCurrentUser().avatarUrl = $scope.url;</div><div class="line">    &#125;]);</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -708,313 +983,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/07/code-block-in-octopress/" itemprop="url">
-                  Code block in Octopress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-07T11:12:00-06:00" content="2013-01-07">
-              2013-01-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/Setup/" itemprop="url" rel="index">
-                    <span itemprop="name">Setup</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/07/code-block-in-octopress/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/07/code-block-in-octopress/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>One of the highlight feature of Octopress is <a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="external">Code block</a></p>
-<p>It can let you share the code with syntax highlight easily.</p>
-<p>However, it doesn't work on my Windows 7 machine.</p>
-<p>It always throw out the following error</p>
-<p>&lt;!-- more --&gt;
-<figure class="highlight plain"><figcaption><span>Error message</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ rake generate</div><div class="line">## Generating Site with Jekyll</div><div class="line">unchanged sass/screen.scss</div><div class="line">Configuration from d:/MyProject/Git/octopress/_config.yml</div><div class="line">Building site: source -&gt; public</div><div class="line">Liquid Exception: No such file or directory - python c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/mentos.py in 2013-01-06-octopress.markdown</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:307:in &apos;popen4&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:41:in &apos;start&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:203:in &apos;mentos&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:192:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:24:in &apos;pygments&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:14:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/code_block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:94:in &apos;block in render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;collect&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/template.rb:124:in &apos;render&apos;</div></pre></td></tr></table></figure></p>
-<p>I followed exactly the steps of installation that I found. No one mentions this problem.</p>
-<p>Moreover, I can't find anyone else having this issue.</p>
-<p>I guess I am on my own.</p>
-<p>First I need to figure out how Octopress does this feature.</p>
-<p>It seems like Octopress use <a href="http://octopress.org/docs/blogging/code/" target="_blank" rel="external">Pygments</a> from this error message.</p>
-<p>So I tried to update pyments to the latest version. But it doesn't work.</p>
-<p>Then I found out <a href="http://pygments.org/docs/installation/" target="_blank" rel="external">Pygments</a> uses Python to work.</p>
-<p>And I didn't have Python installed.</p>
-<p>Well, I guess that should be it.</p>
-<p>But thing doesn't seem like that easy. It still doesn't work after I installed <a href="http://www.python.org/download/" target="_blank" rel="external">Python 2.7 / 3.3</a>.</p>
-<p>After hours and hours thinking, I noticed I can't run Python beside its folder.</p>
-<p>OMG ! It is PATH !</p>
-<p>After I add correct path to windows environment, IT STILL REFUSED WORK.</p>
-<p>I entered <code>path</code> in the cmd. It doesn't show the path I just added.</p>
-<p>Apparently, I need to reboot my machine to get it to work.</p>
-<p>(another way is use SET PATH=%PATH%;C:\pathoftheprogram to avoid reboot.)</p>
-<p>Finally ! It works like a charm after reboot.</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloWorld</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"Hello World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/06/octopress/" itemprop="url">
-                  Octopress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-06T19:54:00-06:00" content="2013-01-06">
-              2013-01-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/Setup/" itemprop="url" rel="index">
-                    <span itemprop="name">Setup</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/06/octopress/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/06/octopress/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>I never used Ruby but heard a lot of nice thing about it.</p>
-<p><a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">Octopress</a> is Ruby-based blogging framework for <a href="https://github.com/mojombo/jekyll#readme" title="Jekyll" target="_blank" rel="external">Jekyll</a>, which is <a href="https://help.github.com/articles/using-jekyll-with-pages" target="_blank" rel="external">supported by GitHub</a>.</p>
-<p>&lt;!-- more --&gt;
-It has several good things I like.</p>
-<ol>
-<li>I can write blog in <a href="http://en.wikipedia.org/wiki/Markdown" title="Markdown Wiki" target="_blank" rel="external">Markdown</a> format.</li>
-<li>I can have a lot of control of your blog.</li>
-<li>Using it with GitHub means you can have verison control for your blog.</li>
-<li>It is easy to insert code snippt into your blog post.</li>
-</ol>
-<p>However, there are few things I don't like either</p>
-<ol>
-<li>It uses <a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a> instead of LESS. They are similar tho.</li>
-<li>It doesn't really use twitter bootstrap way to build the framework.
-(Well, I can change it, but it takes time. )</li>
-</ol>
-<p>Here are some resource for Octopress beside the <a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">official site</a>.</p>
-<ol>
-<li>Install and setup : <a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/" target="_blank" rel="external">Creating a Github Blog Using Octopress</a> &amp; <a href="http://www.viggiosoft.com/blog/blog/2011/09/28/setting-up-a-blog-with-octopress/" target="_blank" rel="external">Setting Up a Blog With Octopress</a></li>
-<li>Themes : <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes" target="_blank" rel="external">3rd Party Octopress Themes</a> &amp; <a href="http://octopressthemes.com/" target="_blank" rel="external">The ultimate Octopress themes &amp; plugins collection</a></li>
-<li>Plugins : <a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins" target="_blank" rel="external">3rd party plugins</a></li>
-<li>Tip:
-<ol>
-<li><a href="http://webmasters.stackexchange.com/questions/15552/how-do-you-exclude-yourself-from-google-analytics-on-your-website-using-cookies" target="_blank" rel="external">How to exclude yourself from Google Analytics</a></li>
-</ol>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1060,7 +1028,7 @@ It has several good things I like.</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1068,7 +1036,7 @@ It has several good things I like.</p>
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1077,7 +1045,7 @@ It has several good things I like.</p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1220,21 +1188,21 @@ It has several good things I like.</p>
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.4"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.4"></script>
 
 
 
   
-  
-
   
 
   
 
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.4"></script>
 
 
 

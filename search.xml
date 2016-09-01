@@ -4,7 +4,38 @@
   
     
     <entry>
-      <title><![CDATA[update gitignore]]></title>
+      <title><![CDATA[ionic2 with Visual Studio + IIS Express]]></title>
+      <url>http://maxisam.github.com/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/</url>
+      <content type="html"><![CDATA[<p>Developing Ionic2 on VS2015 is much easier than I thought.</p>
+<p>You will have pretty nice debugging experience and nice emulator from Visual Studio.</p>
+<p>However, there is always a devil in the details.</p>
+<p>Let's say if you want to make the Ionic app talk to your local IIS Express that serves your Web API, it won't work right out of box.</p>
+<p>First of all, the VS Android Emulator use a virtual network adapter with a magic IP to connect to the localhost, <strong>169.254.80.80</strong>.</p>
+<p>Since IIS Express naturally only binds to localhost, it doesn't know about the IP from this adapter.</p>
+<p>To make IIS Express aware this, a new binding needs to be add in applicationhost.config.</p>
+<p>in vs2015, it is <code>.vs\config\applicationHost.config</code></p>
+<p><code>&lt;site name=&quot;ProjectName&quot; id=&quot;1&quot;&gt; [blah blah blah] &lt;bindings&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:localhost&quot; /&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:169.254.80.80&quot; /&gt; &lt;/bindings&gt; &lt;/site&gt;</code></p>
+<p>Since I forgot this one twice during the development, it deserves my time for this post.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Changing Stylus in Hexo]]></title>
+      <url>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</url>
+      <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
+<p>The code was just quick and dirty. It works on local as well.</p>
+<p><code>.fb-like.fb_iframe_widget{ position: relative; top: -9px; }</code></p>
+<p>However it never got to deploy to server.</p>
+<p>It turns out Stylus tranpiler seems smarter than I assumed.</p>
+<p>because the class <code>fb_iframe_widget</code> is added dynamically by facebook widget, transpiler can't find anything use above code and decide not to put into the result css.</p>
+<p>After I change it to</p>
+<p><code>.fb-like{ position: relative; top: -9px; }</code></p>
+<p>it works.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Updating gitignore]]></title>
       <url>http://maxisam.github.com/2016/08/28/gitignore/</url>
       <content type="html"><![CDATA[<p>How to refresh the file index so the files I want ignored get ignored ?</p>
 <h4>Signal file</h4>
@@ -23,7 +54,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[hexo tags & categories]]></title>
+      <title><![CDATA[Showing hexo tags & categories]]></title>
       <url>http://maxisam.github.com/2016/08/27/hexo-tags-categories/</url>
       <content type="html"><![CDATA[<p>It takes me a while to figure out how to create tags and categories pages</p>
 <p>You need to have</p>

@@ -71,7 +71,7 @@
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.4" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -85,7 +85,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.4" />
 
 
 
@@ -101,6 +101,7 @@
 <meta property="og:site_name" content="Thought &amp; &lt;/code&gt;">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thought &amp; &lt;/code&gt;">
+<meta name="twitter:creator" content="@[object Object]">
 <link rel="publisher" href="[object Object]">
 
 
@@ -316,8 +317,271 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/" itemprop="url">
+                  ionic2 with Visual Studio + IIS Express
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-31T17:45:32-05:00" content="2016-08-31">
+              2016-08-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Ionic2/" itemprop="url" rel="index">
+                    <span itemprop="name">Ionic2</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/31/ionic2-with-Visual-Studio-IIS-Express/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Developing Ionic2 on VS2015 is much easier than I thought.</p>
+<p>You will have pretty nice debugging experience and nice emulator from Visual Studio.</p>
+<p>However, there is always a devil in the details.</p>
+<p>Let's say if you want to make the Ionic app talk to your local IIS Express that serves your Web API, it won't work right out of box.</p>
+<p>First of all, the VS Android Emulator use a virtual network adapter with a magic IP to connect to the localhost, <strong>169.254.80.80</strong>.</p>
+<p>Since IIS Express naturally only binds to localhost, it doesn't know about the IP from this adapter.</p>
+<p>To make IIS Express aware this, a new binding needs to be add in applicationhost.config.</p>
+<p>in vs2015, it is <code>.vs\config\applicationHost.config</code></p>
+<p><code>&lt;site name=&quot;ProjectName&quot; id=&quot;1&quot;&gt; [blah blah blah] &lt;bindings&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:localhost&quot; /&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:169.254.80.80&quot; /&gt; &lt;/bindings&gt; &lt;/site&gt;</code></p>
+<p>Since I forgot this one twice during the development, it deserves my time for this post.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/29/changing-styl-in-Hexo/" itemprop="url">
+                  Changing Stylus in Hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-29T10:26:14-05:00" content="2016-08-29">
+              2016-08-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Blog/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/29/changing-styl-in-Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/29/changing-styl-in-Hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
+<p>The code was just quick and dirty. It works on local as well.</p>
+<p><code>.fb-like.fb_iframe_widget{ position: relative; top: -9px; }</code></p>
+<p>However it never got to deploy to server.</p>
+<p>It turns out Stylus tranpiler seems smarter than I assumed.</p>
+<p>because the class <code>fb_iframe_widget</code> is added dynamically by facebook widget, transpiler can't find anything use above code and decide not to put into the result css.</p>
+<p>After I change it to</p>
+<p><code>.fb-like{ position: relative; top: -9px; }</code></p>
+<p>it works.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/28/gitignore/" itemprop="url">
-                  update gitignore
+                  Updating gitignore
                 </a>
               
             
@@ -446,7 +710,7 @@
               
                 
                 <a class="post-title-link" href="/2016/08/27/hexo-tags-categories/" itemprop="url">
-                  hexo tags & categories
+                  Showing hexo tags & categories
                 </a>
               
             
@@ -684,309 +948,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/23/run-foodme-in-windows/" itemprop="url">
-                  Run Foodme in windows
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-23T10:12:00-06:00" content="2013-01-23">
-              2013-01-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Learning-Resource/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning Resource</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/23/run-foodme-in-windows/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/23/run-foodme-in-windows/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Lately I finally have some time to check the awesome example, <a href="https://github.com/IgorMinar/foodme" target="_blank" rel="external">FoodMe</a>, created by AngularJS team.</p>
-<p>First of all, I am not a node.js user. So when I try to run foodme, it took me some time.</p>
-<p>And this <a href="https://docs.google.com/document/pub?id=1Fzq60IBaSf5mnsLWhig5nhZ9cJT85sresp0NqNIwh1I" target="_blank" rel="external">doc</a> doesn't really help on this. They probably never image someone doesn't know this. lol</p>
-<p>This tutorial is for people like me, a node.js newbie,</p>
-<p>Doesn't know what to do with this kinda message:</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">module.js:340</div><div class="line">    throw err;</div><div class="line">          ^</div><div class="line">Error: Cannot find module &apos;express&apos;</div><div class="line">    at Function.Module._resolveFilename (module.js:338:15)</div><div class="line">    at Function.Module._load (module.js:280:25)</div><div class="line">    at Module.require (module.js:362:17)</div><div class="line">    at require (module.js:378:17)</div><div class="line">    at Object.&lt;anonymous&gt; (H:\Work\MyProject\foodme\server\index.js:1:77)</div><div class="line">    at Module._compile (module.js:449:26)</div><div class="line">    at Object.Module._extensions..js (module.js:467:10)</div><div class="line">    at Module.load (module.js:356:32)</div><div class="line">    at Function.Module._load (module.js:312:12)</div><div class="line">    at Module.require (module.js:362:17)</div></pre></td></tr></table></figure></p>
-<p>&lt;!-- more --&gt;
-To run Foodme on Windows, you need to do the following step.</p>
-<ol>
-<li>Install <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a></li>
-</ol>
-<p>--The following steps are running in command line.--</p>
-<ol start="2">
-<li>Input <code>npm install -g express</code></li>
-</ol>
-<p>This step will install <a href="https://npmjs.org/package/express" target="_blank" rel="external">express</a></p>
-<ol start="3">
-<li>Input <code>npm install -g open</code></li>
-</ol>
-<p>This step will install <a href="https://npmjs.org/package/open" target="_blank" rel="external">open</a></p>
-<ol start="4">
-<li>
-<p>Go to  Your Path\foodme\server\</p>
-</li>
-<li>
-<p>Input <code>npm link express</code></p>
-</li>
-<li>
-<p>Input <code>npm link open</code></p>
-</li>
-<li>
-<p>Input <code>node start.js</code></p>
-</li>
-</ol>
-<p>If you see the following message, you are good to go !</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">GET / 200 4ms - 1.58kb</div><div class="line">GET /css/app.css 200 6ms - 2.02kb</div><div class="line">GET /js/app.js 200 6ms - 650</div><div class="line">GET /lib/angular/angular-resource.js 200 8ms - 15.93kb</div><div class="line">GET /js/controllers/CustomerController.js 200 8ms - 401</div><div class="line">GET /css/bootstrap-united.css 200 13ms - 126.41kb</div><div class="line">GET /js/controllers/NavbarController.js 200 8ms - 207</div><div class="line">GET /js/controllers/RestaurantsController.js 200 8ms - 295</div><div class="line">GET /js/services/customer.js 200 7ms - 476</div><div class="line">GET /js/services/localStorage.js 200 6ms - 72</div><div class="line">GET /js/services/Restaurant.js 200 5ms - 134</div><div class="line">GET /lib/angular/angular.js 200 19ms - 479.29kb</div><div class="line">GET /css/Ubuntu.font 200 1ms - 148</div><div class="line">GET /views/restaurants.html 200 8ms - 3.11kb</div><div class="line">GET /favicon.ico 200 2ms - 1.12kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /api/restaurant 200 3ms - 14.71kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /views/customer.html 200 4ms - 1.18kb</div><div class="line">GET /img/restaurants/tofuparadise.jpg 200 6ms - 15.89kb</div><div class="line">GET /img/restaurants/robatayaki.jpg 200 8ms - 12.82kb</div><div class="line">GET /img/restaurants/khartoum.jpg 200 8ms - 17.16kb</div><div class="line">GET /img/restaurants/bateaurouge.jpg 200 11ms - 15.08kb</div><div class="line">GET /img/restaurants/sallys.jpg 200 9ms - 17.59kb</div><div class="line">GET /img/restaurants/saucy.jpg 200 9ms - 14.33kb</div><div class="line">GET /img/restaurants/speisewagen.jpg 200 7ms - 15.26kb</div><div class="line">GET /img/restaurants/czechpoint.jpg 200 9ms - 10.95kb</div><div class="line">GET /img/restaurants/beijing.jpg 200 7ms - 17.54kb</div><div class="line">GET /img/restaurants/satay.jpg 200 9ms - 14.89kb</div><div class="line">GET /img/restaurants/cancun.jpg 200 10ms - 15.07kb</div><div class="line">GET /img/restaurants/curryup.jpg 200 8ms - 18.66kb</div><div class="line">GET /img/restaurants/carthage.jpg 200 9ms - 10.24kb</div><div class="line">GET /img/restaurants/burgerama.jpg 200 9ms - 11.76kb</div><div class="line">GET /img/restaurants/littleprague.jpg 200 5ms - 13.13kb</div><div class="line">GET /img/restaurants/dragon.jpg 200 5ms - 16.72kb</div><div class="line">GET /img/restaurants/kohlhaus.jpg 200 7ms - 13.66kb</div><div class="line">GET /img/restaurants/babythai.jpg 200 6ms - 17.35kb</div><div class="line">GET /img/restaurants/wholetamale.jpg 200 8ms - 14.32kb</div><div class="line">GET /img/restaurants/taqueria.jpg 200 6ms - 11.74kb</div><div class="line">GET /img/restaurants/pedros.jpg 200 7ms - 12.42kb</div><div class="line">GET /img/restaurants/bhangra.jpg 200 10ms - 14.03kb</div><div class="line">GET /img/restaurants/superwonton.jpg 200 8ms - 16.15kb</div><div class="line">GET /img/restaurants/sakura.jpg 200 7ms - 11.27kb</div><div class="line">GET /img/restaurants/naansequitur.jpg 200 8ms - 16.77kb</div><div class="line">GET /img/restaurants/shandong.jpg 200 8ms - 14.4kb</div><div class="line">GET /img/restaurants/currygalore.jpg 200 7ms - 10.26kb</div><div class="line">GET /img/restaurants/esthers.jpg 200 55ms - 11.85kb</div><div class="line">GET /img/restaurants/beans.jpg 200 9ms - 15.7kb</div><div class="line">GET /img/restaurants/north.jpg 200 11ms - 11.78kb</div><div class="line">GET /img/restaurants/jeeves.jpg 200 9ms - 11.19kb</div><div class="line">GET /img/restaurants/zardoz.jpg 200 10ms - 16.09kb</div><div class="line">GET /img/restaurants/angular.jpg 200 7ms - 13.72kb</div><div class="line">GET /img/restaurants/littlepigs.jpg 200 43ms - 12.64kb</div><div class="line">GET /img/restaurants/flavia.jpg 200 11ms - 14.19kb</div><div class="line">GET /img/restaurants/luigis.jpg 200 10ms - 16.36kb</div><div class="line">GET /img/restaurants/thick.jpg 200 8ms - 14.13kb</div><div class="line">GET /img/restaurants/wheninrome.jpg 200 8ms - 20.15kb</div><div class="line">GET /img/restaurants/pizza76.jpg 200 5ms - 20.44kb</div><div class="line">GET /favicon.ico 304 1ms</div><div class="line">GET /img/customer_bkg.jpg 200 2ms - 32.42kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /robots.txt 404 1ms</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/20/filtering-by-multiple-specific-model-properties/" itemprop="url">
-                  Filtering by Multiple Specific Model Properties
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-20T14:12:00-06:00" content="2013-01-20">
-              2013-01-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Filter/" itemprop="url" rel="index">
-                    <span itemprop="name">Filter</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/20/filtering-by-multiple-specific-model-properties/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/20/filtering-by-multiple-specific-model-properties/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>####Objective####</p>
-<ol>
-<li>Example of showing to filter by Multiple Specific Model Properties by using [filter function][0]</li>
-<li>Example of [currency filter][1]
-&lt;!-- more --&gt;
-&lt;iframe style=&quot;width: 100%; height: 320px&quot; src=&quot;http://embed.plnkr.co/scuPYt&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</li>
-</ol>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng009/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"span4 pull-right"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Search for smartphone in model and brand"</span> <span class="attr">ng-model</span>=<span class="string">"query"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"results"</span> <span class="attr">class</span>=<span class="string">"table table-striped table-bordered table-hover"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Brand<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Model<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">ng-repeat</span>=<span class="string">"smartphone in smartphones | filter: search "</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"brand"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"model"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"price"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng009/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, []);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.smartphones = [</div><div class="line">        &#123;brand: <span class="string">'Apple'</span>, model: <span class="string">'iPhone 4S'</span>, price: <span class="string">'999'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'Samsung'</span>, model: <span class="string">'SIII'</span>, price: <span class="string">'888'</span> &#125;,</div><div class="line">        &#123;brand: <span class="string">'LG'</span>, model: <span class="string">'Optimus'</span>, price: <span class="string">'777'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'htc'</span>, model: <span class="string">'Desire'</span>, price: <span class="string">'666'</span>&#125;,</div><div class="line">        &#123;brand: <span class="string">'Nokia'</span>, model: <span class="string">'N9'</span>, price: <span class="string">'555'</span>&#125;</div><div class="line">    ];</div><div class="line">    $scope.search = <span class="function"><span class="keyword">function</span> (<span class="params">row</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> !!((row.brand.indexOf($scope.query || <span class="string">''</span>) !== <span class="number">-1</span> || row.model.indexOf($scope.query || <span class="string">''</span>) !== <span class="number">-1</span>));</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
-[0]:http://docs.angularjs.org/api/ng.filter:filter
-[1]:http://docs.angularjs.org/api/ng.filter:currency</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1032,7 +993,7 @@ To run Foodme on Windows, you need to do the following step.</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1040,7 +1001,7 @@ To run Foodme on Windows, you need to do the following step.</p>
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1049,7 +1010,7 @@ To run Foodme on Windows, you need to do the following step.</p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1192,21 +1153,21 @@ To run Foodme on Windows, you need to do the following step.</p>
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.4"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.4"></script>
 
 
 
   
-  
-
   
 
   
 
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.4"></script>
 
 
 
