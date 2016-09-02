@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[CSS namespacing/ architecture idea]]></title>
+      <url>http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/</url>
+      <content type="html"><![CDATA[<p>Just come across an interesting idea for CSS</p>
+<p>In a word, <strong>prefixed the class name with an indicator of the class' purpose and scope.</strong></p>
+<ul>
+<li>.o- // an object, an unstyled design pattern</li>
+<li>.c- // a component, a styled piece of UI</li>
+<li>.a- // an alteration, an UI-independent override</li>
+<li>.t- // a theme, change UI appearance based on theme</li>
+<li>.is-, .has-, .for- // state-based styles</li>
+<li>.js- // used for binding behavior to components</li>
+</ul>
+<p>In each layer of the inverted triangle, the scope of the styles get narrower and more specific.
+At the bottom of this is a layer of utility or helper classes, referred to as “trumps”, that contains high-specificity selectors (<a href="https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54#.xg8gjc766" target="_blank" rel="external">ref</a>).</p>
+<p>This probably become less important now when using Angular2 component with style attached, but still a good thought.</p>
+<p>more:</p>
+<ul>
+<li><a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731" target="_blank" rel="external">Manage large-scale web projects with new CSS architecture ITCSS</a></li>
+<li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/" target="_blank" rel="external">More Transparent UI Code with Namespaces</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[image path in github page]]></title>
       <url>http://maxisam.github.com/2016/09/01/image-path-in-github-page/</url>
       <content type="html"><![CDATA[<p>Another detail.</p>
