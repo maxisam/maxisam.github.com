@@ -317,6 +317,135 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/28/gitignore/" itemprop="url">
+                  Updating gitignore
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-28T00:55:27-05:00" content="2016-08-28">
+              2016-08-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/28/gitignore/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/28/gitignore/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>How to refresh the file index so the files I want ignored get ignored ?</p>
+<h4>Signal file</h4>
+<p><code>git rm --cached filename</code></p>
+<p>to undo <code>use git add filename</code></p>
+<hr>
+<h4>Redo the whole .gitignore</h4>
+<p><strong>First commit any outstanding code changes</strong>, and then, run this command:</p>
+<p><code>git rm -r --cached .</code></p>
+<p>This removes any changed files from the index(staging area), then just run:</p>
+<p><code>git add .</code></p>
+<p>Commit it:</p>
+<p><code>git commit -m &quot;redo .gitignore&quot;</code></p>
+<p>kudos to <a href="http://stackoverflow.com/a/1139797/667767" target="_blank" rel="external">takeshin@stackoverflow</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/27/hexo-tags-categories/" itemprop="url">
                   Showing hexo tags & categories
                 </a>
@@ -859,143 +988,6 @@ To run Foodme on Windows, you need to do the following step.</p>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/20/$observe-vs-$watch/" itemprop="url">
-                  $observe vs $watch
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-20T02:09:00-06:00" content="2013-01-20">
-              2013-01-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
-                    <span itemprop="name">Directive</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/20/$observe-vs-$watch/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/20/$observe-vs-$watch/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>####Objective####</p>
-<ol>
-<li>Example of showing the difference between <a href="http://docs.angularjs.org/guide/directive" target="_blank" rel="external">observe</a> and <a href="http://docs.angularjs.org/guide/directive" target="_blank" rel="external">watch</a></li>
-<li>Example of showing <a href="http://docs.angularjs.org/api/ng.$rootScope.Scope#$eval" target="_blank" rel="external">$eval</a></li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin: 20px 0; width: 100%; height: 250px&quot; src=&quot;http://embed.plnkr.co/jxGl8aLKy1snCMlRbRxC&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng008/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"xinput"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">my-dir</span> <span class="attr">textinput</span>=<span class="string">'xinput'</span> <span class="attr">valinput</span>=<span class="string">''</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng008/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'myDir'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            scope: <span class="literal">true</span>,</div><div class="line">            template: <span class="string">'&lt;div&gt;observe-textinput: &lt;/div&gt;&lt;div&gt;observe-valinput: &lt;/div&gt;&lt;div&gt;eval: &lt;/div&gt;&lt;div&gt;eval2: &lt;/div&gt;&lt;div&gt;watch: &lt;/div&gt;'</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, iElement, iAttrs</span>) </span>&#123;</div><div class="line">                iAttrs.$observe(<span class="string">'textinput'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">                    scope.observe1 = value;</div><div class="line">                &#125;);</div><div class="line">                iAttrs.$observe(<span class="string">'valinput'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">                    scope.observe2 = value;</div><div class="line">                &#125;);</div><div class="line">                scope.$watch(iAttrs.textinput, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal, scope</span>) </span>&#123;</div><div class="line">                    scope.evalVal = scope.$<span class="built_in">eval</span>(iAttrs.textinput);</div><div class="line">                    scope.evalVal2 = scope.$<span class="built_in">eval</span>(<span class="string">'xinput'</span>);</div><div class="line">                    scope.watchVal = newVal;</div><div class="line">                &#125;, <span class="literal">false</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.xinput = <span class="string">'test'</span>;</div><div class="line">&#125;]);</div><div class="line"></div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1041,7 +1033,7 @@ To run Foodme on Windows, you need to do the following step.</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">22</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1058,7 +1050,7 @@ To run Foodme on Windows, you need to do the following step.</p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

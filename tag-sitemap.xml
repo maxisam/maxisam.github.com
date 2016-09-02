@@ -100,13 +100,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Hexo/</loc>
-        <lastmod>2016-08-29T21:36:06.678Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/Stylus/</loc>
         <lastmod>2016-08-29T21:36:06.678Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -158,6 +151,20 @@
     <url>
         <loc>http://maxisam.github.com/tags/CSS/</loc>
         <lastmod>2016-09-02T05:38:33.220Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Hexo/</loc>
+        <lastmod>2016-09-02T05:49:29.112Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/github/</loc>
+        <lastmod>2016-09-02T05:49:29.112Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

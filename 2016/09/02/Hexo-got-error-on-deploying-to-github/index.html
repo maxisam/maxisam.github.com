@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.4" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="personal," />
+  <meta name="keywords" content="Hexo,github," />
 
 
 
@@ -95,25 +95,19 @@
 
 
 
-<meta name="description" content="New year, new resolutions.
-This time, my resolution is writing blog.
-It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.
-Not 1">
+<meta name="description" content="Today when I tried to deploy, it throws me this. It was working fine but just not today.
+bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2013">
-<meta property="og:url" content="http://maxisam.github.com/2013/01/04/2013/index.html">
+<meta property="og:title" content="Hexo got error on deploying to github">
+<meta property="og:url" content="http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/index.html">
 <meta property="og:site_name" content="Thought &amp; &lt;/code&gt;">
-<meta property="og:description" content="New year, new resolutions.
-This time, my resolution is writing blog.
-It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.
-Not 1">
-<meta property="og:updated_time" content="2016-08-28T05:12:13.856Z">
+<meta property="og:description" content="Today when I tried to deploy, it throws me this. It was working fine but just not today.
+bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not">
+<meta property="og:updated_time" content="2016-09-02T05:49:29.112Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2013">
-<meta name="twitter:description" content="New year, new resolutions.
-This time, my resolution is writing blog.
-It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.
-Not 1">
+<meta name="twitter:title" content="Hexo got error on deploying to github">
+<meta name="twitter:description" content="Today when I tried to deploy, it throws me this. It was working fine but just not today.
+bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not">
 <meta name="twitter:creator" content="@[object Object]">
 <link rel="publisher" href="[object Object]">
 
@@ -136,9 +130,9 @@ Not 1">
 
 
 
-  <link rel="canonical" href="http://maxisam.github.com/2013/01/04/2013/"/>
+  <link rel="canonical" href="http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/"/>
 
-  <title> 2013 | Thought &amp; &lt;/code&gt; </title>
+  <title> Hexo got error on deploying to github | Thought &amp; &lt;/code&gt; </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -327,7 +321,7 @@ Not 1">
             
             
               
-                2013
+                Hexo got error on deploying to github
               
             
           </h1>
@@ -339,8 +333,8 @@ Not 1">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-04T00:33:00-06:00" content="2013-01-04">
-              2013-01-04
+            <time itemprop="dateCreated" datetime="2016-09-02T00:40:47-05:00" content="2016-09-02">
+              2016-09-02
             </time>
           </span>
 
@@ -360,11 +354,32 @@ Not 1">
 
                 
                 
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Blog/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
 
               
             </span>
           
 
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/02/Hexo-got-error-on-deploying-to-github/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/02/Hexo-got-error-on-deploying-to-github/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
           
           
@@ -381,13 +396,15 @@ Not 1">
       
 
       
-        <p>New year, new resolutions.</p>
-<p>This time, my resolution is writing blog.</p>
-<p>It took me like a weekish to figure out the whole thing with Git/GitHub/Jekyll/Octopress and customize it with my geek taste.</p>
-<p>Not 100% but good enough for me to build this blog.</p>
-<p>Feeling a little embarrass that I haven't learnt Git for this whole time and stayed in the comfort room created by TFS.</p>
-<p>I guess that is why we need new resolutions to break some old habits :).</p>
-<p>Happy new year.</p>
+        <p>Today when I tried to deploy, it throws me this. It was working fine but just not today.</p>
+<p><code>bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not read Username for 'https://github.com': No error</code></p>
+<p>And VS code keeps popping up the dialog for git's username and password.</p>
+<p>Google it, most of people handle it by switching to SSH.</p>
+<p>But it actually can be fixed by 2 simple steps</p>
+<ul>
+<li>Git Credential Manager for Windows</li>
+<li>run command <code>git config --global credential.helper wincred</code> <a href="https://help.github.com/enterprise/2.7/user/articles/caching-your-github-password-in-git/" target="_blank" rel="external">link</a></li>
+</ul>
 
       
     </div>
@@ -410,7 +427,9 @@ Not 1">
       
         <div class="post-tags">
           
-            <a href="/tags/personal/" rel="tag">#personal</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/github/" rel="tag">#github</a>
           
         </div>
       
@@ -419,17 +438,13 @@ Not 1">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2012/12/31/firsttry/" rel="next" title="First Try">
-                <i class="fa fa-chevron-left"></i> First Try
+              <a href="/2016/09/01/CSS-namespacing-architecture-idea/" rel="next" title="CSS namespacing/ architecture idea">
+                <i class="fa fa-chevron-left"></i> CSS namespacing/ architecture idea
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2013/01/06/octopress/" rel="prev" title="Octopress">
-                Octopress <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,6 +490,17 @@ Not 1">
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -721,9 +747,9 @@ Not 1">
 
     <script type="text/javascript">
       var disqus_shortname = 'maxisam';
-      var disqus_identifier = '2013/01/04/2013/';
-      var disqus_title = "2013";
-      var disqus_url = 'http://maxisam.github.com/2013/01/04/2013/';
+      var disqus_identifier = '2016/09/02/Hexo-got-error-on-deploying-to-github/';
+      var disqus_title = "Hexo got error on deploying to github";
+      var disqus_url = 'http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -734,6 +760,8 @@ Not 1">
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
