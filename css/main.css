@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4e050;
+  background: #2fffcd;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2056,10 +2056,6 @@ a.search-result {
 .site-uv::after {
   content: "|";
   padding-left: 10px;
-}
-.fb-like {
-  position: relative;
-  top: -9px;
 }
 .use-motion .post {
   opacity: 0;

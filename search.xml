@@ -73,12 +73,12 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
       <url>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</url>
       <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
 <p>The code was just quick and dirty. It works on local as well.</p>
-<p><code>.fb-like.fb_iframe_widget{ position: relative; top: -9px; }</code></p>
+<p><code>.fb-like.fb_iframe_widget{ vertical-align: top; }</code></p>
 <p>However it never got to deploy to server.</p>
 <p>It turns out Stylus tranpiler seems smarter than I assumed.</p>
 <p>because the class <code>fb_iframe_widget</code> is added dynamically by facebook widget, transpiler can't find anything use above code and decide not to put into the result css.</p>
 <p>After I change it to</p>
-<p><code>.fb-like{ position: relative; top: -9px; }</code></p>
+<p><code>.fb-like{ vertical-align: top; }</code></p>
 <p>it works.</p>
 ]]></content>
     </entry>

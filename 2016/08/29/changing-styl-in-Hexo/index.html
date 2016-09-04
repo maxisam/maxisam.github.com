@@ -92,20 +92,20 @@
 
 <meta name="description" content="I was trying to fix the css in my blog to make fb like button align with google+ button.
 The code was just quick and dirty. It works on local as well.
-.fb-like.fb_iframe_widget{ position: relative; to">
+.fb-like.fb_iframe_widget{ vertical-align: top; }">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Changing Stylus in Hexo">
 <meta property="og:url" content="http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/index.html">
 <meta property="og:site_name" content="Thought &amp; &lt;/code&gt;">
 <meta property="og:description" content="I was trying to fix the css in my blog to make fb like button align with google+ button.
 The code was just quick and dirty. It works on local as well.
-.fb-like.fb_iframe_widget{ position: relative; to">
-<meta property="og:updated_time" content="2016-08-29T21:36:06.678Z">
+.fb-like.fb_iframe_widget{ vertical-align: top; }">
+<meta property="og:updated_time" content="2016-09-04T06:42:35.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Changing Stylus in Hexo">
 <meta name="twitter:description" content="I was trying to fix the css in my blog to make fb like button align with google+ button.
 The code was just quick and dirty. It works on local as well.
-.fb-like.fb_iframe_widget{ position: relative; to">
+.fb-like.fb_iframe_widget{ vertical-align: top; }">
 <meta name="twitter:creator" content="@SamINngShirt">
 <link rel="publisher" href="https://plus.google.com/u/0/+SamLinMaxisam">
 
@@ -396,12 +396,12 @@ The code was just quick and dirty. It works on local as well.
       
         <p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
 <p>The code was just quick and dirty. It works on local as well.</p>
-<p><code>.fb-like.fb_iframe_widget{ position: relative; top: -9px; }</code></p>
+<p><code>.fb-like.fb_iframe_widget{ vertical-align: top; }</code></p>
 <p>However it never got to deploy to server.</p>
 <p>It turns out Stylus tranpiler seems smarter than I assumed.</p>
 <p>because the class <code>fb_iframe_widget</code> is added dynamically by facebook widget, transpiler can't find anything use above code and decide not to put into the result css.</p>
 <p>After I change it to</p>
-<p><code>.fb-like{ position: relative; top: -9px; }</code></p>
+<p><code>.fb-like{ vertical-align: top; }</code></p>
 <p>it works.</p>
 
       
