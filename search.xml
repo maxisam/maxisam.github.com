@@ -71,7 +71,7 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
     <entry>
       <title><![CDATA[Changing Stylus in Hexo]]></title>
       <url>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</url>
-      <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
+      <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make &quot;facebook like&quot; button align with google+ button.</p>
 <p>The code was just quick and dirty. It works on local as well.</p>
 <p><code>.fb-like.fb_iframe_widget{ vertical-align: top; }</code></p>
 <p>However it never got to deploy to server.</p>

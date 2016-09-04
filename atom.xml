@@ -166,9 +166,9 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
     <link href="http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/"/>
     <id>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</id>
     <published>2016-08-29T15:26:14.000Z</published>
-    <updated>2016-09-04T06:42:35.807Z</updated>
+    <updated>2016-09-04T06:46:08.287Z</updated>
     
-    <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make fb like button align with google+ button.</p>
+    <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make &quot;facebook like&quot; button align with google+ button.</p>
 <p>The code was just quick and dirty. It works on local as well.</p>
 <p><code>.fb-like.fb_iframe_widget{ vertical-align: top; }</code></p>
 <p>However it never got to deploy to server.</p>
@@ -181,8 +181,7 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
     
     <summary type="html">
     
-      &lt;p&gt;I was trying to fix the css in my blog to make fb like button align with google+ button.&lt;/p&gt;
-&lt;p&gt;The code was just quick and dirty. It wor
+      facebook like button not align with other social button and the way Hexo transpile Stylus
     
     </summary>
     
