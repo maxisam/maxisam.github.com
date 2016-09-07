@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.5" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CSS," />
+  <meta name="keywords" content="Angular2,Webpack," />
 
 
 
@@ -90,28 +90,16 @@
 
 
 
-<meta name="description" content="Just come across an interesting idea for CSS
-In a word, prefixed the class name with an indicator of the class&apos; purpose and scope.
-
-.o- // an object, an unstyled design pattern
-.c- // a component, a s">
+<meta name="description" content="Build an Angular2 Library with Webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS namespacing/ architecture idea">
-<meta property="og:url" content="http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/index.html">
+<meta property="og:title" content="Build an Angular2 Library with Webpack">
+<meta property="og:url" content="http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/index.html">
 <meta property="og:site_name" content="Thought &amp; &lt;/code&gt;">
-<meta property="og:description" content="Just come across an interesting idea for CSS
-In a word, prefixed the class name with an indicator of the class&apos; purpose and scope.
-
-.o- // an object, an unstyled design pattern
-.c- // a component, a s">
-<meta property="og:updated_time" content="2016-09-02T05:38:33.220Z">
+<meta property="og:description" content="Build an Angular2 Library with Webpack">
+<meta property="og:updated_time" content="2016-09-07T04:54:07.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS namespacing/ architecture idea">
-<meta name="twitter:description" content="Just come across an interesting idea for CSS
-In a word, prefixed the class name with an indicator of the class&apos; purpose and scope.
-
-.o- // an object, an unstyled design pattern
-.c- // a component, a s">
+<meta name="twitter:title" content="Build an Angular2 Library with Webpack">
+<meta name="twitter:description" content="Build an Angular2 Library with Webpack">
 <meta name="twitter:creator" content="@SamINngShirt">
 <link rel="publisher" href="https://plus.google.com/u/0/+SamLinMaxisam">
 
@@ -134,9 +122,9 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
 
 
 
-  <link rel="canonical" href="http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/"/>
+  <link rel="canonical" href="http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/"/>
 
-  <title> CSS namespacing/ architecture idea | Thought &amp; &lt;/code&gt; </title>
+  <title> Build an Angular2 Library with Webpack | Thought &amp; &lt;/code&gt; </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -325,7 +313,7 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
             
             
               
-                CSS namespacing/ architecture idea
+                Build an Angular2 Library with Webpack
               
             
           </h1>
@@ -337,8 +325,8 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-09-01T22:50:38-05:00" content="2016-09-01">
-              2016-09-01
+            <time itemprop="dateCreated" datetime="2016-09-06T22:41:30-05:00" content="2016-09-06">
+              2016-09-06
             </time>
           </span>
 
@@ -351,8 +339,20 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/Angular2/" itemprop="url" rel="index">
+                    <span itemprop="name">Angular2</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Angular2/Webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">Webpack</span>
                   </a>
                 </span>
 
@@ -367,8 +367,8 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/01/CSS-namespacing-architecture-idea/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/01/CSS-namespacing-architecture-idea/" itemprop="commentsCount"></span>
+                <a href="/2016/09/06/Build-an-Angular2-Library/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/06/Build-an-Angular2-Library/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -388,24 +388,26 @@ In a word, prefixed the class name with an indicator of the class&apos; purpose 
       
 
       
-        <p>Just come across an interesting idea for CSS</p>
-<p>In a word, <strong>prefixed the class name with an indicator of the class' purpose and scope.</strong></p>
-<ul>
-<li>.o- // an object, an unstyled design pattern</li>
-<li>.c- // a component, a styled piece of UI</li>
-<li>.a- // an alteration, an UI-independent override</li>
-<li>.t- // a theme, change UI appearance based on theme</li>
-<li>.is-, .has-, .for- // state-based styles</li>
-<li>.js- // used for binding behavior to components</li>
-</ul>
-<p>In each layer of the inverted triangle, the scope of the styles get narrower and more specific.
-At the bottom of this is a layer of utility or helper classes, referred to as ‚Äútrumps‚Äù, that contains high-specificity selectors (<a href="https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54#.xg8gjc766" target="_blank" rel="external">ref</a>).</p>
-<p>This probably become less important now when using Angular2 component with style attached, but still a good thought.</p>
-<p>more:</p>
-<ul>
-<li><a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731" target="_blank" rel="external">Manage large-scale web projects with new CSS architecture ITCSS</a></li>
-<li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/" target="_blank" rel="external">More Transparent UI Code with Namespaces</a></li>
-</ul>
+        <p>I was trying to build an Angular2 library, but it actually took me a while to figure it out. I hope this post will help me or others in the future.</p>
+<p>Here is the project, <a href="https://github.com/maxisam/angular2-clipboard" target="_blank" rel="external">angular2-clipboard</a></p>
+<p>It is written in Typescript. However, people want to have a build in plain old Javascript.</p>
+<p>My first thought was pack it with Webpack.</p>
+<p><strong>But how to exclude something like Angular2 from this library ?</strong></p>
+<p>In Webpack, there is a option call <a href="https://webpack.github.io/docs/library-and-externals.html" target="_blank" rel="external">externals</a></p>
+<p>Here is code I used in my angular2-clipboard project</p>
+<p><code>externals: { &quot;clipboard&quot;: &quot;clipboard&quot;, '@angular/core': { root: ['ng', 'core'], commonjs: '@angular/core', commonjs2: '@angular/core', amd: '@angular/core' }, 'rxjs/Rx': { root: 'Rx', commonjs: 'rxjs/Rx', commonjs2: 'rxjs/Rx', amd: 'rxjs/Rx' }, 'rxjs/add/operator/let': { root: ['Rx', 'Observable', 'prototype'], commonjs: 'rxjs/add/operator/let', commonjs2: 'rxjs/add/operator/let', amd: 'rxjs/add/operator/let' }</code></p>
+<p>But it doesn't work. If you check the output js, you will find @angular/core module is like</p>
+<p>`<br>
+function(module, exports) {</p>
+<pre><code>module.exports = undefined;
+</code></pre>
+<p>}
+`</p>
+<p>It turns out there are 2 settings in output section needs to set. <a href="https://webpack.github.io/docs/configuration.html#output-library" target="_blank" rel="external">library and libraryTarget</a></p>
+<p>Here is the example,</p>
+<p><code>output: { path: './', filename: '[name].js', library: 'ngII', // you can call it whatever you want. libraryTarget: 'umd' }</code></p>
+<p>Ref 1: <a href="http://tomasalabes.me/blog/_site/web-development/2016/04/30/Webpack-Series-Part-1.html" target="_blank" rel="external">Webpack Series (Part 1): Some Configs Explained</a>
+Ref 2: <a href="https://github.com/ng-bootstrap/ng-bootstrap" target="_blank" rel="external">NG Bootstrap</a></p>
 
       
     </div>
@@ -428,7 +430,9 @@ At the bottom of this is a layer of utility or helper classes, referred to as ‚Ä
       
         <div class="post-tags">
           
-            <a href="/tags/CSS/" rel="tag">#CSS</a>
+            <a href="/tags/Angular2/" rel="tag">#Angular2</a>
+          
+            <a href="/tags/Webpack/" rel="tag">#Webpack</a>
           
         </div>
       
@@ -437,17 +441,13 @@ At the bottom of this is a layer of utility or helper classes, referred to as ‚Ä
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/01/image-path-in-github-page/" rel="next" title="image path in github page">
-                <i class="fa fa-chevron-left"></i> image path in github page
+              <a href="/2016/09/02/Hexo-got-error-on-deploying-to-github/" rel="next" title="Hexo got error on deploying to github">
+                <i class="fa fa-chevron-left"></i> Hexo got error on deploying to github
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/02/Hexo-got-error-on-deploying-to-github/" rel="prev" title="Hexo got error on deploying to github">
-                Hexo got error on deploying to github <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -750,9 +750,9 @@ At the bottom of this is a layer of utility or helper classes, referred to as ‚Ä
 
     <script type="text/javascript">
       var disqus_shortname = 'maxisam';
-      var disqus_identifier = '2016/09/01/CSS-namespacing-architecture-idea/';
-      var disqus_title = "CSS namespacing/ architecture idea";
-      var disqus_url = 'http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/';
+      var disqus_identifier = '2016/09/06/Build-an-Angular2-Library/';
+      var disqus_title = "Build an Angular2 Library with Webpack";
+      var disqus_url = 'http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

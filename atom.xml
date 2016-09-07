@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-09-04T01:54:41.836Z</updated>
+  <updated>2016-09-07T04:54:07.254Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Build an Angular2 Library with Webpack</title>
+    <link href="http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/"/>
+    <id>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</id>
+    <published>2016-09-07T03:41:30.000Z</published>
+    <updated>2016-09-07T04:54:07.254Z</updated>
+    
+    <content type="html"><![CDATA[<p>I was trying to build an Angular2 library, but it actually took me a while to figure it out. I hope this post will help me or others in the future.</p>
+<p>Here is the project, <a href="https://github.com/maxisam/angular2-clipboard" target="_blank" rel="external">angular2-clipboard</a></p>
+<p>It is written in Typescript. However, people want to have a build in plain old Javascript.</p>
+<p>My first thought was pack it with Webpack.</p>
+<p><strong>But how to exclude something like Angular2 from this library ?</strong></p>
+<p>In Webpack, there is a option call <a href="https://webpack.github.io/docs/library-and-externals.html" target="_blank" rel="external">externals</a></p>
+<p>Here is code I used in my angular2-clipboard project</p>
+<p><code>externals: { &quot;clipboard&quot;: &quot;clipboard&quot;, '@angular/core': { root: ['ng', 'core'], commonjs: '@angular/core', commonjs2: '@angular/core', amd: '@angular/core' }, 'rxjs/Rx': { root: 'Rx', commonjs: 'rxjs/Rx', commonjs2: 'rxjs/Rx', amd: 'rxjs/Rx' }, 'rxjs/add/operator/let': { root: ['Rx', 'Observable', 'prototype'], commonjs: 'rxjs/add/operator/let', commonjs2: 'rxjs/add/operator/let', amd: 'rxjs/add/operator/let' }</code></p>
+<p>But it doesn't work. If you check the output js, you will find @angular/core module is like</p>
+<p>`<br>
+function(module, exports) {</p>
+<pre><code>module.exports = undefined;
+</code></pre>
+<p>}
+`</p>
+<p>It turns out there are 2 settings in output section needs to set. <a href="https://webpack.github.io/docs/configuration.html#output-library" target="_blank" rel="external">library and libraryTarget</a></p>
+<p>Here is the example,</p>
+<p><code>output: { path: './', filename: '[name].js', library: 'ngII', // you can call it whatever you want. libraryTarget: 'umd' }</code></p>
+<p>Ref 1: <a href="http://tomasalabes.me/blog/_site/web-development/2016/04/30/Webpack-Series-Part-1.html" target="_blank" rel="external">Webpack Series (Part 1): Some Configs Explained</a>
+Ref 2: <a href="https://github.com/ng-bootstrap/ng-bootstrap" target="_blank" rel="external">NG Bootstrap</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Build an Angular2 Library with Webpack
+    
+    </summary>
+    
+      <category term="Angular2" scheme="http://maxisam.github.com/categories/Angular2/"/>
+    
+      <category term="Webpack" scheme="http://maxisam.github.com/categories/Angular2/Webpack/"/>
+    
+    
+      <category term="Angular2" scheme="http://maxisam.github.com/tags/Angular2/"/>
+    
+      <category term="Webpack" scheme="http://maxisam.github.com/tags/Webpack/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo got error on deploying to github</title>
@@ -435,9 +481,9 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
     
-      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
-    
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
+    
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
     
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
     
@@ -484,9 +530,9 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
     
-      <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
-    
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
+    
+      <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
     
   </entry>
   
@@ -748,58 +794,6 @@ To run Foodme on Windows, you need to do the following step.</p>
     <summary type="html">
     
       &lt;p&gt;One of the highlight feature of Octopress is &lt;a href=&quot;http://octopress.org/docs/plugins/codeblock/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Code b
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
-    
-    
-      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Octopress</title>
-    <link href="http://maxisam.github.com/2013/01/06/octopress/"/>
-    <id>http://maxisam.github.com/2013/01/06/octopress/</id>
-    <published>2013-01-07T01:54:00.000Z</published>
-    <updated>2016-08-28T04:47:57.003Z</updated>
-    
-    <content type="html"><![CDATA[<p>I never used Ruby but heard a lot of nice thing about it.</p>
-<p><a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">Octopress</a> is Ruby-based blogging framework for <a href="https://github.com/mojombo/jekyll#readme" title="Jekyll" target="_blank" rel="external">Jekyll</a>, which is <a href="https://help.github.com/articles/using-jekyll-with-pages" target="_blank" rel="external">supported by GitHub</a>.</p>
-<p>&lt;!-- more --&gt;
-It has several good things I like.</p>
-<ol>
-<li>I can write blog in <a href="http://en.wikipedia.org/wiki/Markdown" title="Markdown Wiki" target="_blank" rel="external">Markdown</a> format.</li>
-<li>I can have a lot of control of your blog.</li>
-<li>Using it with GitHub means you can have verison control for your blog.</li>
-<li>It is easy to insert code snippt into your blog post.</li>
-</ol>
-<p>However, there are few things I don't like either</p>
-<ol>
-<li>It uses <a href="http://sass-lang.com/" target="_blank" rel="external">SASS</a> instead of LESS. They are similar tho.</li>
-<li>It doesn't really use twitter bootstrap way to build the framework.
-(Well, I can change it, but it takes time. )</li>
-</ol>
-<p>Here are some resource for Octopress beside the <a href="http://octopress.org/blog/2011/07/23/octopress-20-surfaces/" title="Octopress" target="_blank" rel="external">official site</a>.</p>
-<ol>
-<li>Install and setup : <a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/" target="_blank" rel="external">Creating a Github Blog Using Octopress</a> &amp; <a href="http://www.viggiosoft.com/blog/blog/2011/09/28/setting-up-a-blog-with-octopress/" target="_blank" rel="external">Setting Up a Blog With Octopress</a></li>
-<li>Themes : <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes" target="_blank" rel="external">3rd Party Octopress Themes</a> &amp; <a href="http://octopressthemes.com/" target="_blank" rel="external">The ultimate Octopress themes &amp; plugins collection</a></li>
-<li>Plugins : <a href="https://github.com/imathis/octopress/wiki/3rd-party-plugins" target="_blank" rel="external">3rd party plugins</a></li>
-<li>Tip:
-<ol>
-<li><a href="http://webmasters.stackexchange.com/questions/15552/how-do-you-exclude-yourself-from-google-analytics-on-your-website-using-cookies" target="_blank" rel="external">How to exclude yourself from Google Analytics</a></li>
-</ol>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;I never used Ruby but heard a lot of nice thing about it.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://octopress.org/blog/2011/07/23/octopress-20-surfaces/&quot; ti
     
     </summary>
     

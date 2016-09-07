@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[Build an Angular2 Library with Webpack]]></title>
+      <url>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</url>
+      <content type="html"><![CDATA[<p>I was trying to build an Angular2 library, but it actually took me a while to figure it out. I hope this post will help me or others in the future.</p>
+<p>Here is the project, <a href="https://github.com/maxisam/angular2-clipboard" target="_blank" rel="external">angular2-clipboard</a></p>
+<p>It is written in Typescript. However, people want to have a build in plain old Javascript.</p>
+<p>My first thought was pack it with Webpack.</p>
+<p><strong>But how to exclude something like Angular2 from this library ?</strong></p>
+<p>In Webpack, there is a option call <a href="https://webpack.github.io/docs/library-and-externals.html" target="_blank" rel="external">externals</a></p>
+<p>Here is code I used in my angular2-clipboard project</p>
+<p><code>externals: { &quot;clipboard&quot;: &quot;clipboard&quot;, '@angular/core': { root: ['ng', 'core'], commonjs: '@angular/core', commonjs2: '@angular/core', amd: '@angular/core' }, 'rxjs/Rx': { root: 'Rx', commonjs: 'rxjs/Rx', commonjs2: 'rxjs/Rx', amd: 'rxjs/Rx' }, 'rxjs/add/operator/let': { root: ['Rx', 'Observable', 'prototype'], commonjs: 'rxjs/add/operator/let', commonjs2: 'rxjs/add/operator/let', amd: 'rxjs/add/operator/let' }</code></p>
+<p>But it doesn't work. If you check the output js, you will find @angular/core module is like</p>
+<p>`<br>
+function(module, exports) {</p>
+<pre><code>module.exports = undefined;
+</code></pre>
+<p>}
+`</p>
+<p>It turns out there are 2 settings in output section needs to set. <a href="https://webpack.github.io/docs/configuration.html#output-library" target="_blank" rel="external">library and libraryTarget</a></p>
+<p>Here is the example,</p>
+<p><code>output: { path: './', filename: '[name].js', library: 'ngII', // you can call it whatever you want. libraryTarget: 'umd' }</code></p>
+<p>Ref 1: <a href="http://tomasalabes.me/blog/_site/web-development/2016/04/30/Webpack-Series-Part-1.html" target="_blank" rel="external">Webpack Series (Part 1): Some Configs Explained</a>
+Ref 2: <a href="https://github.com/ng-bootstrap/ng-bootstrap" target="_blank" rel="external">NG Bootstrap</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo got error on deploying to github]]></title>
       <url>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</url>
       <content type="html"><![CDATA[<p>Today when I tried to deploy, it throws me this. It was working fine but just not today.</p>
