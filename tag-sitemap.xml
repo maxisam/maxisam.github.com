@@ -100,50 +100,8 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/ionic2/</loc>
-        <lastmod>2016-09-01T04:57:24.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/IIS-Express/</loc>
-        <lastmod>2016-09-01T04:57:24.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/VS2015/</loc>
-        <lastmod>2016-09-01T04:57:24.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/Visual-Studio/</loc>
-        <lastmod>2016-09-01T04:57:24.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/VS-Emulator-Android/</loc>
-        <lastmod>2016-09-01T04:57:24.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/github-page/</loc>
         <lastmod>2016-09-01T05:22:57.704Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/CSS/</loc>
-        <lastmod>2016-09-02T05:38:33.220Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -179,6 +137,55 @@
     <url>
         <loc>http://maxisam.github.com/tags/Webpack/</loc>
         <lastmod>2016-09-07T05:09:47.812Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/ionic2/</loc>
+        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/IIS-Express/</loc>
+        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/VS2015/</loc>
+        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Visual-Studio/</loc>
+        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/VS-Emulator-Android/</loc>
+        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/CSS/</loc>
+        <lastmod>2016-09-09T05:18:18.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/transforms/</loc>
+        <lastmod>2016-09-09T05:18:18.462Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

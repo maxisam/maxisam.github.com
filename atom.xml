@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-09-07T05:09:47.812Z</updated>
+  <updated>2016-09-09T05:18:18.462Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>font-stretch</title>
+    <link href="http://maxisam.github.com/2016/09/09/font-stretch/"/>
+    <id>http://maxisam.github.com/2016/09/09/font-stretch/</id>
+    <published>2016-09-09T05:06:50.000Z</published>
+    <updated>2016-09-09T05:18:18.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>First of all, font-stretch doesn't work. I mean at least it doesn't work on Chrome. So how to <strong>stretch</strong> the text then ?</p>
+<p><strong>CSS 2D transform</strong> is the best savor I found.</p>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"stretch"</span>&gt;</span>stretching<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span><span class="selector-class">.stretch</span> &#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;</div><div class="line">    <span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Safari and Chrome */</span></div><div class="line">    <span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* IE 9 */</span></div><div class="line">    <span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Opera */</span></div><div class="line">    <span class="attribute">transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* W3C */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Kudos to : <a href="http://stackoverflow.com/a/12065925/667767" target="_blank" rel="external">Timothy Perez@stackoverflow</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      how to stretch text by css
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://maxisam.github.com/categories/CSS/"/>
+    
+      <category term="Text" scheme="http://maxisam.github.com/categories/CSS/Text/"/>
+    
+    
+      <category term="CSS" scheme="http://maxisam.github.com/tags/CSS/"/>
+    
+      <category term="transforms" scheme="http://maxisam.github.com/tags/transforms/"/>
+    
+  </entry>
   
   <entry>
     <title>Build an Angular2 Library with Webpack</title>
@@ -166,7 +197,7 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
     <link href="http://maxisam.github.com/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/"/>
     <id>http://maxisam.github.com/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/</id>
     <published>2016-08-31T22:45:32.000Z</published>
-    <updated>2016-09-01T04:57:24.493Z</updated>
+    <updated>2016-09-07T05:47:46.745Z</updated>
     
     <content type="html"><![CDATA[<p>Developing Ionic2 on VS2015 is much easier than I thought.</p>
 <p>You will have pretty nice debugging experience and nice emulator from Visual Studio.</p>
@@ -182,8 +213,7 @@ At the bottom of this is a layer of utility or helper classes, referred to as â€
     
     <summary type="html">
     
-      &lt;p&gt;Developing Ionic2 on VS2015 is much easier than I thought.&lt;/p&gt;
-&lt;p&gt;You will have pretty nice debugging experience and nice emulator from V
+      Developing Ionic2 on VS2015 with IIS Express
     
     </summary>
     
@@ -476,11 +506,11 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
     
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
+    
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
     
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
-    
-      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
     
       <category term="$observe" scheme="http://maxisam.github.com/tags/observe/"/>
     
@@ -525,9 +555,9 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
     
-      <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
-    
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
+    
+      <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
     
   </entry>
   
@@ -750,54 +780,6 @@ To run Foodme on Windows, you need to do the following step.</p>
     
     
       <category term="filter" scheme="http://maxisam.github.com/tags/filter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Code block in Octopress</title>
-    <link href="http://maxisam.github.com/2013/01/07/code-block-in-octopress/"/>
-    <id>http://maxisam.github.com/2013/01/07/code-block-in-octopress/</id>
-    <published>2013-01-07T17:12:00.000Z</published>
-    <updated>2016-08-28T04:48:06.608Z</updated>
-    
-    <content type="html"><![CDATA[<p>One of the highlight feature of Octopress is <a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="external">Code block</a></p>
-<p>It can let you share the code with syntax highlight easily.</p>
-<p>However, it doesn't work on my Windows 7 machine.</p>
-<p>It always throw out the following error</p>
-<p>&lt;!-- more --&gt;
-<figure class="highlight plain"><figcaption><span>Error message</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ rake generate</div><div class="line">## Generating Site with Jekyll</div><div class="line">unchanged sass/screen.scss</div><div class="line">Configuration from d:/MyProject/Git/octopress/_config.yml</div><div class="line">Building site: source -&gt; public</div><div class="line">Liquid Exception: No such file or directory - python c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/mentos.py in 2013-01-06-octopress.markdown</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:307:in &apos;popen4&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:41:in &apos;start&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:203:in &apos;mentos&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:192:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:24:in &apos;pygments&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:14:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/code_block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:94:in &apos;block in render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;collect&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/template.rb:124:in &apos;render&apos;</div></pre></td></tr></table></figure></p>
-<p>I followed exactly the steps of installation that I found. No one mentions this problem.</p>
-<p>Moreover, I can't find anyone else having this issue.</p>
-<p>I guess I am on my own.</p>
-<p>First I need to figure out how Octopress does this feature.</p>
-<p>It seems like Octopress use <a href="http://octopress.org/docs/blogging/code/" target="_blank" rel="external">Pygments</a> from this error message.</p>
-<p>So I tried to update pyments to the latest version. But it doesn't work.</p>
-<p>Then I found out <a href="http://pygments.org/docs/installation/" target="_blank" rel="external">Pygments</a> uses Python to work.</p>
-<p>And I didn't have Python installed.</p>
-<p>Well, I guess that should be it.</p>
-<p>But thing doesn't seem like that easy. It still doesn't work after I installed <a href="http://www.python.org/download/" target="_blank" rel="external">Python 2.7 / 3.3</a>.</p>
-<p>After hours and hours thinking, I noticed I can't run Python beside its folder.</p>
-<p>OMG ! It is PATH !</p>
-<p>After I add correct path to windows environment, IT STILL REFUSED WORK.</p>
-<p>I entered <code>path</code> in the cmd. It doesn't show the path I just added.</p>
-<p>Apparently, I need to reboot my machine to get it to work.</p>
-<p>(another way is use SET PATH=%PATH%;C:\pathoftheprogram to avoid reboot.)</p>
-<p>Finally ! It works like a charm after reboot.</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloWorld</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"Hello World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;One of the highlight feature of Octopress is &lt;a href=&quot;http://octopress.org/docs/plugins/codeblock/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Code b
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
-    
-    
-      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
     
   </entry>
   

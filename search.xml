@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[font-stretch]]></title>
+      <url>http://maxisam.github.com/2016/09/09/font-stretch/</url>
+      <content type="html"><![CDATA[<p>First of all, font-stretch doesn't work. I mean at least it doesn't work on Chrome. So how to <strong>stretch</strong> the text then ?</p>
+<p><strong>CSS 2D transform</strong> is the best savor I found.</p>
+<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"stretch"</span>&gt;</span>stretching<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span><span class="selector-class">.stretch</span> &#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;</div><div class="line">    <span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Safari and Chrome */</span></div><div class="line">    <span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* IE 9 */</span></div><div class="line">    <span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Opera */</span></div><div class="line">    <span class="attribute">transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* W3C */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Kudos to : <a href="http://stackoverflow.com/a/12065925/667767" target="_blank" rel="external">Timothy Perez@stackoverflow</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Build an Angular2 Library with Webpack]]></title>
       <url>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</url>
       <content type="html"><![CDATA[<p>I was trying to build an Angular2 library, but it actually took me a while to figure it out. I hope this post will help me or others in the future.</p>
