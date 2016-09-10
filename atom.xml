@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-09-09T05:18:18.462Z</updated>
+  <updated>2016-09-10T01:53:54.193Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Exclude JavaScript Files from TypeScript Project in VS Code</title>
+    <link href="http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/"/>
+    <id>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</id>
+    <published>2016-09-10T01:40:14.000Z</published>
+    <updated>2016-09-10T01:53:54.193Z</updated>
+    
+    <content type="html"><![CDATA[<p>When working in a TypeScript project, the workspace always contains JavaScript transpiled files.</p>
+<p>It kinda pollutes the workspace, IMO.</p>
+<p>Here is solution. Put the following settings in <code>.vscode\settings.json</code></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"files.exclude"</span>: &#123;</div><div class="line">        <span class="string">"**/.git"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">"**/*.js"</span>: &#123;</div><div class="line">            <span class="string">"when"</span>: <span class="string">"$(basename).ts"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="string">"**/*.js.map"</span>:<span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      How to exclude Javascript files from Typescript project in Visual Studio Code
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://maxisam.github.com/categories/Tool/"/>
+    
+      <category term="Visual Studio Code" scheme="http://maxisam.github.com/categories/Tool/Visual-Studio-Code/"/>
+    
+    
+      <category term="Visual Studio Code" scheme="http://maxisam.github.com/tags/Visual-Studio-Code/"/>
+    
+      <category term="tool setting" scheme="http://maxisam.github.com/tags/tool-setting/"/>
+    
+  </entry>
   
   <entry>
     <title>font-stretch</title>
@@ -744,42 +774,6 @@ To run Foodme on Windows, you need to do the following step.</p>
     
     
       <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Using tabs reorder table</title>
-    <link href="http://maxisam.github.com/2013/01/09/using-tabs-reorder-table/"/>
-    <id>http://maxisam.github.com/2013/01/09/using-tabs-reorder-table/</id>
-    <published>2013-01-10T04:49:00.000Z</published>
-    <updated>2016-08-27T06:01:42.279Z</updated>
-    
-    <content type="html"><![CDATA[<p>####Objective:####</p>
-<ol>
-<li>Example for using filter to set order by certain column with tab UI.</li>
-<li>Exampe for using ng-class to switch twitter bootstrap tabs.</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/fMrhagVKl2nehzTOHriF&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Mark up for Twitter bootstrap tab</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/Index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"MainCtrl"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav nav-pills"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='name'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('name')"</span>&gt;</span>name<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='phone'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('phone')"</span>&gt;</span>phone<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-ng-repeat</span>=<span class="string">"friend in friends|orderBy:order"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"phone"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS controller</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.order = <span class="string">'name'</span>;</div><div class="line">    $scope.friends = [</div><div class="line">        &#123;name: <span class="string">'John'</span>, phone: <span class="string">'555-1276'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mary'</span>, phone: <span class="string">'800-BIG-MARY'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mike'</span>, phone: <span class="string">'555-4321'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Adam'</span>, phone: <span class="string">'555-5678'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Julie'</span>, phone: <span class="string">'555-8765'</span>&#125;</div><div class="line">    ];</div><div class="line">    $scope.setOrder = <span class="function"><span class="keyword">function</span> (<span class="params">order</span>) </span>&#123;</div><div class="line">        $scope.order = order;</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;####Objective:####&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Example for using filter to set order by certain column with tab UI.&lt;/li&gt;
-&lt;li&gt;Exampe for using ng-class t
-    
-    </summary>
-    
-      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
-    
-      <category term="Filter" scheme="http://maxisam.github.com/categories/AngularJS/Filter/"/>
-    
-    
-      <category term="filter" scheme="http://maxisam.github.com/tags/filter/"/>
     
   </entry>
   

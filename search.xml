@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[Exclude JavaScript Files from TypeScript Project in VS Code]]></title>
+      <url>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</url>
+      <content type="html"><![CDATA[<p>When working in a TypeScript project, the workspace always contains JavaScript transpiled files.</p>
+<p>It kinda pollutes the workspace, IMO.</p>
+<p>Here is solution. Put the following settings in <code>.vscode\settings.json</code></p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"files.exclude"</span>: &#123;</div><div class="line">        <span class="string">"**/.git"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">"**/*.js"</span>: &#123;</div><div class="line">            <span class="string">"when"</span>: <span class="string">"$(basename).ts"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="string">"**/*.js.map"</span>:<span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[font-stretch]]></title>
       <url>http://maxisam.github.com/2016/09/09/font-stretch/</url>
       <content type="html"><![CDATA[<p>First of all, font-stretch doesn't work. I mean at least it doesn't work on Chrome. So how to <strong>stretch</strong> the text then ?</p>
