@@ -202,7 +202,7 @@ Remember to <strong>import</strong> this token as well.</p>
     <link href="http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/"/>
     <id>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</id>
     <published>2016-09-10T01:40:14.000Z</published>
-    <updated>2016-09-17T04:17:02.918Z</updated>
+    <updated>2016-09-17T04:39:25.075Z</updated>
     
     <content type="html"><![CDATA[<p>When working in a TypeScript project, the workspace always contains JavaScript transpiled files.</p>
 <p>It kinda pollutes the workspace, IMO.</p>
@@ -216,9 +216,9 @@ Remember to <strong>import</strong> this token as well.</p>
     
     </summary>
     
-      <category term="Tool" scheme="http://maxisam.github.com/categories/Tool/"/>
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
     
-      <category term="VS Code" scheme="http://maxisam.github.com/categories/Tool/VS-Code/"/>
+      <category term="VS Code" scheme="http://maxisam.github.com/categories/Tools/VS-Code/"/>
     
     
       <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>

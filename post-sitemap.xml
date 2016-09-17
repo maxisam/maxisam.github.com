@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</loc>
+        <lastmod>2016-09-17T04:39:25.075Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</loc>
         <lastmod>2016-09-17T04:37:43.316Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</loc>
         <lastmod>2016-09-17T04:17:31.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</loc>
-        <lastmod>2016-09-17T04:17:02.918Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
