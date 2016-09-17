@@ -212,13 +212,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/error/</loc>
-        <lastmod>2016-09-17T04:17:31.442Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/github-page/</loc>
         <lastmod>2016-09-17T04:18:50.680Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -233,13 +226,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/VS-Code/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/snippets/</loc>
         <lastmod>2016-09-17T04:20:46.411Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,8 +233,22 @@
     </url>
 
     <url>
+        <loc>http://maxisam.github.com/tags/VS-Code/</loc>
+        <lastmod>2016-09-17T04:37:43.316Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/error/</loc>
+        <lastmod>2016-09-17T04:37:43.316Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://maxisam.github.com/tags/VS-Code-extension/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
+        <lastmod>2016-09-17T04:37:43.316Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

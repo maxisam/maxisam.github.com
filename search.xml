@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[Fix VS Code Error - Extension host terminated unexpectedly]]></title>
+      <url>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</url>
+      <content type="html"><![CDATA[<p>Sometime VS Code keeps throwing an annoy Error message on top like</p>
+<p><code>Error: Extension host terminated unexpectedly. Please reload the window to recover.</code></p>
+<p>To troubleShoot, go to Help &gt; Toggle Developer Tools</p>
+<p>And it might show some clues there. In my case, it points out there was an extension loading abnormally.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[VS Code snippets extension for Hexo tag]]></title>
       <url>http://maxisam.github.com/2016/09/16/vs-code-snippets-extension-for-Hexo-tag/</url>
       <content type="html"><![CDATA[<p>Every time when I try to insert a code block to a Hexo post, I feel pain.</p>

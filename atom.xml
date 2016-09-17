@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-09-17T04:20:46.411Z</updated>
+  <updated>2016-09-17T04:37:43.316Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fix VS Code Error - Extension host terminated unexpectedly</title>
+    <link href="http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/"/>
+    <id>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</id>
+    <published>2016-09-17T03:46:29.000Z</published>
+    <updated>2016-09-17T04:37:43.316Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sometime VS Code keeps throwing an annoy Error message on top like</p>
+<p><code>Error: Extension host terminated unexpectedly. Please reload the window to recover.</code></p>
+<p>To troubleShoot, go to Help &gt; Toggle Developer Tools</p>
+<p>And it might show some clues there. In my case, it points out there was an extension loading abnormally.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      How to fix VS Code Error - Extension host terminated unexpectedly.
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="VS Code" scheme="http://maxisam.github.com/categories/Tools/VS-Code/"/>
+    
+      <category term="Bug &amp; TroubleShooting" scheme="http://maxisam.github.com/categories/Tools/VS-Code/Bug-TroubleShooting/"/>
+    
+    
+      <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>
+    
+      <category term="error" scheme="http://maxisam.github.com/tags/error/"/>
+    
+      <category term="VS Code extension" scheme="http://maxisam.github.com/tags/VS-Code-extension/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code snippets extension for Hexo tag</title>
@@ -684,11 +718,11 @@ To run Foodme on Windows, you need to do the following step.</p>
     
       <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
     
+      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
+    
       <category term="directive" scheme="http://maxisam.github.com/tags/directive/"/>
     
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
-    
-      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
     
       <category term="$observe" scheme="http://maxisam.github.com/tags/observe/"/>
     
@@ -774,40 +808,6 @@ To run Foodme on Windows, you need to do the following step.</p>
     
     
       <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Using directive to work with highlight.js</title>
-    <link href="http://maxisam.github.com/2013/01/15/using-directive-to-work-with-highlight-dot-js/"/>
-    <id>http://maxisam.github.com/2013/01/15/using-directive-to-work-with-highlight-dot-js/</id>
-    <published>2013-01-15T06:59:00.000Z</published>
-    <updated>2016-08-27T18:16:57.471Z</updated>
-    
-    <content type="html"><![CDATA[<ol>
-<li>Example of ussing directive to work with <a href="http://softwaremaniacs.org/soft/highlight/en/" target="_blank" rel="external">highlight.js</a>, or any other jQuery plugin.</li>
-<li>Example of <a href="http://docs.angularjs.org/api/ng.directive:ngTransclude" target="_blank" rel="external">ng-transclude</a>.</li>
-<li>Example of <a href="http://docs.angularjs.org/api/ng.$interpolate" target="_blank" rel="external">$interpolate</a>. (It is different from <a href="http://docs.angularjs.org/api/ng.$compile" target="_blank" rel="external">$compile</a>)</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/3rtp1v&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">snippet</span>&gt;</span>&amp;lt;!--[if IE]&amp;gt;&amp;lt;script src="/js/gaig-ui-ie.js"&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;![endif]--&amp;gt;</div><div class="line">    &amp;lt;link rel="stylesheet" href="/css/gaig-bootstrap.css" /&amp;gt;</div><div class="line">    &amp;lt;script src="/js/gaig-ui.js"&amp;gt;&amp;lt;/script&amp;gt;<span class="tag">&lt;/<span class="name">snippet</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng005/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'snippet'</span>, [<span class="string">'$timeout'</span>, <span class="string">'$interpolate'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$timeout, $interpolate</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'E'</span>,</div><div class="line">            template: <span class="string">'<pre><code ng-transclude=""></code></pre>'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            transclude: <span class="literal">true</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, elm</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> tmp = $interpolate(elm.find(<span class="string">'code'</span>).text())(scope);</div><div class="line">                elm.find(<span class="string">'code'</span>).html(hljs.highlightAuto(tmp).value);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.cdnPath = <span class="string">"//path/to/cdn/"</span>;</div><div class="line">    $scope.version = <span class="string">"1.0"</span>;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;Example of ussing directive to work with &lt;a href=&quot;http://softwaremaniacs.org/soft/highlight/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hig
-    
-    </summary>
-    
-      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
-    
-      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
-    
-    
-      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
     
   </entry>
   
