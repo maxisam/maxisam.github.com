@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-09-17T04:37:43.316Z</updated>
+  <updated>2016-09-18T06:57:35.618Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -16,11 +16,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Visual Studio Snippets Stop Working</title>
+    <link href="http://maxisam.github.com/2016/09/18/Visual-Studio-Snippets-Stop-Working/"/>
+    <id>http://maxisam.github.com/2016/09/18/Visual-Studio-Snippets-Stop-Working/</id>
+    <published>2016-09-18T06:46:02.000Z</published>
+    <updated>2016-09-18T06:57:35.618Z</updated>
+    
+    <content type="html"><![CDATA[<p>After a Windows 10 crash, the snippets feature on VS2015 just stops working.</p>
+<p>This is really weird. I checked the snippets manager, I could see the snippets were there, besides the first one.</p>
+<p>But if I try to insert a snippet by hitting <code>ctrl + k</code> <code>ctrl + x</code>, it shows nothing from popup menu.</p>
+<p>The way to fix it is to open the snippet manager and remove the snippets from the list and re-add them.</p>
+<p>This costs me couple hours, I think it deserved to be remembered.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      How to fix Visual Studio snippets stop working
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="VS2015" scheme="http://maxisam.github.com/categories/Tools/VS2015/"/>
+    
+      <category term="Troubleshooting" scheme="http://maxisam.github.com/categories/Tools/VS2015/Troubleshooting/"/>
+    
+    
+      <category term="VS2015" scheme="http://maxisam.github.com/tags/VS2015/"/>
+    
+      <category term="troubleshooting" scheme="http://maxisam.github.com/tags/troubleshooting/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Fix VS Code Error - Extension host terminated unexpectedly</title>
     <link href="http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/"/>
     <id>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</id>
     <published>2016-09-17T03:46:29.000Z</published>
-    <updated>2016-09-17T04:37:43.316Z</updated>
+    <updated>2016-09-18T06:44:32.071Z</updated>
     
     <content type="html"><![CDATA[<p>Sometime VS Code keeps throwing an annoy Error message on top like</p>
 <p><code>Error: Extension host terminated unexpectedly. Please reload the window to recover.</code></p>
@@ -38,14 +71,14 @@
     
       <category term="VS Code" scheme="http://maxisam.github.com/categories/Tools/VS-Code/"/>
     
-      <category term="Bug &amp; TroubleShooting" scheme="http://maxisam.github.com/categories/Tools/VS-Code/Bug-TroubleShooting/"/>
+      <category term="TroubleShooting" scheme="http://maxisam.github.com/categories/Tools/VS-Code/TroubleShooting/"/>
     
     
       <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>
     
-      <category term="error" scheme="http://maxisam.github.com/tags/error/"/>
-    
       <category term="VS Code extension" scheme="http://maxisam.github.com/tags/VS-Code-extension/"/>
+    
+      <category term="troubleshooting" scheme="http://maxisam.github.com/tags/troubleshooting/"/>
     
   </entry>
   
@@ -97,9 +130,9 @@ The personal access token needs to be set as <strong>all accessible account</str
     
       <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>
     
-      <category term="snippets" scheme="http://maxisam.github.com/tags/snippets/"/>
-    
       <category term="VS Code extension" scheme="http://maxisam.github.com/tags/VS-Code-extension/"/>
+    
+      <category term="snippets" scheme="http://maxisam.github.com/tags/snippets/"/>
     
   </entry>
   
@@ -108,7 +141,7 @@ The personal access token needs to be set as <strong>all accessible account</str
     <link href="http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/"/>
     <id>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</id>
     <published>2016-09-16T05:05:06.000Z</published>
-    <updated>2016-09-17T04:17:31.442Z</updated>
+    <updated>2016-09-18T06:44:18.803Z</updated>
     
     <content type="html"><![CDATA[<p>There is a very annoy issue after installing Typescript 1.8.x on VS2015.</p>
 <p>It shows tons of error like this</p>
@@ -131,14 +164,14 @@ The personal access token needs to be set as <strong>all accessible account</str
     
       <category term="VS2015" scheme="http://maxisam.github.com/categories/Tools/VS2015/"/>
     
-      <category term="Bug &amp; TroubleShooting" scheme="http://maxisam.github.com/categories/Tools/VS2015/Bug-TroubleShooting/"/>
+      <category term="Troubleshooting" scheme="http://maxisam.github.com/categories/Tools/VS2015/Troubleshooting/"/>
     
     
       <category term="VS2015" scheme="http://maxisam.github.com/tags/VS2015/"/>
     
-      <category term="Typescript" scheme="http://maxisam.github.com/tags/Typescript/"/>
+      <category term="troubleshooting" scheme="http://maxisam.github.com/tags/troubleshooting/"/>
     
-      <category term="error" scheme="http://maxisam.github.com/tags/error/"/>
+      <category term="Typescript" scheme="http://maxisam.github.com/tags/Typescript/"/>
     
   </entry>
   
@@ -770,44 +803,6 @@ To run Foodme on Windows, you need to do the following step.</p>
       <category term="scope" scheme="http://maxisam.github.com/tags/scope/"/>
     
       <category term="attribute" scheme="http://maxisam.github.com/tags/attribute/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Observe two variables in one $watch</title>
-    <link href="http://maxisam.github.com/2013/01/16/watch-2-variables-w-slash-1-$watch/"/>
-    <id>http://maxisam.github.com/2013/01/16/watch-2-variables-w-slash-1-$watch/</id>
-    <published>2013-01-16T06:04:00.000Z</published>
-    <updated>2016-08-28T04:25:40.439Z</updated>
-    
-    <content type="html"><![CDATA[<p>####Objective####</p>
-<ol>
-<li>Example of [$watch][0]</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin: 20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/o3cnXm&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng006/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>X: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">ng-model</span>=<span class="string">'x'</span>/&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Y: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'text'</span> <span class="attr">ng-model</span>=<span class="string">'y'</span>/&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-xng-watcher</span> <span class="attr">x</span>=<span class="string">''</span> <span class="attr">y</span>=<span class="string">''</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng006/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'xngWatcher'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            template: <span class="string">'&lt;span&gt;X:, Y:&lt;/span&gt;'</span>,</div><div class="line">            link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, elm, iAttrs</span>) </span>&#123;</div><div class="line">                scope.$watch(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">return</span> &#123;x: iAttrs.x, y: iAttrs.y&#125;;</div><div class="line">                &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">newVal, oldVal, scope</span>) </span>&#123;</div><div class="line">                    <span class="built_in">console</span>.log(<span class="string">'change !'</span>);</div><div class="line">                    scope.x = newVal.x;</div><div class="line">                    scope.y = newVal.y;</div><div class="line">                &#125;, <span class="literal">true</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-[0]:http://docs.angularjs.org/api/ng.$rootScope.Scope#$watch</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;####Objective####&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Example of [$watch][0]&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&amp;lt;!-- more --&amp;gt;
-&amp;lt;iframe style=&amp;quot;margin: 20px 0; width: 100
-    
-    </summary>
-    
-      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
-    
-      <category term="Directive" scheme="http://maxisam.github.com/categories/AngularJS/Directive/"/>
-    
-    
-      <category term="$watch" scheme="http://maxisam.github.com/tags/watch/"/>
     
   </entry>
   

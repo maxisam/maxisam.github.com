@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[Visual Studio Snippets Stop Working]]></title>
+      <url>http://maxisam.github.com/2016/09/18/Visual-Studio-Snippets-Stop-Working/</url>
+      <content type="html"><![CDATA[<p>After a Windows 10 crash, the snippets feature on VS2015 just stops working.</p>
+<p>This is really weird. I checked the snippets manager, I could see the snippets were there, besides the first one.</p>
+<p>But if I try to insert a snippet by hitting <code>ctrl + k</code> <code>ctrl + x</code>, it shows nothing from popup menu.</p>
+<p>The way to fix it is to open the snippet manager and remove the snippets from the list and re-add them.</p>
+<p>This costs me couple hours, I think it deserved to be remembered.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Fix VS Code Error - Extension host terminated unexpectedly]]></title>
       <url>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</url>
       <content type="html"><![CDATA[<p>Sometime VS Code keeps throwing an annoy Error message on top like</p>
