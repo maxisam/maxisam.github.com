@@ -135,13 +135,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Visual-Studio/</loc>
-        <lastmod>2016-09-07T05:47:46.745Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/VS-Emulator-Android/</loc>
         <lastmod>2016-09-07T05:47:46.745Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -149,106 +142,162 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/CSS/</loc>
-        <lastmod>2016-09-17T04:12:47.992Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/transforms/</loc>
-        <lastmod>2016-09-17T04:12:47.992Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/Angular2/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/provider/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/OpaqueToken/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/dependency-injection/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/github-page/</loc>
-        <lastmod>2016-09-17T04:18:50.680Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/Hexo/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/snippets/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://maxisam.github.com/tags/tool-setting/</loc>
-        <lastmod>2016-09-17T04:39:25.075Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.855Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Typescript/</loc>
-        <lastmod>2016-09-18T06:44:18.803Z</lastmod>
+        <loc>http://maxisam.github.com/tags/CSS/</loc>
+        <lastmod>2016-10-02T04:08:21.861Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/VS-Code/</loc>
-        <lastmod>2016-09-18T06:44:32.071Z</lastmod>
+        <loc>http://maxisam.github.com/tags/transforms/</loc>
+        <lastmod>2016-10-02T04:08:21.861Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/VS-Code-extension/</loc>
-        <lastmod>2016-09-18T06:44:32.071Z</lastmod>
+        <loc>http://maxisam.github.com/tags/provider/</loc>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/OpaqueToken/</loc>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/dependency-injection/</loc>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://maxisam.github.com/tags/VS2015/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://maxisam.github.com/tags/troubleshooting/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Hexo/</loc>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/VS-Code/</loc>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/VS-Code-extension/</loc>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/snippets/</loc>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Visual-Studio/</loc>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/tips/</loc>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/string/</loc>
+        <lastmod>2016-10-02T04:08:21.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/array/</loc>
+        <lastmod>2016-10-02T04:08:21.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/JavaScript/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/event-loop/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/thread/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Angular2/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Typescript/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/tsconfig/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -70,99 +70,127 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/CSS/</loc>
-        <lastmod>2016-09-17T04:12:47.992Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/CSS/Text/</loc>
-        <lastmod>2016-09-17T04:12:47.992Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Angular2/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/Providing-Value/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/Blog/</loc>
-        <lastmod>2016-09-17T04:18:50.680Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://maxisam.github.com/categories/Blog/Github-page/</loc>
-        <lastmod>2016-09-17T04:18:50.680Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS-Code/VS-Code-extension/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
+        <loc>http://maxisam.github.com/categories/CSS/</loc>
+        <lastmod>2016-10-02T04:08:21.861Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS-Code/VS-Code-extension/Snippets/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
+        <loc>http://maxisam.github.com/categories/CSS/Text/</loc>
+        <lastmod>2016-10-02T04:08:21.861Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS-Code/</loc>
-        <lastmod>2016-09-18T06:44:32.071Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/</loc>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS-Code/TroubleShooting/</loc>
-        <lastmod>2016-09-18T06:44:32.071Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/Providing-Value/</loc>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/VS-Code/</loc>
+        <lastmod>2016-10-02T04:08:21.868Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/</loc>
+        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/VS2015/</loc>
+        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Tips/VS-Code/</loc>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://maxisam.github.com/categories/Tools/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS2015/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Tools/Tips/</loc>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Tools/VS2015/Troubleshooting/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Tools/Tips/Visual-Studio/</loc>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/string/</loc>
+        <lastmod>2016-10-02T04:08:21.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/Core-Knowledge/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular2/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular2/Typescript/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

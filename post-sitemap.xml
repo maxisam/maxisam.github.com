@@ -7,32 +7,32 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/18/Visual-Studio-Snippets-Stop-Working/</loc>
-        <lastmod>2016-09-18T06:57:35.618Z</lastmod>
+        <loc>http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/</loc>
+        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</loc>
-        <lastmod>2016-09-18T06:44:32.071Z</lastmod>
+        <loc>http://maxisam.github.com/2016/09/27/JavaScript-Note-Thread-Event-Loop/</loc>
+        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</loc>
-        <lastmod>2016-09-18T06:44:18.803Z</lastmod>
+        <loc>http://maxisam.github.com/2016/09/21/unshift-join-on-javascript-string/</loc>
+        <lastmod>2016-10-02T04:08:21.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</loc>
-        <lastmod>2016-09-17T04:39:25.075Z</lastmod>
+        <loc>http://maxisam.github.com/2016/09/20/Visual-Studio-Tip-File-Comparison/</loc>
+        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,15 +40,23 @@
 
     <url>
         <loc>http://maxisam.github.com/2016/09/16/vs-code-snippets-extension-for-Hexo-tag/</loc>
-        <lastmod>2016-09-17T04:20:46.411Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/01/image-path-in-github-page/</loc>
-        <lastmod>2016-09-17T04:18:50.680Z</lastmod>
+        <loc>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</loc>
+        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</loc>
+        <lastmod>2016-10-02T04:08:21.868Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -56,7 +64,7 @@
 
     <url>
         <loc>http://maxisam.github.com/2016/09/14/use-window-as-a-provider-in-Angular2/</loc>
-        <lastmod>2016-09-17T04:12:56.334Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,7 +72,23 @@
 
     <url>
         <loc>http://maxisam.github.com/2016/09/09/font-stretch/</loc>
-        <lastmod>2016-09-17T04:12:47.992Z</lastmod>
+        <lastmod>2016-10-02T04:08:21.861Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</loc>
+        <lastmod>2016-10-02T04:08:21.855Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/01/image-path-in-github-page/</loc>
+        <lastmod>2016-10-02T04:08:21.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

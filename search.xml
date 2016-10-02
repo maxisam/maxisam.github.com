@@ -4,13 +4,63 @@
   
     
     <entry>
-      <title><![CDATA[Visual Studio Snippets Stop Working]]></title>
-      <url>http://maxisam.github.com/2016/09/18/Visual-Studio-Snippets-Stop-Working/</url>
-      <content type="html"><![CDATA[<p>After a Windows 10 crash, the snippets feature on VS2015 just stops working.</p>
-<p>This is really weird. I checked the snippets manager, I could see the snippets were there, besides the first one.</p>
-<p>But if I try to insert a snippet by hitting <code>ctrl + k</code> <code>ctrl + x</code>, it shows nothing from popup menu.</p>
-<p>The way to fix it is to open the snippet manager and remove the snippets from the list and re-add them.</p>
-<p>This costs me couple hours, I think it deserved to be remembered.</p>
+      <title><![CDATA[Unexpected value 'xxx' imported by the module 'AppModule']]></title>
+      <url>http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/</url>
+      <content type="html"><![CDATA[<p>When building an app with custom libraries pulling from npm, sometime it shows the following error</p>
+<p><code>Unexpected value 'xxx' imported by the module 'AppModule'</code></p>
+<p>It won't throw this error if the code is put directly with other source files instead of importing from node_modules folder.</p>
+<p>The reason is this custom library might forgot to put <strong>tsconfig.json</strong> into npm package, which providing the information for module and module resolution.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScript Note: Thread & Event Loop]]></title>
+      <url>http://maxisam.github.com/2016/09/27/JavaScript-Note-Thread-Event-Loop/</url>
+      <content type="html"><![CDATA[<p><img src="/2016/09/27/JavaScript-Note-Thread-Event-Loop/javascript_event_loop.png" alt="Event Loop" title="Event Loop"></p>
+<ul>
+<li>JavaScript only has one thread.
+<ol>
+<li>No dead lock</li>
+<li>No thread switching</li>
+<li>Execution context stack</li>
+</ol>
+</li>
+<li>It uses Event Loop to achieve async or setTimeout
+<ol>
+<li>It is a queue, called &quot;task queue&quot;.</li>
+</ol>
+</li>
+</ul>
+<p><figure class="highlight javascript"><figcaption><span>setTimeout</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">1</span>);&#125;, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</div></pre></td></tr></table></figure></p>
+<p>Above example will always show <strong>2, 1</strong>, because the callback of setTimeout will only be called from queue after main thread is done.</p>
+<p>note: <code>console.log</code> in browser is actually async</p>
+<p>Ref: <a href="https://youtu.be/8aGhZQkoFbQ" target="_blank" rel="external">Philip Roberts: What the heck is the event loop anyway? | JSConf EU </a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Unshift & Join on JavaScript String]]></title>
+      <url>http://maxisam.github.com/2016/09/21/unshift-join-on-javascript-string/</url>
+      <content type="html"><![CDATA[<p><code>var hello = 'hello';</code></p>
+<p><code>Array.prototype.unshift.call(hello, '11')</code> // gives error</p>
+<p><code>Array.prototype.join.call(hello, ', ')</code> // works, why??</p>
+<p>Because strings are immutable, and unshift tries to assign to an index (property) of the string.</p>
+<p>join doesn't assign anything and only reads properties, therefore it works with any object that has .length.</p>
+<p><blockquote><p>A String object is an exotic object that encapsulates a String value and exposes virtual integer indexed data properties corresponding to the individual code unit elements of the String value. Exotic String objects always have a data property named &quot;length&quot; whose value is the number of code unit elements in the encapsulated String value. Both the code unit data properties and the &quot;length&quot; property are non-writable and non-configurable.</p>
+<footer><strong>http://www.ecma-international.org/ecma-262/6.0/#sec-string-exotic-objects sec-string-exotic-objects</strong></footer></blockquote></p>
+<p>Ref: <a href="http://stackoverflow.com/a/36384788/667767" target="_blank" rel="external">georg@stackoverflow</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Visual Studio Tip - Files Comparison]]></title>
+      <url>http://maxisam.github.com/2016/09/20/Visual-Studio-Tip-File-Comparison/</url>
+      <content type="html"><![CDATA[<p>It seems like very hard to find this feature from IDE, at least to me.</p>
+<p>Here is how:</p>
+<p><code>ctrl + w, a</code> to get to command window
+<code>Tools.DiffFiles {filename1} {filename2}</code></p>
+<p>and it will pull out a DiffFiles window.</p>
+<p>Ref: <a href="http://stackoverflow.com/a/17664677/667767" target="_blank" rel="external">Vladimir Reshetnikov@stackoverflow</a></p>
 ]]></content>
     </entry>
     
