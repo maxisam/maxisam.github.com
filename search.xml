@@ -183,6 +183,7 @@ Remember to <strong>import</strong> this token as well.</p>
 <p><figure class="highlight javascript"><figcaption><span>Webpack.config</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: <span class="string">'./'</span>,</div><div class="line">    filename: <span class="string">'[name].js'</span>,</div><div class="line">    library: <span class="string">'ngII'</span>,  <span class="comment">// you can call it whatever you want. </span></div><div class="line">    libraryTarget: <span class="string">'umd'</span></div><div class="line">  &#125; </div></pre></td></tr></table></figure></p>
 <p>Ref 1: <a href="http://tomasalabes.me/blog/_site/web-development/2016/04/30/Webpack-Series-Part-1.html" target="_blank" rel="external">Webpack Series (Part 1): Some Configs Explained</a></p>
 <p>Ref 2: <a href="https://github.com/ng-bootstrap/ng-bootstrap" target="_blank" rel="external">NG Bootstrap</a></p>
+<p>Ref 3: <a href="https://medium.com/@OCombe/how-to-publish-a-library-for-angular-2-on-npm-5f48cdabf435#.jodrdcb3r" target="_blank" rel="external">How to publish a library for Angular 2 on npm</a></p>
 ]]></content>
     </entry>
     

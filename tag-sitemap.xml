@@ -114,13 +114,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Webpack/</loc>
-        <lastmod>2016-09-07T05:09:47.812Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/ionic2/</loc>
         <lastmod>2016-09-07T05:47:46.745Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -282,13 +275,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Angular2/</loc>
-        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/Typescript/</loc>
         <lastmod>2016-10-02T06:56:34.836Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -298,6 +284,20 @@
     <url>
         <loc>http://maxisam.github.com/tags/tsconfig/</loc>
         <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Angular2/</loc>
+        <lastmod>2016-10-03T04:47:16.550Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Webpack/</loc>
+        <lastmod>2016-10-03T04:47:16.550Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
