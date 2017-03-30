@@ -268,13 +268,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/TypeScript/</loc>
-        <lastmod>2017-03-30T02:39:54.180Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/tsconfig/</loc>
         <lastmod>2017-03-30T02:39:54.180Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -312,13 +305,6 @@
     <url>
         <loc>http://maxisam.github.com/tags/validators/</loc>
         <lastmod>2017-03-30T02:39:54.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/Angular/</loc>
-        <lastmod>2017-03-30T02:39:54.200Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -375,6 +361,34 @@
     <url>
         <loc>http://maxisam.github.com/tags/Github/</loc>
         <lastmod>2017-03-30T05:48:35.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Angular/</loc>
+        <lastmod>2017-03-30T06:00:27.436Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/component/</loc>
+        <lastmod>2017-03-30T06:00:27.436Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/TypeScript/</loc>
+        <lastmod>2017-03-30T06:00:27.437Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/lodash/</loc>
+        <lastmod>2017-03-30T06:00:27.437Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

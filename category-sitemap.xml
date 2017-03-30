@@ -189,13 +189,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Angular/</loc>
-        <lastmod>2017-03-30T02:39:54.200Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/Angular/Form/</loc>
         <lastmod>2017-03-30T02:39:54.200Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,6 +240,27 @@
     <url>
         <loc>http://maxisam.github.com/categories/Blog/Hexo/</loc>
         <lastmod>2017-03-30T05:48:35.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/</loc>
+        <lastmod>2017-03-30T06:00:27.436Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/Component/</loc>
+        <lastmod>2017-03-30T06:00:27.436Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/TypeScript/</loc>
+        <lastmod>2017-03-30T06:00:27.437Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

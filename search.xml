@@ -42,6 +42,44 @@
     </entry>
     
     <entry>
+      <title><![CDATA[import partial lodash feature to Typescript project]]></title>
+      <url>http://maxisam.github.com/2017/02/03/import-partial-lodash-feature-to-Typescript-project/</url>
+      <content type="html"><![CDATA[<p>Install</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install --save @types/lodash-es</div><div class="line"></div><div class="line">npm install --save lodash-es</div></pre></td></tr></table></figure></p>
+<p>Usage</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import clonedeep from &apos;lodash-es/clonedeep&apos;;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Angular2 Component Inheritance Summary]]></title>
+      <url>http://maxisam.github.com/2017/02/01/Angular2-Component-Inheritance/</url>
+      <content type="html"><![CDATA[<p>Simple tutorial can be found here at <a href="https://scotch.io/tutorials/component-inheritance-in-angular-2" target="_blank" rel="external">Component Inheritance in Angular 2</a></p>
+<p>There are some limitations.</p>
+<ol>
+<li>
+<p>No Annotations inheritance. More detail on <a href="https://medium.com/@ttemplier/angular2-decorators-and-class-inheritance-905921dbd1b7#.c60rva7jo" target="_blank" rel="external">Angular 2, decorators and class inheritance</a></p>
+<p>Which means, no template or style inheritance.</p>
+</li>
+<li>
+<p>Constructor inheritance relies on child component re-injection. More detail on <a href="https://github.com/angular/angular/issues/5155#issuecomment-154422983" target="_blank" rel="external">Github discussion</a></p>
+<p>Also the inject variable should set as protected or public.</p>
+</li>
+</ol>
+<p><figure class="highlight javascript"><figcaption><span>re-injection</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ChildCmp</span> <span class="keyword">extends</span> <span class="title">BaseCmp</span>  </span>&#123;</div><div class="line"></div><div class="line"><span class="keyword">constructor</span>(protected http: Http) &#123;</div><div class="line">     <span class="keyword">super</span>(http);</div><div class="line">&#125;</div><div class="line"></div><div class="line">...</div><div class="line">&#125;</div><div class="line"> </div></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>
+<p>Lifecycle hooks needs to be called manually if derive class overwrites it.</p>
+<p>It can be called like</p>
+</li>
+</ol>
+<p><figure class="highlight javascript"><figcaption><span>re-injection</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ChildCmp</span> <span class="keyword">extends</span> <span class="title">BaseCmp</span>  </span>&#123;</div><div class="line"></div><div class="line">ngOnDestroy() &#123;</div><div class="line">    <span class="keyword">super</span>.ngOnDestroy();</div><div class="line">    ...</div><div class="line">&#125;</div><div class="line"></div><div class="line">...</div><div class="line">&#125;</div><div class="line"> </div></pre></td></tr></table></figure></p>
+<p>However, here is a small hack to ensure parent's ngOnDestroy always get called. <a href="https://stacksandfoundations.com/2016/06/24/using-class-inheritance-to-hook-to-angular2-component-lifecycle/" target="_blank" rel="external">Using Class inheritance to hook to Angular 2 component lifecycle</a></p>
+<p><figure class="highlight javascript"><figcaption><span>hack</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">SafeUnsubscriber</span> <span class="title">implements</span> <span class="title">OnDestroy</span> </span>&#123;</div><div class="line">    private subscriptions: Subscription[] = [];</div><div class="line"> </div><div class="line">    <span class="keyword">constructor</span>() &#123;</div><div class="line">        <span class="keyword">let</span> f = <span class="keyword">this</span>.ngOnDestroy;</div><div class="line"> </div><div class="line">        <span class="keyword">this</span>.ngOnDestroy = () =&gt; &#123;</div><div class="line">            f();</div><div class="line">            <span class="keyword">this</span>.unsubscribeAll();</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    protected safeSubscription (sub: Subscription): Subscription &#123;</div><div class="line">        <span class="keyword">this</span>.subscriptions.push(sub);</div><div class="line">        <span class="keyword">return</span> sub;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    private unsubscribeAll() &#123;</div><div class="line">        <span class="keyword">this</span>.subscriptions.forEach(element =&gt; &#123;</div><div class="line">            !element.isUnsubscribed &amp;&amp; element.unsubscribe();</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    ngOnDestroy() &#123;</div><div class="line">        <span class="comment">// no-op</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Commit on detached HEAD in Git]]></title>
       <url>http://maxisam.github.com/2017/01/30/commit-on-detached-HEAD-in-Git/</url>
       <content type="html"><![CDATA[<p>First of all, <strong>don't commit on detached Head</strong>.</p>
