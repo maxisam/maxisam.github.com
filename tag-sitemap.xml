@@ -198,13 +198,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/tags/Hexo/</loc>
-        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/tags/provider/</loc>
         <lastmod>2017-03-30T02:39:54.033Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -228,13 +221,6 @@
     <url>
         <loc>http://maxisam.github.com/tags/VS2015/</loc>
         <lastmod>2017-03-30T02:39:54.039Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/tags/Github/</loc>
-        <lastmod>2017-03-30T02:39:54.049Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -375,6 +361,20 @@
     <url>
         <loc>http://maxisam.github.com/tags/semantic-release/</loc>
         <lastmod>2017-03-30T05:13:52.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Hexo/</loc>
+        <lastmod>2017-03-30T05:48:35.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/tags/Github/</loc>
+        <lastmod>2017-03-30T05:48:35.930Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

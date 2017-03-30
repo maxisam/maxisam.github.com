@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</loc>
+        <lastmod>2017-03-30T05:48:35.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://maxisam.github.com/2017/03/29/fix-semantic-release-always-push-a-new-major-version/</loc>
         <lastmod>2017-03-30T05:13:52.572Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -137,14 +145,6 @@
     <url>
         <loc>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</loc>
         <lastmod>2017-03-30T02:39:54.026Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</loc>
-        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

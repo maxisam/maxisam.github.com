@@ -98,20 +98,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Blog/</loc>
-        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Blog/Hexo/</loc>
-        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/Angular/Webpack/</loc>
         <lastmod>2017-03-30T02:39:54.026Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,6 +233,20 @@
     <url>
         <loc>http://maxisam.github.com/categories/JavaScript/package/npm/</loc>
         <lastmod>2017-03-30T05:13:52.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Blog/</loc>
+        <lastmod>2017-03-30T05:48:35.930Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Blog/Hexo/</loc>
+        <lastmod>2017-03-30T05:48:35.930Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
