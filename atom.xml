@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maxisam.github.com/"/>
-  <updated>2016-10-02T06:56:34.836Z</updated>
+  <updated>2017-03-30T05:13:52.572Z</updated>
   <id>http://maxisam.github.com/</id>
   
   <author>
@@ -16,11 +16,557 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>fix semantic-release always push a new major version</title>
+    <link href="http://maxisam.github.com/2017/03/29/fix-semantic-release-always-push-a-new-major-version/"/>
+    <id>http://maxisam.github.com/2017/03/29/fix-semantic-release-always-push-a-new-major-version/</id>
+    <published>2017-03-30T04:39:26.000Z</published>
+    <updated>2017-03-30T05:13:52.572Z</updated>
+    
+    <content type="html"><![CDATA[<p>Symptom: semantic-release always bump a new major version</p>
+<p>The way semantic-release determines a new version is basing on <a href="https://github.com/semantic-release/semantic-release#analyzecommits" target="_blank" rel="external">analyzeCommits</a></p>
+<p>But it is based on the commits between last release to this release.</p>
+<p>To locate last release, it relies on <a href="https://github.com/semantic-release/semantic-release#getlastrelease" target="_blank" rel="external">getLastRelease</a>.</p>
+<p>And getLastRelease relies on <a href="https://github.com/semantic-release/last-release-npm/blob/next/src/index.js#L43" target="_blank" rel="external">gitHead</a></p>
+<p>So if <strong>gitHead</strong> is not set properly in package.json, semantic-release will determine the version base on commits between the very first one to the current one. And most likely, it would find a commit with <code>Breaking Changes</code>, which will trigger a new major version.</p>
+<p>There are several situations will lead to missing gitHead in package.json.</p>
+<p>The case I have is deploy a package that is not directly under project root.</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish ./dist</div></pre></td></tr></table></figure></p>
+<p>The above code will confuse npm.</p>
+<p>Therefore, use <a href="http://stackoverflow.com/a/37421736/667767" target="_blank" rel="external">npmignore or files field</a> to trim your project instead of copying files to dist folder.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      fix semantic-release always push a new major version
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://maxisam.github.com/categories/JavaScript/"/>
+    
+      <category term="package" scheme="http://maxisam.github.com/categories/JavaScript/package/"/>
+    
+      <category term="npm" scheme="http://maxisam.github.com/categories/JavaScript/package/npm/"/>
+    
+    
+      <category term="npm" scheme="http://maxisam.github.com/tags/npm/"/>
+    
+      <category term="publish" scheme="http://maxisam.github.com/tags/publish/"/>
+    
+      <category term="semantic-release" scheme="http://maxisam.github.com/tags/semantic-release/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>publish beta to npm</title>
+    <link href="http://maxisam.github.com/2017/03/29/publish-beta-to-npm/"/>
+    <id>http://maxisam.github.com/2017/03/29/publish-beta-to-npm/</id>
+    <published>2017-03-30T04:18:59.000Z</published>
+    <updated>2017-03-30T04:37:00.154Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sometime we want to try out a new build. We don't want to release to everyone and cause a ciaos.</p>
+<p>We want to release a beta version and only for people specific want to try it.</p>
+<p><a href="https://docs.npmjs.com/cli/dist-tag" target="_blank" rel="external">dist-tag</a> is for this purpose.</p>
+<p>Create this following task in package.json
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;publish-npm:beta&quot;: &quot;npm publish --tag=next&quot;</div></pre></td></tr></table></figure></p>
+<p>if the testing goes well, we can change the tag to <code>latest</code>. And everyone will see this officially on npm site.</p>
+<p><code>latest</code> is a special tag</p>
+<blockquote>
+<p>Typically, projects only use the latest tag for stable release versions, and use other tags for unstable versions such as prereleases.</p>
+</blockquote>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag rm &lt;pkg&gt; &lt;tag&gt;</div></pre></td></tr></table></figure></p>
+<p>To list all tags
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag ls [&lt;pkg&gt;]</div></pre></td></tr></table></figure></p>
+<p>To add tag to a certain version
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag add &lt;pkg&gt;@&lt;version&gt; [&lt;tag&gt;]</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      how to publish beta version to npm
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://maxisam.github.com/categories/JavaScript/"/>
+    
+      <category term="package" scheme="http://maxisam.github.com/categories/JavaScript/package/"/>
+    
+      <category term="npm" scheme="http://maxisam.github.com/categories/JavaScript/package/npm/"/>
+    
+    
+      <category term="npm" scheme="http://maxisam.github.com/tags/npm/"/>
+    
+      <category term="publish" scheme="http://maxisam.github.com/tags/publish/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Commit on detached HEAD in Git</title>
+    <link href="http://maxisam.github.com/2017/01/30/commit-on-detached-HEAD-in-Git/"/>
+    <id>http://maxisam.github.com/2017/01/30/commit-on-detached-HEAD-in-Git/</id>
+    <published>2017-01-30T06:00:35.000Z</published>
+    <updated>2017-03-30T02:39:54.204Z</updated>
+    
+    <content type="html"><![CDATA[<p>First of all, <strong>don't commit on detached Head</strong>.</p>
+<p><blockquote><p>A &quot;detached head&quot; in git isn't the same as Mercurial's concept of a &quot;head&quot;. Git has exactly one HEAD, which is just the currently checked-out commit. &quot;Detached&quot; just means that you don't currently have a branch checked out. So when you create a commit, it won't be associated with a branch, and it'll be lost when you checkout a different commit.</p>
+<p>In Git, every commit that you care about should be reachable from some branch. There's no such thing as an &quot;anonymous branch&quot;, which is why git warns you when committing on a detached head. Committing on a detached head is like allocating an object and then throwing away the pointer; it's possible, but almost never what you want to do. Remember, branches in git are lightweight and can be ephemeral. Just create a branch before committing so that you can find your commits again.</p>
+<footer><strong>David@StackOverflow</strong><cite><a href="http://stackoverflow.com/a/16368880/667767" target="_blank" rel="external">stackoverflow.com/a/16368880/667767</a></cite></footer></blockquote></p>
+<p>But it's too late, how to get it back ?</p>
+<p><code>git reflog</code></p>
+<p>It will show all commit with hash.</p>
+<p>And create a new branch with the hash by</p>
+<p><code>git branch &lt;new-branch&gt; &lt;hash&gt;</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;First of all, &lt;strong&gt;don&#39;t commit on detached Head&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote&gt;&lt;p&gt;A &amp;quot;detached head&amp;quot; in git isn&#39;t the same as 
+    
+    </summary>
+    
+      <category term="Git" scheme="http://maxisam.github.com/categories/Git/"/>
+    
+      <category term="Tips" scheme="http://maxisam.github.com/categories/Git/Tips/"/>
+    
+    
+      <category term="git" scheme="http://maxisam.github.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Angular2 Form: Get Specific Error Type for Multiple Validators</title>
+    <link href="http://maxisam.github.com/2017/01/26/Angular2-Form-Get-Specific-Error-Type/"/>
+    <id>http://maxisam.github.com/2017/01/26/Angular2-Form-Get-Specific-Error-Type/</id>
+    <published>2017-01-26T17:46:26.000Z</published>
+    <updated>2017-03-30T02:39:54.196Z</updated>
+    
+    <content type="html"><![CDATA[<p>There are 2 ways</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">myFormCtrl: FormControl;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">this.myFormCtrl = new FormControl(&apos;&apos;, [Validators.required, Validators.maxLength(25)]);</div></pre></td></tr></table></figure></p>
+<p>you can either use safe-navigation (Elvis) operator .?</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input class=&quot;form-control&quot; type=&quot;text&quot;  [formControl]=&quot;myFormCtrl&quot; /&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.errors?.maxlength&quot;&gt; too long &lt;/span&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.errors?.required&quot;&gt; required &lt;/span&gt;</div></pre></td></tr></table></figure></p>
+<p>or</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input class=&quot;form-control&quot; type=&quot;text&quot;  [formControl]=&quot;myFormCtrl&quot; /&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.hasError(&apos;maxlength&apos;)&quot;&gt; too long &lt;/span&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.hasError(&apos;required&apos;)&quot;&gt; required &lt;/span&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Angular2 Form Get Specific Error Type for multiple validators
+    
+    </summary>
+    
+      <category term="Angular" scheme="http://maxisam.github.com/categories/Angular/"/>
+    
+      <category term="Form" scheme="http://maxisam.github.com/categories/Angular/Form/"/>
+    
+    
+      <category term="Angular" scheme="http://maxisam.github.com/tags/Angular/"/>
+    
+      <category term="form" scheme="http://maxisam.github.com/tags/form/"/>
+    
+      <category term="validators" scheme="http://maxisam.github.com/tags/validators/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ngModel in FormGroup</title>
+    <link href="http://maxisam.github.com/2017/01/26/ngModel-in-FormGroup/"/>
+    <id>http://maxisam.github.com/2017/01/26/ngModel-in-FormGroup/</id>
+    <published>2017-01-26T16:15:48.000Z</published>
+    <updated>2017-03-30T02:39:54.200Z</updated>
+    
+    <content type="html"><![CDATA[<p>In short <strong>ngModel can't be used by itself within FormGroup</strong></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div [formGroup]=&quot;myGroup&quot;&gt;</div><div class="line">   &lt;input name=&quot;firstName&quot; [(ngModel)]=&quot;firstName&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>The above code will throw an error like</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TypeError: Cannot set property stack of [object Object] which has only a getter at assignAll</div></pre></td></tr></table></figure></p>
+<p>Why ? kara@Github explained it very well at Github</p>
+<p><blockquote><p>formGroup expects you to create your own FormControl instances, whereas ngModel creates FormControl instances implicitly for you. You can't have two conflicting FormControl instances on the same form control element. When you use formControlName, ngModel does not activate or create a control (it's simply used as an @Input). formControlName just links to the existing input you created in your class.</p>
+<footer><strong>kara</strong><cite><a href="https://github.com/angular/angular/pull/10314#issuecomment-242230874" target="_blank" rel="external">Github</a></cite></footer></blockquote></p>
+<p>Therefore, to make above code work, here is the correct code</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div [formGroup]=&quot;myGroup&quot;&gt;</div><div class="line">   &lt;input formControlName=&quot;firstName&quot; [(ngModel)]=&quot;firstName&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In short &lt;strong&gt;ngModel can&#39;t be used by itself within FormGroup&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;g
+    
+    </summary>
+    
+      <category term="Angular" scheme="http://maxisam.github.com/categories/Angular/"/>
+    
+      <category term="Form" scheme="http://maxisam.github.com/categories/Angular/Form/"/>
+    
+    
+      <category term="Angular" scheme="http://maxisam.github.com/tags/Angular/"/>
+    
+      <category term="form" scheme="http://maxisam.github.com/tags/form/"/>
+    
+      <category term="ngModel" scheme="http://maxisam.github.com/tags/ngModel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to analyze your HDD usage</title>
+    <link href="http://maxisam.github.com/2017/01/20/How-to-analyze-your-HDD-usage/"/>
+    <id>http://maxisam.github.com/2017/01/20/How-to-analyze-your-HDD-usage/</id>
+    <published>2017-01-20T20:26:05.000Z</published>
+    <updated>2017-03-30T02:39:54.191Z</updated>
+    
+    <content type="html"><![CDATA[<p>Want to know what eat the HDD space ?</p>
+<p>Try <a href="https://windirstat.net/" target="_blank" rel="external">Windirstat</a> !</p>
+]]></content>
+    
+    <summary type="html">
+    
+      How to analyze your HDD usage
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="Tips" scheme="http://maxisam.github.com/categories/Tools/Tips/"/>
+    
+    
+      <category term="tips" scheme="http://maxisam.github.com/tags/tips/"/>
+    
+      <category term="Windows" scheme="http://maxisam.github.com/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clean Windows Installer to free up your HDD</title>
+    <link href="http://maxisam.github.com/2017/01/20/Clean-Windows-Installer-to-free-up-your-HDD/"/>
+    <id>http://maxisam.github.com/2017/01/20/Clean-Windows-Installer-to-free-up-your-HDD/</id>
+    <published>2017-01-20T20:05:49.000Z</published>
+    <updated>2017-03-30T02:39:54.187Z</updated>
+    
+    <content type="html"><![CDATA[<p>After a long time of usage, the space in system drive just getting low.</p>
+<p>One big thing can be remove is Windows Installer File</p>
+<p>But it is not safe to remove all.</p>
+<p>Here is a great tool called <a href="http://www.homedev.com.au/Free/PatchCleaner" target="_blank" rel="external">PatchCleaner</a> to save your day.</p>
+<p>More discussion can be found <a href="http://superuser.com/questions/707767/how-can-i-free-up-drive-space-from-the-windows-installer-folder-without-killing" target="_blank" rel="external">here</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Clean Windows Installer to free up your HDD
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="Tips" scheme="http://maxisam.github.com/categories/Tools/Tips/"/>
+    
+    
+      <category term="tips" scheme="http://maxisam.github.com/tags/tips/"/>
+    
+      <category term="Windows" scheme="http://maxisam.github.com/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Include and Exclude in Webpack Loader</title>
+    <link href="http://maxisam.github.com/2017/01/09/Include-and-Exclude-in-webpack-loader/"/>
+    <id>http://maxisam.github.com/2017/01/09/Include-and-Exclude-in-webpack-loader/</id>
+    <published>2017-01-09T06:21:50.000Z</published>
+    <updated>2017-03-30T02:39:54.183Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kinda surprises me.</p>
+<p>Exclude and Include DO NOT support relative path.</p>
+<p>Here is the detail from <a href="http://webpack.github.io/docs/configuration.html#module-loaders" target="_blank" rel="external">doc</a>.</p>
+<blockquote>
+<p><strong>module.loaders</strong></p>
+<p>A array of automatically applied loaders.</p>
+<p>Each item can have these properties:</p>
+<p>test: A condition that must be met
+exclude: A condition that must not be met
+include: A condition that must be met
+loader: A string of &quot;!&quot; separated loaders
+loaders: A array of loaders as string</p>
+<p>A condition can be a <strong>RegExp</strong>, an <strong>absolute path start</strong>, or <strong>an array of one of these combined with &quot;and&quot;</strong>.</p>
+</blockquote>
+<p>RegExp example</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exclude: [/bower_components/, /node_modules/]</div></pre></td></tr></table></figure></p>
+<p><strong>Performance tip</strong></p>
+<p>Use exclude and include properly, since Webpack is likely traveling through the files in the project.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      Include and Exclude in webpack loader
+    
+    </summary>
+    
+      <category term="Webpack" scheme="http://maxisam.github.com/categories/Webpack/"/>
+    
+      <category term="loader" scheme="http://maxisam.github.com/categories/Webpack/loader/"/>
+    
+    
+      <category term="Webpack" scheme="http://maxisam.github.com/tags/Webpack/"/>
+    
+      <category term="loader" scheme="http://maxisam.github.com/tags/loader/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rootDirs, rootDir and baseUrl in tsconfig</title>
+    <link href="http://maxisam.github.com/2017/01/03/rootDirs-in-tsconfig/"/>
+    <id>http://maxisam.github.com/2017/01/03/rootDirs-in-tsconfig/</id>
+    <published>2017-01-03T20:26:36.000Z</published>
+    <updated>2017-03-30T02:39:54.180Z</updated>
+    
+    <content type="html"><![CDATA[<p>rootDirs &amp; rootDir are two totally different thing, despite the names are similar.</p>
+<p>Here is the example structure</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root</div><div class="line"> └── compiled</div><div class="line"> └── dist</div><div class="line"> └── src</div><div class="line"> └── node_modules</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#concatenate-amd-and-system-modules-with---outfile" target="_blank" rel="external">rootDir</a> is for the location of the source code, which is <code>src</code>.</p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#virtual-directories-with-rootdirs" target="_blank" rel="external">rootDirs</a> is for Virtual Directories.</p>
+<p>Sometime a project might generate code for certain usage. Like in Angular AoT build, it will generate compiled code that is set by <a href="https://github.com/angular/angular/tree/master/modules/@angular/compiler-cli" target="_blank" rel="external">genDir</a></p>
+<p>if we set genDir = &quot;compiled&quot;, we should add <code>compiled</code> to rootDirs so we can reference it as it is inside src.</p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#base-url" target="_blank" rel="external">baseUrl</a> is for non-relative modules import.</p>
+<p>so it should be set as <code>node_modules</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      A note on how rootDirs should work in tsconfig
+    
+    </summary>
+    
+      <category term="Angular" scheme="http://maxisam.github.com/categories/Angular/"/>
+    
+      <category term="TypeScript" scheme="http://maxisam.github.com/categories/Angular/TypeScript/"/>
+    
+    
+      <category term="TypeScript" scheme="http://maxisam.github.com/tags/TypeScript/"/>
+    
+      <category term="tsconfig" scheme="http://maxisam.github.com/tags/tsconfig/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AoT&#39;s no no list</title>
+    <link href="http://maxisam.github.com/2016/12/27/AoT-s-no-no-list/"/>
+    <id>http://maxisam.github.com/2016/12/27/AoT-s-no-no-list/</id>
+    <published>2016-12-27T22:02:19.000Z</published>
+    <updated>2017-03-30T02:39:54.176Z</updated>
+    
+    <content type="html"><![CDATA[<p>Just make my project build in AOT mode. Here is the list I discovered during the process.</p>
+<ol>
+<li>
+<p>No destructured variable or constant.</p>
+<blockquote>
+<p>Referencing an exported destructured variable or constant is not supported by the template compiler</p>
+</blockquote>
+<p>Not support: <code>const {var1, ver2} = generate();</code></p>
+</li>
+<li>
+<p>Function calls are not supported.</p>
+<blockquote>
+<p>Function calls are not supported. Consider replacing the function or lambda with a reference to an exported function</p>
+</blockquote>
+<p>Not supported <code>export const var1 = () =&gt; {}</code>
+Support <code>export function fun1 { }</code></p>
+</li>
+<li>
+<p>Could not resolve type Window.</p>
+<p>Not supported Window type directly from <code>lib.dom.d.ts</code>
+<figure class="highlight javascript"><figcaption><span>injuct Window service</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> windowSrv = <span class="keyword">new</span> OpaqueToken(<span class="string">'WindowSrv'</span>);</div><div class="line"></div><div class="line"><span class="keyword">constructor</span> (</div><div class="line"> @Inject(windowSrv) private _Window: any</div><div class="line">) &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>Here is the proper way to do it <a href="http://juristr.com/blog/2016/09/ng2-get-window-ref/" target="_blank" rel="external">Angular 2: How do I get a reference to the window object?</a></p>
+</li>
+<li>
+<p>No support for Sass or Less</p>
+<p>Compile them first. ngc does not support anything other than css. So the best bet right now is</p>
+<p>a. compile scss first and run ngc. <a href="https://github.com/qdouble/angular-webpack2-starter/issues/112" target="_blank" rel="external">angular-webpack2-starter</a></p>
+<p>b. use loader chain for resources when compiling AOT <a href="https://github.com/AngularClass/angular2-webpack-starter/pull/1307" target="_blank" rel="external">angular2-webpack-starter</a></p>
+<p>c. use <a href="https://www.npmjs.com/package/@ngtools/webpack" target="_blank" rel="external">@ngtools/webpack</a>, which is still under development.</p>
+</li>
+<li>
+<p>Typescript version.</p>
+<p>Check ngc (compiler-cli) support typescript version on <a href="https://github.com/angular/angular/tree/master/modules/@angular/compiler-cli" target="_blank" rel="external">github</a></p>
+</li>
+<li>
+<p>Don't use enum for router path. It just doesn't work.</p>
+</li>
+</ol>
+<p>Here is the list from  <a href="https://github.com/AngularClass/angular2-webpack-starter/blob/master/README.md#aot--donts" target="_blank" rel="external">angular2-webpack-starter</a></p>
+<p>The following are some things that will make AoT compile fail.</p>
+<ol>
+<li>
+<p>Don’t use require statements for your templates or styles, use styleUrls and templateUrls, the angular2-template-loader plugin will change it to require at build time.</p>
+</li>
+<li>
+<p>Don’t use default exports.</p>
+</li>
+<li>
+<p>Don’t use form.controls.controlName, use form.get(‘controlName’)</p>
+</li>
+<li>
+<p>Don’t use control.errors?.someError, use control.hasError(‘someError’)</p>
+</li>
+<li>
+<p>Don’t use functions in your providers, routes or declarations, export a function and then reference that function name</p>
+</li>
+<li>
+<p>Inputs, Outputs, View or Content Child(ren), Hostbindings, and any field you use from the template or annotate for Angular should be public</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      Restriction for Angular AoT
+    
+    </summary>
+    
+      <category term="Angular" scheme="http://maxisam.github.com/categories/Angular/"/>
+    
+      <category term="AoT" scheme="http://maxisam.github.com/categories/Angular/AoT/"/>
+    
+    
+      <category term="Angular" scheme="http://maxisam.github.com/tags/Angular/"/>
+    
+      <category term="AoT" scheme="http://maxisam.github.com/tags/AoT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to do negative pattern for VS Code files exclude</title>
+    <link href="http://maxisam.github.com/2016/12/09/how-to-do-negative-pattern-for-VS-code-files-exclude/"/>
+    <id>http://maxisam.github.com/2016/12/09/how-to-do-negative-pattern-for-VS-code-files-exclude/</id>
+    <published>2016-12-09T19:38:12.000Z</published>
+    <updated>2017-03-30T02:39:54.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>The short answer is No, VS Code have not support it yet. (2016-12-09)</p>
+<p>So is this the end ? No</p>
+<p>Here is the work around.</p>
+<p><figure class="highlight javascript"><figcaption><span>files.exclude</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">"files.exclude"</span>: &#123;</div><div class="line">   <span class="string">"**/node_modules"</span>: <span class="literal">false</span>,</div><div class="line">   <span class="string">"**/node_modules/.*"</span>: <span class="literal">true</span>,</div><div class="line">   <span class="comment">// hide all folders that doesn't start with letter 'a'</span></div><div class="line">   <span class="string">"**/node_modules/[bcdefghijklmnopqrstuvwxyz]*"</span>: <span class="literal">true</span>,</div><div class="line">   <span class="comment">// hide all folders that doesn't start with 'ap'</span></div><div class="line">   <span class="string">"**/node_modules/a[abcdefghijklmnoqrstuvwxyz]*"</span>: <span class="literal">true</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>Kudos to 1-9@<a href="https://github.com/Microsoft/vscode/issues/869#issuecomment-263006643%5D" target="_blank" rel="external">Github</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      a work around for doing negative pattern in files exclude of VS Code
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="Tips" scheme="http://maxisam.github.com/categories/Tools/Tips/"/>
+    
+      <category term="VS Code" scheme="http://maxisam.github.com/categories/Tools/Tips/VS-Code/"/>
+    
+    
+      <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>
+    
+      <category term="tips" scheme="http://maxisam.github.com/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Figure out build error in Visual studio 2015</title>
+    <link href="http://maxisam.github.com/2016/10/10/Figure-out-build-error-in-Visual-studio-2015/"/>
+    <id>http://maxisam.github.com/2016/10/10/Figure-out-build-error-in-Visual-studio-2015/</id>
+    <published>2016-10-10T05:39:32.000Z</published>
+    <updated>2017-03-30T02:39:54.167Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sometime Visual Studio spit out an error that doesn't really tell what error is about.</p>
+<p>For example, <code>tsc.exe exited with code 1</code></p>
+<p>There is just not much clue from this error message.</p>
+<p>Here is the saver:</p>
+<p><code>Visual Studio -&gt; Tools -&gt; Options -&gt; Projects and Solutions -&gt; Build and Run -&gt; MSBuild project build output verbosity</code></p>
+<p>Change it to <code>Detailed</code></p>
+<p>And it will show more detail in output window.</p>
+<p>Kudos to <a href="http://stackoverflow.com/a/39162173/667767" target="_blank" rel="external">thoean@stackoverflow</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Figure out build (MSBuild) error in Visual studio 2015
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="Troubleshooting" scheme="http://maxisam.github.com/categories/Tools/Troubleshooting/"/>
+    
+      <category term="VS2015" scheme="http://maxisam.github.com/categories/Tools/Troubleshooting/VS2015/"/>
+    
+    
+      <category term="Visual Studio" scheme="http://maxisam.github.com/tags/Visual-Studio/"/>
+    
+      <category term="troubleshooting" scheme="http://maxisam.github.com/tags/troubleshooting/"/>
+    
+      <category term="tips" scheme="http://maxisam.github.com/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Add automatically releasing to Github project</title>
+    <link href="http://maxisam.github.com/2016/10/06/Add-automatically-releasing-to-Github-project/"/>
+    <id>http://maxisam.github.com/2016/10/06/Add-automatically-releasing-to-Github-project/</id>
+    <published>2016-10-06T05:49:03.000Z</published>
+    <updated>2017-03-30T02:39:54.049Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><a href="https://github.com/semantic-release/semantic-release" target="_blank" rel="external">semantic-release</a></strong></p>
+<ol>
+<li>
+<p><code>npm i -g semantic-release cli</code></p>
+</li>
+<li>
+<p>semantic-release-cli setup</p>
+<ul>
+<li>it will add <code>travis.yml</code> to the project</li>
+<li>package.json changes
+<ul>
+<li>version is removed</li>
+<li>add semantic-release task</li>
+<li>add semantic-release to devDependencies</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong><a href="https://github.com/commitizen/cz-cli" target="_blank" rel="external">commitizen</a></strong></p>
+<p>Since semantic-release uses <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit" target="_blank" rel="external">conventional commit message</a> to determine version, this tool will make it easier.</p>
+<ol>
+<li><code>npm install -D commitizen cz-conventional-changelog</code>
+<ul>
+<li>add <code>commitizen</code> &amp; <code>cz-conventional-changelog</code> to package.json</li>
+</ul>
+</li>
+<li>run <code>commitizen init cz-conventional-changelog --save-dev --save-exact</code></li>
+<li>add task &quot;commit&quot;: &quot;git-cz&quot; to package.json</li>
+</ol>
+<p><strong><a href="https://travis-ci.org/" target="_blank" rel="external">TravisCI</a></strong></p>
+<p>The <code>.travis.yml</code> should probably look like</p>
+<p><figure class="highlight yml"><figcaption><span>.travis.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sudo:</span> <span class="literal">false</span></div><div class="line"><span class="attr">language:</span> node_js</div><div class="line"><span class="attr">cache:</span></div><div class="line"><span class="attr">  directories:</span></div><div class="line"><span class="bullet">    -</span> node_modules</div><div class="line"><span class="attr">branches:</span></div><div class="line"><span class="attr">  only:</span></div><div class="line"><span class="bullet">    -</span> master    </div><div class="line"><span class="attr">notifications:</span></div><div class="line"><span class="attr">  email:</span> <span class="literal">false</span></div><div class="line"><span class="attr">node_js:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">'4'</span></div><div class="line"><span class="attr">before_install:</span></div><div class="line"><span class="bullet">  -</span> npm i -g npm@^<span class="number">2.0</span><span class="number">.0</span></div><div class="line"><span class="attr">before_script:</span></div><div class="line"><span class="bullet">  -</span> npm prune</div><div class="line"><span class="attr">script:</span></div><div class="line"><span class="bullet">  -</span> npm run build</div><div class="line"><span class="attr">after_success:</span></div><div class="line"><span class="bullet">  -</span> npm run semantic-release</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Add automatically releasing to Github project with semantic-release, commitizen and TravisCI
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
+    
+      <category term="Automation" scheme="http://maxisam.github.com/categories/Tools/Automation/"/>
+    
+    
+      <category term="Github" scheme="http://maxisam.github.com/tags/Github/"/>
+    
+      <category term="build &amp; releasing" scheme="http://maxisam.github.com/tags/build-releasing/"/>
+    
+      <category term="TravisCI" scheme="http://maxisam.github.com/tags/TravisCI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Unexpected value &#39;xxx&#39; imported by the module &#39;AppModule&#39;</title>
     <link href="http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/"/>
     <id>http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/</id>
     <published>2016-10-02T06:43:35.000Z</published>
-    <updated>2016-10-02T06:56:34.836Z</updated>
+    <updated>2017-03-30T02:39:54.045Z</updated>
     
     <content type="html"><![CDATA[<p>When building an app with custom libraries pulling from npm, sometime it shows the following error</p>
 <p><code>Unexpected value 'xxx' imported by the module 'AppModule'</code></p>
@@ -34,14 +580,14 @@
     
     </summary>
     
-      <category term="Angular2" scheme="http://maxisam.github.com/categories/Angular2/"/>
+      <category term="Angular" scheme="http://maxisam.github.com/categories/Angular/"/>
     
-      <category term="Typescript" scheme="http://maxisam.github.com/categories/Angular2/Typescript/"/>
+      <category term="TypeScript" scheme="http://maxisam.github.com/categories/Angular/TypeScript/"/>
     
     
-      <category term="Angular2" scheme="http://maxisam.github.com/tags/Angular2/"/>
+      <category term="Angular" scheme="http://maxisam.github.com/tags/Angular/"/>
     
-      <category term="Typescript" scheme="http://maxisam.github.com/tags/Typescript/"/>
+      <category term="TypeScript" scheme="http://maxisam.github.com/tags/TypeScript/"/>
     
       <category term="tsconfig" scheme="http://maxisam.github.com/tags/tsconfig/"/>
     
@@ -255,7 +801,7 @@ The personal access token needs to be set as <strong>all accessible account</str
     <link href="http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/"/>
     <id>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</id>
     <published>2016-09-16T05:05:06.000Z</published>
-    <updated>2016-10-02T04:08:21.870Z</updated>
+    <updated>2017-03-30T02:39:54.039Z</updated>
     
     <content type="html"><![CDATA[<p>There is a very annoy issue after installing Typescript 1.8.x on VS2015.</p>
 <p>It shows tons of error like this</p>
@@ -285,515 +831,7 @@ The personal access token needs to be set as <strong>all accessible account</str
     
       <category term="troubleshooting" scheme="http://maxisam.github.com/tags/troubleshooting/"/>
     
-      <category term="Typescript" scheme="http://maxisam.github.com/tags/Typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Use window as a provider in Angular2</title>
-    <link href="http://maxisam.github.com/2016/09/14/use-window-as-a-provider-in-Angular2/"/>
-    <id>http://maxisam.github.com/2016/09/14/use-window-as-a-provider-in-Angular2/</id>
-    <published>2016-09-15T04:12:54.000Z</published>
-    <updated>2016-10-02T04:08:21.867Z</updated>
-    
-    <content type="html"><![CDATA[<p>Sometime the project need to access window object in Angular2. Here is the best and easiest way I found.</p>
-<p>First, use <a href="http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html" target="_blank" rel="external"><strong>OpaqueToken</strong></a> to create a token for the provider. It need to be in a <strong>separated</strong> file, which is other than the one for ngModule.</p>
-<p>Otherwise, it will cause circular dependency issue.</p>
-<p><figure class="highlight javascript"><figcaption><span>create window provider</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> WindowSrv = <span class="keyword">new</span> OpaqueToken(<span class="string">"WindowSrv"</span>);</div></pre></td></tr></table></figure></p>
-<p>then import this token to ngModule.</p>
-<p><figure class="highlight javascript"><figcaption><span>in ngModule</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; WindowSrv &#125; <span class="keyword">from</span> <span class="string">'./app.service'</span>;</div></pre></td></tr></table></figure></p>
-<p>Add it to providers array</p>
-<p><figure class="highlight javascript"><figcaption><span>in ngModule</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">providers: [ <span class="comment">// expose our Services and Providers into Angular's dependency injection</span></div><div class="line">    ENV_PROVIDERS,</div><div class="line">    APP_PROVIDERS,</div><div class="line">    &#123; provide: WindowSrv, useValue: <span class="built_in">window</span> &#125;</div><div class="line">]</div></pre></td></tr></table></figure></p>
-<p>Then it can be use everywhere like this. Since it is not a class dependency, it needs to use <a href="https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#dependency-injection-tokens" target="_blank" rel="external"><strong>@Inject</strong> decorator</a>.
-Remember to <strong>import</strong> this token as well.</p>
-<p><figure class="highlight javascript"><figcaption><span>in component</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(</div><div class="line">    @Inject(WindowSrv) private _Window: Window</div><div class="line">) &#123; &#125;</div></pre></td></tr></table></figure></p>
-<p>Ref:</p>
-<ol>
-<li>
-<p><a href="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html" target="_blank" rel="external">DEPENDENCY INJECTION IN ANGULAR 2</a></p>
-</li>
-<li>
-<p><a href="https://angular.io/docs/ts/latest/guide/dependency-injection.html#!#dependency-injection-tokens" target="_blank" rel="external">Dependency injection tokens</a></p>
-</li>
-<li>
-<p><a href="http://blog.thoughtram.io/angular/2016/05/23/opaque-tokens-in-angular-2.html" target="_blank" rel="external">OpaqueToken</a></p>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      How to use window as a provider in Angular2
-    
-    </summary>
-    
-      <category term="Angular2" scheme="http://maxisam.github.com/categories/Angular2/"/>
-    
-      <category term="Dependency Injection" scheme="http://maxisam.github.com/categories/Angular2/Dependency-Injection/"/>
-    
-      <category term="Providing Value" scheme="http://maxisam.github.com/categories/Angular2/Dependency-Injection/Providing-Value/"/>
-    
-    
-      <category term="Angular2" scheme="http://maxisam.github.com/tags/Angular2/"/>
-    
-      <category term="provider" scheme="http://maxisam.github.com/tags/provider/"/>
-    
-      <category term="OpaqueToken" scheme="http://maxisam.github.com/tags/OpaqueToken/"/>
-    
-      <category term="dependency injection" scheme="http://maxisam.github.com/tags/dependency-injection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Exclude JavaScript Files from TypeScript Project in VS Code</title>
-    <link href="http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/"/>
-    <id>http://maxisam.github.com/2016/09/09/Exclude-Javascript-Files-from-Typescript-Project-in-VS-Code/</id>
-    <published>2016-09-10T01:40:14.000Z</published>
-    <updated>2016-10-02T04:08:21.855Z</updated>
-    
-    <content type="html"><![CDATA[<p>When working in a TypeScript project, the workspace always contains JavaScript transpiled files.</p>
-<p>It kinda pollutes the workspace, IMO.</p>
-<p>Here is solution. Put the following settings in <code>.vscode\settings.json</code></p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"files.exclude"</span>: &#123;</div><div class="line">        <span class="string">"**/.git"</span>: <span class="literal">true</span>,</div><div class="line">        <span class="string">"**/*.js"</span>: &#123;</div><div class="line">            <span class="string">"when"</span>: <span class="string">"$(basename).ts"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="string">"**/*.js.map"</span>:<span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      How to exclude Javascript files from Typescript project in Visual Studio Code
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://maxisam.github.com/categories/Tools/"/>
-    
-      <category term="Tips" scheme="http://maxisam.github.com/categories/Tools/Tips/"/>
-    
-      <category term="VS Code" scheme="http://maxisam.github.com/categories/Tools/Tips/VS-Code/"/>
-    
-    
-      <category term="VS Code" scheme="http://maxisam.github.com/tags/VS-Code/"/>
-    
-      <category term="tool setting" scheme="http://maxisam.github.com/tags/tool-setting/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Font-stretch</title>
-    <link href="http://maxisam.github.com/2016/09/09/font-stretch/"/>
-    <id>http://maxisam.github.com/2016/09/09/font-stretch/</id>
-    <published>2016-09-09T05:06:50.000Z</published>
-    <updated>2016-10-02T04:08:21.861Z</updated>
-    
-    <content type="html"><![CDATA[<p>First of all, font-stretch doesn't work. I mean at least it doesn't work on Chrome. So how to <strong>stretch</strong> the text then ?</p>
-<p><strong>CSS 2D transform</strong> is the best savor I found.</p>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"stretch"</span>&gt;</span>stretching<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span><span class="selector-class">.stretch</span> &#123;</div><div class="line">    <span class="attribute">display</span>:inline-block;</div><div class="line">    <span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Safari and Chrome */</span></div><div class="line">    <span class="attribute">-moz-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">-ms-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* IE 9 */</span></div><div class="line">    <span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* Opera */</span></div><div class="line">    <span class="attribute">transform</span>:<span class="built_in">scale</span>(2,1); <span class="comment">/* W3C */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Kudos to : <a href="http://stackoverflow.com/a/12065925/667767" target="_blank" rel="external">Timothy Perez@stackoverflow</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      how to stretch text by css
-    
-    </summary>
-    
-      <category term="CSS" scheme="http://maxisam.github.com/categories/CSS/"/>
-    
-      <category term="Text" scheme="http://maxisam.github.com/categories/CSS/Text/"/>
-    
-    
-      <category term="CSS" scheme="http://maxisam.github.com/tags/CSS/"/>
-    
-      <category term="transforms" scheme="http://maxisam.github.com/tags/transforms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Build an Angular2 Library with Webpack</title>
-    <link href="http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/"/>
-    <id>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</id>
-    <published>2016-09-07T03:41:30.000Z</published>
-    <updated>2016-10-03T04:47:16.550Z</updated>
-    
-    <content type="html"><![CDATA[<p>I was trying to build an Angular2 library, but it actually took me a while to figure it out. I hope this post will help me or others in the future.</p>
-<p>Here is the project, <a href="https://github.com/maxisam/angular2-clipboard" target="_blank" rel="external">angular2-clipboard</a></p>
-<p>It is written in Typescript. However, people want to have a build in plain old Javascript.</p>
-<p>My first thought was pack it with Webpack.</p>
-<p><strong>But how to exclude something like Angular2 from this library ?</strong></p>
-<p>In Webpack, there is a option call <a href="https://webpack.github.io/docs/library-and-externals.html" target="_blank" rel="external">externals</a></p>
-<p>Here is code I used in my angular2-clipboard project</p>
-<p><figure class="highlight javascript"><figcaption><span>Webpack.config</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">externals: &#123;</div><div class="line">    <span class="string">"clipboard"</span>: <span class="string">"clipboard"</span>,</div><div class="line">    <span class="string">'@angular/core'</span>: &#123; root: [<span class="string">'ng'</span>, <span class="string">'core'</span>], commonjs: <span class="string">'@angular/core'</span>, commonjs2: <span class="string">'@angular/core'</span>, amd: <span class="string">'@angular/core'</span> &#125;,</div><div class="line">    <span class="string">'rxjs/Rx'</span>: &#123; root: <span class="string">'Rx'</span>, commonjs: <span class="string">'rxjs/Rx'</span>, commonjs2: <span class="string">'rxjs/Rx'</span>, amd: <span class="string">'rxjs/Rx'</span> &#125;,</div><div class="line">    <span class="string">'rxjs/add/operator/let'</span>: &#123;</div><div class="line">      root: [<span class="string">'Rx'</span>, <span class="string">'Observable'</span>, <span class="string">'prototype'</span>],</div><div class="line">      commonjs: <span class="string">'rxjs/add/operator/let'</span>,</div><div class="line">      commonjs2: <span class="string">'rxjs/add/operator/let'</span>,</div><div class="line">      amd: <span class="string">'rxjs/add/operator/let'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>But it doesn't work. If you check the output js, you will find @angular/core module is like</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function(module, exports) &#123;</div><div class="line">	</div><div class="line">  module.exports = undefined;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>It turns out there are 2 settings in output section needs to set. <a href="https://webpack.github.io/docs/configuration.html#output-library" target="_blank" rel="external">library and libraryTarget</a></p>
-<p>Here is the example,</p>
-<p><figure class="highlight javascript"><figcaption><span>Webpack.config</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    path: <span class="string">'./'</span>,</div><div class="line">    filename: <span class="string">'[name].js'</span>,</div><div class="line">    library: <span class="string">'ngII'</span>,  <span class="comment">// you can call it whatever you want. </span></div><div class="line">    libraryTarget: <span class="string">'umd'</span></div><div class="line">  &#125; </div></pre></td></tr></table></figure></p>
-<p>Ref 1: <a href="http://tomasalabes.me/blog/_site/web-development/2016/04/30/Webpack-Series-Part-1.html" target="_blank" rel="external">Webpack Series (Part 1): Some Configs Explained</a></p>
-<p>Ref 2: <a href="https://github.com/ng-bootstrap/ng-bootstrap" target="_blank" rel="external">NG Bootstrap</a></p>
-<p>Ref 3: <a href="https://medium.com/@OCombe/how-to-publish-a-library-for-angular-2-on-npm-5f48cdabf435#.jodrdcb3r" target="_blank" rel="external">How to publish a library for Angular 2 on npm</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      How to build an Angular2 Library with Webpack
-    
-    </summary>
-    
-      <category term="Angular2" scheme="http://maxisam.github.com/categories/Angular2/"/>
-    
-      <category term="Webpack" scheme="http://maxisam.github.com/categories/Angular2/Webpack/"/>
-    
-    
-      <category term="Angular2" scheme="http://maxisam.github.com/tags/Angular2/"/>
-    
-      <category term="Webpack" scheme="http://maxisam.github.com/tags/Webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo got error on deploying to github</title>
-    <link href="http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/"/>
-    <id>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</id>
-    <published>2016-09-02T05:40:47.000Z</published>
-    <updated>2016-09-04T01:54:41.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>Today when I tried to deploy, it throws me this. It was working fine but just not today.</p>
-<p><code>bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not read Username for 'https://github.com': No error</code></p>
-<p>And VS code keeps popping up the dialog for git's username and password.</p>
-<p>Google it, most of people handle it by switching to SSH.</p>
-<p>But it actually can be fixed by 2 simple steps</p>
-<ul>
-<li>Git Credential Manager for Windows</li>
-<li>run command <code>git config --global credential.helper wincred</code> <a href="https://help.github.com/enterprise/2.7/user/articles/caching-your-github-password-in-git/" target="_blank" rel="external">link</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      handle &quot;could not real Username&quot; error when deploying Hexo blog to github
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Hexo" scheme="http://maxisam.github.com/categories/Blog/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://maxisam.github.com/tags/Hexo/"/>
-    
-      <category term="github" scheme="http://maxisam.github.com/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS namespacing/ architecture idea</title>
-    <link href="http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/"/>
-    <id>http://maxisam.github.com/2016/09/01/CSS-namespacing-architecture-idea/</id>
-    <published>2016-09-02T03:50:38.000Z</published>
-    <updated>2016-09-02T05:38:33.220Z</updated>
-    
-    <content type="html"><![CDATA[<p>Just come across an interesting idea for CSS</p>
-<p>In a word, <strong>prefixed the class name with an indicator of the class' purpose and scope.</strong></p>
-<ul>
-<li>.o- // an object, an unstyled design pattern</li>
-<li>.c- // a component, a styled piece of UI</li>
-<li>.a- // an alteration, an UI-independent override</li>
-<li>.t- // a theme, change UI appearance based on theme</li>
-<li>.is-, .has-, .for- // state-based styles</li>
-<li>.js- // used for binding behavior to components</li>
-</ul>
-<p>In each layer of the inverted triangle, the scope of the styles get narrower and more specific.
-At the bottom of this is a layer of utility or helper classes, referred to as “trumps”, that contains high-specificity selectors (<a href="https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54#.xg8gjc766" target="_blank" rel="external">ref</a>).</p>
-<p>This probably become less important now when using Angular2 component with style attached, but still a good thought.</p>
-<p>more:</p>
-<ul>
-<li><a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731" target="_blank" rel="external">Manage large-scale web projects with new CSS architecture ITCSS</a></li>
-<li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/" target="_blank" rel="external">More Transparent UI Code with Namespaces</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Just come across an interesting idea for CSS&lt;/p&gt;
-&lt;p&gt;In a word, &lt;strong&gt;prefixed the class name with an indicator of the class&#39; purpose an
-    
-    </summary>
-    
-      <category term="CSS" scheme="http://maxisam.github.com/categories/CSS/"/>
-    
-    
-      <category term="CSS" scheme="http://maxisam.github.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Image path in github page</title>
-    <link href="http://maxisam.github.com/2016/09/01/image-path-in-github-page/"/>
-    <id>http://maxisam.github.com/2016/09/01/image-path-in-github-page/</id>
-    <published>2016-09-01T05:18:03.000Z</published>
-    <updated>2016-10-02T04:08:21.851Z</updated>
-    
-    <content type="html"><![CDATA[<p>Another detail.</p>
-<p>I was woundering why some images were missing on my github page generated by Hexo but showed correctly on local Hexo server.</p>
-<p>It turns out the image path for Githut page is <strong>case-sensitive</strong> !</p>
-<p>case closed.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Another detail.&lt;/p&gt;
-&lt;p&gt;I was woundering why some images were missing on my github page generated by Hexo but showed correctly on local He
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Github page" scheme="http://maxisam.github.com/categories/Blog/Github-page/"/>
-    
-    
-      <category term="github page" scheme="http://maxisam.github.com/tags/github-page/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ionic2 with Visual Studio + IIS Express</title>
-    <link href="http://maxisam.github.com/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/"/>
-    <id>http://maxisam.github.com/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/</id>
-    <published>2016-08-31T22:45:32.000Z</published>
-    <updated>2016-09-07T05:47:46.745Z</updated>
-    
-    <content type="html"><![CDATA[<p>Developing Ionic2 on VS2015 is much easier than I thought.</p>
-<p>You will have pretty nice debugging experience and nice emulator from Visual Studio.</p>
-<p>However, there is always a devil in the details.</p>
-<p>Let's say if you want to make the Ionic app talk to your local IIS Express that serves your Web API, it won't work right out of box.</p>
-<p>First of all, the VS Android Emulator use a virtual network adapter with a magic IP to connect to the localhost, <strong>169.254.80.80</strong>.</p>
-<p>Since IIS Express naturally only binds to localhost, it doesn't know about the IP from this adapter.</p>
-<p>To make IIS Express aware this, a new binding needs to be add in applicationhost.config.</p>
-<p>in vs2015, it is <code>.vs\config\applicationHost.config</code></p>
-<p><code>&lt;site name=&quot;ProjectName&quot; id=&quot;1&quot;&gt; [blah blah blah] &lt;bindings&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:localhost&quot; /&gt; &lt;binding protocol=&quot;http&quot; bindingInformation=&quot;*:1234:169.254.80.80&quot; /&gt; &lt;/bindings&gt; &lt;/site&gt;</code></p>
-<p>Since I forgot this one twice during the development, it deserves my time for this post.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      Developing Ionic2 on VS2015 with IIS Express
-    
-    </summary>
-    
-      <category term="Ionic2" scheme="http://maxisam.github.com/categories/Ionic2/"/>
-    
-    
-      <category term="ionic2" scheme="http://maxisam.github.com/tags/ionic2/"/>
-    
-      <category term="IIS Express" scheme="http://maxisam.github.com/tags/IIS-Express/"/>
-    
-      <category term="VS2015" scheme="http://maxisam.github.com/tags/VS2015/"/>
-    
-      <category term="Visual Studio" scheme="http://maxisam.github.com/tags/Visual-Studio/"/>
-    
-      <category term="VS Emulator Android" scheme="http://maxisam.github.com/tags/VS-Emulator-Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Changing Stylus in Hexo</title>
-    <link href="http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/"/>
-    <id>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</id>
-    <published>2016-08-29T15:26:14.000Z</published>
-    <updated>2016-09-04T06:46:08.287Z</updated>
-    
-    <content type="html"><![CDATA[<p>I was trying to fix the css in my blog to make &quot;facebook like&quot; button align with google+ button.</p>
-<p>The code was just quick and dirty. It works on local as well.</p>
-<p><code>.fb-like.fb_iframe_widget{ vertical-align: top; }</code></p>
-<p>However it never got to deploy to server.</p>
-<p>It turns out Stylus tranpiler seems smarter than I assumed.</p>
-<p>because the class <code>fb_iframe_widget</code> is added dynamically by facebook widget, transpiler can't find anything use above code and decide not to put into the result css.</p>
-<p>After I change it to</p>
-<p><code>.fb-like{ vertical-align: top; }</code></p>
-<p>it works.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      facebook like button not align with other social button and the way Hexo transpile Stylus
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Hexo" scheme="http://maxisam.github.com/categories/Blog/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="http://maxisam.github.com/tags/Hexo/"/>
-    
-      <category term="Stylus" scheme="http://maxisam.github.com/tags/Stylus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Updating gitignore</title>
-    <link href="http://maxisam.github.com/2016/08/28/gitignore/"/>
-    <id>http://maxisam.github.com/2016/08/28/gitignore/</id>
-    <published>2016-08-28T05:55:27.000Z</published>
-    <updated>2016-08-29T21:36:06.674Z</updated>
-    
-    <content type="html"><![CDATA[<p>How to refresh the file index so the files I want ignored get ignored ?</p>
-<h4>Signal file</h4>
-<p><code>git rm --cached filename</code></p>
-<p>to undo <code>use git add filename</code></p>
-<hr>
-<h4>Redo the whole .gitignore</h4>
-<p><strong>First commit any outstanding code changes</strong>, and then, run this command:</p>
-<p><code>git rm -r --cached .</code></p>
-<p>This removes any changed files from the index(staging area), then just run:</p>
-<p><code>git add .</code></p>
-<p>Commit it:</p>
-<p><code>git commit -m &quot;redo .gitignore&quot;</code></p>
-<p>kudos to <a href="http://stackoverflow.com/a/1139797/667767" target="_blank" rel="external">takeshin@stackoverflow</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;How to refresh the file index so the files I want ignored get ignored ?&lt;/p&gt;
-&lt;h4&gt;Signal file&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;git rm --cached filename&lt;/code&gt;
-    
-    </summary>
-    
-      <category term="Git" scheme="http://maxisam.github.com/categories/Git/"/>
-    
-    
-      <category term="gitignore" scheme="http://maxisam.github.com/tags/gitignore/"/>
-    
-      <category term="git" scheme="http://maxisam.github.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Showing hexo tags &amp; categories</title>
-    <link href="http://maxisam.github.com/2016/08/27/hexo-tags-categories/"/>
-    <id>http://maxisam.github.com/2016/08/27/hexo-tags-categories/</id>
-    <published>2016-08-28T04:31:52.000Z</published>
-    <updated>2016-08-29T21:36:06.670Z</updated>
-    
-    <content type="html"><![CDATA[<p>It takes me a while to figure out how to create tags and categories pages</p>
-<p>You need to have</p>
-<ol>
-<li>
-<p>Supported theme</p>
-</li>
-<li>
-<p>Add type attribute to tags &amp; categories pages as tags and categories respectfully</p>
-</li>
-<li>
-<p>Add tags and categories pages to the menu</p>
-</li>
-</ol>
-<p><a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">Official docs</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;It takes me a while to figure out how to create tags and categories pages&lt;/p&gt;
-&lt;p&gt;You need to have&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Supported theme&lt;/p&gt;
-&lt;/
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-      <category term="Setup" scheme="http://maxisam.github.com/categories/Blog/Setup/"/>
-    
-    
-      <category term="blog" scheme="http://maxisam.github.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Migrate to Hexo</title>
-    <link href="http://maxisam.github.com/2016/08/26/newblog/"/>
-    <id>http://maxisam.github.com/2016/08/26/newblog/</id>
-    <published>2016-08-26T05:12:42.000Z</published>
-    <updated>2016-08-28T05:12:26.457Z</updated>
-    
-    <content type="html"><![CDATA[<p>Migrate everything to Hexo from Octopress!</p>
-<p>It is actually very smooth.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Migrate everything to Hexo from Octopress!&lt;/p&gt;
-&lt;p&gt;It is actually very smooth.&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://maxisam.github.com/categories/Blog/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Run Foodme in windows</title>
-    <link href="http://maxisam.github.com/2013/01/23/run-foodme-in-windows/"/>
-    <id>http://maxisam.github.com/2013/01/23/run-foodme-in-windows/</id>
-    <published>2013-01-23T16:12:00.000Z</published>
-    <updated>2016-08-28T04:25:25.820Z</updated>
-    
-    <content type="html"><![CDATA[<p>Lately I finally have some time to check the awesome example, <a href="https://github.com/IgorMinar/foodme" target="_blank" rel="external">FoodMe</a>, created by AngularJS team.</p>
-<p>First of all, I am not a node.js user. So when I try to run foodme, it took me some time.</p>
-<p>And this <a href="https://docs.google.com/document/pub?id=1Fzq60IBaSf5mnsLWhig5nhZ9cJT85sresp0NqNIwh1I" target="_blank" rel="external">doc</a> doesn't really help on this. They probably never image someone doesn't know this. lol</p>
-<p>This tutorial is for people like me, a node.js newbie,</p>
-<p>Doesn't know what to do with this kinda message:</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">module.js:340</div><div class="line">    throw err;</div><div class="line">          ^</div><div class="line">Error: Cannot find module &apos;express&apos;</div><div class="line">    at Function.Module._resolveFilename (module.js:338:15)</div><div class="line">    at Function.Module._load (module.js:280:25)</div><div class="line">    at Module.require (module.js:362:17)</div><div class="line">    at require (module.js:378:17)</div><div class="line">    at Object.&lt;anonymous&gt; (H:\Work\MyProject\foodme\server\index.js:1:77)</div><div class="line">    at Module._compile (module.js:449:26)</div><div class="line">    at Object.Module._extensions..js (module.js:467:10)</div><div class="line">    at Module.load (module.js:356:32)</div><div class="line">    at Function.Module._load (module.js:312:12)</div><div class="line">    at Module.require (module.js:362:17)</div></pre></td></tr></table></figure></p>
-<p>&lt;!-- more --&gt;
-To run Foodme on Windows, you need to do the following step.</p>
-<ol>
-<li>Install <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a></li>
-</ol>
-<p>--The following steps are running in command line.--</p>
-<ol start="2">
-<li>Input <code>npm install -g express</code></li>
-</ol>
-<p>This step will install <a href="https://npmjs.org/package/express" target="_blank" rel="external">express</a></p>
-<ol start="3">
-<li>Input <code>npm install -g open</code></li>
-</ol>
-<p>This step will install <a href="https://npmjs.org/package/open" target="_blank" rel="external">open</a></p>
-<ol start="4">
-<li>
-<p>Go to  Your Path\foodme\server\</p>
-</li>
-<li>
-<p>Input <code>npm link express</code></p>
-</li>
-<li>
-<p>Input <code>npm link open</code></p>
-</li>
-<li>
-<p>Input <code>node start.js</code></p>
-</li>
-</ol>
-<p>If you see the following message, you are good to go !</p>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">GET / 200 4ms - 1.58kb</div><div class="line">GET /css/app.css 200 6ms - 2.02kb</div><div class="line">GET /js/app.js 200 6ms - 650</div><div class="line">GET /lib/angular/angular-resource.js 200 8ms - 15.93kb</div><div class="line">GET /js/controllers/CustomerController.js 200 8ms - 401</div><div class="line">GET /css/bootstrap-united.css 200 13ms - 126.41kb</div><div class="line">GET /js/controllers/NavbarController.js 200 8ms - 207</div><div class="line">GET /js/controllers/RestaurantsController.js 200 8ms - 295</div><div class="line">GET /js/services/customer.js 200 7ms - 476</div><div class="line">GET /js/services/localStorage.js 200 6ms - 72</div><div class="line">GET /js/services/Restaurant.js 200 5ms - 134</div><div class="line">GET /lib/angular/angular.js 200 19ms - 479.29kb</div><div class="line">GET /css/Ubuntu.font 200 1ms - 148</div><div class="line">GET /views/restaurants.html 200 8ms - 3.11kb</div><div class="line">GET /favicon.ico 200 2ms - 1.12kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /api/restaurant 200 3ms - 14.71kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /views/customer.html 200 4ms - 1.18kb</div><div class="line">GET /img/restaurants/tofuparadise.jpg 200 6ms - 15.89kb</div><div class="line">GET /img/restaurants/robatayaki.jpg 200 8ms - 12.82kb</div><div class="line">GET /img/restaurants/khartoum.jpg 200 8ms - 17.16kb</div><div class="line">GET /img/restaurants/bateaurouge.jpg 200 11ms - 15.08kb</div><div class="line">GET /img/restaurants/sallys.jpg 200 9ms - 17.59kb</div><div class="line">GET /img/restaurants/saucy.jpg 200 9ms - 14.33kb</div><div class="line">GET /img/restaurants/speisewagen.jpg 200 7ms - 15.26kb</div><div class="line">GET /img/restaurants/czechpoint.jpg 200 9ms - 10.95kb</div><div class="line">GET /img/restaurants/beijing.jpg 200 7ms - 17.54kb</div><div class="line">GET /img/restaurants/satay.jpg 200 9ms - 14.89kb</div><div class="line">GET /img/restaurants/cancun.jpg 200 10ms - 15.07kb</div><div class="line">GET /img/restaurants/curryup.jpg 200 8ms - 18.66kb</div><div class="line">GET /img/restaurants/carthage.jpg 200 9ms - 10.24kb</div><div class="line">GET /img/restaurants/burgerama.jpg 200 9ms - 11.76kb</div><div class="line">GET /img/restaurants/littleprague.jpg 200 5ms - 13.13kb</div><div class="line">GET /img/restaurants/dragon.jpg 200 5ms - 16.72kb</div><div class="line">GET /img/restaurants/kohlhaus.jpg 200 7ms - 13.66kb</div><div class="line">GET /img/restaurants/babythai.jpg 200 6ms - 17.35kb</div><div class="line">GET /img/restaurants/wholetamale.jpg 200 8ms - 14.32kb</div><div class="line">GET /img/restaurants/taqueria.jpg 200 6ms - 11.74kb</div><div class="line">GET /img/restaurants/pedros.jpg 200 7ms - 12.42kb</div><div class="line">GET /img/restaurants/bhangra.jpg 200 10ms - 14.03kb</div><div class="line">GET /img/restaurants/superwonton.jpg 200 8ms - 16.15kb</div><div class="line">GET /img/restaurants/sakura.jpg 200 7ms - 11.27kb</div><div class="line">GET /img/restaurants/naansequitur.jpg 200 8ms - 16.77kb</div><div class="line">GET /img/restaurants/shandong.jpg 200 8ms - 14.4kb</div><div class="line">GET /img/restaurants/currygalore.jpg 200 7ms - 10.26kb</div><div class="line">GET /img/restaurants/esthers.jpg 200 55ms - 11.85kb</div><div class="line">GET /img/restaurants/beans.jpg 200 9ms - 15.7kb</div><div class="line">GET /img/restaurants/north.jpg 200 11ms - 11.78kb</div><div class="line">GET /img/restaurants/jeeves.jpg 200 9ms - 11.19kb</div><div class="line">GET /img/restaurants/zardoz.jpg 200 10ms - 16.09kb</div><div class="line">GET /img/restaurants/angular.jpg 200 7ms - 13.72kb</div><div class="line">GET /img/restaurants/littlepigs.jpg 200 43ms - 12.64kb</div><div class="line">GET /img/restaurants/flavia.jpg 200 11ms - 14.19kb</div><div class="line">GET /img/restaurants/luigis.jpg 200 10ms - 16.36kb</div><div class="line">GET /img/restaurants/thick.jpg 200 8ms - 14.13kb</div><div class="line">GET /img/restaurants/wheninrome.jpg 200 8ms - 20.15kb</div><div class="line">GET /img/restaurants/pizza76.jpg 200 5ms - 20.44kb</div><div class="line">GET /favicon.ico 304 1ms</div><div class="line">GET /img/customer_bkg.jpg 200 2ms - 32.42kb</div><div class="line">GET /robots.txt 404 1ms</div><div class="line">GET /robots.txt 404 1ms</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Lately I finally have some time to check the awesome example, &lt;a href=&quot;https://github.com/IgorMinar/foodme&quot; target=&quot;_blank&quot; rel=&quot;external
-    
-    </summary>
-    
-      <category term="AngularJS" scheme="http://maxisam.github.com/categories/AngularJS/"/>
-    
-      <category term="Learning Resource" scheme="http://maxisam.github.com/categories/AngularJS/Learning-Resource/"/>
-    
-    
-      <category term="angularjs" scheme="http://maxisam.github.com/tags/angularjs/"/>
-    
-      <category term="learning" scheme="http://maxisam.github.com/tags/learning/"/>
+      <category term="TypeScript" scheme="http://maxisam.github.com/tags/TypeScript/"/>
     
   </entry>
   

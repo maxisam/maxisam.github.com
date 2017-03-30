@@ -42,29 +42,8 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Git/</loc>
-        <lastmod>2016-08-29T21:36:06.674Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Blog/Hexo/</loc>
-        <lastmod>2016-09-04T06:46:08.287Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/Ionic2/</loc>
         <lastmod>2016-09-07T05:47:46.745Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Blog/</loc>
-        <lastmod>2016-10-02T04:08:21.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -91,57 +70,8 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/</loc>
-        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Dependency-Injection/Providing-Value/</loc>
-        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/VS-Code/</loc>
         <lastmod>2016-10-02T04:08:21.868Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/</loc>
-        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/VS2015/</loc>
-        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Tools/Tips/VS-Code/</loc>
-        <lastmod>2016-10-02T04:08:21.871Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Tools/</loc>
-        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/categories/Tools/Tips/</loc>
-        <lastmod>2016-10-02T04:08:21.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -161,13 +91,6 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/JavaScript/</loc>
-        <lastmod>2016-10-02T04:08:21.875Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/categories/JavaScript/Core-Knowledge/</loc>
         <lastmod>2016-10-02T04:08:21.875Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -175,22 +98,155 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Typescript/</loc>
-        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Blog/</loc>
+        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Angular2/</loc>
-        <lastmod>2016-10-03T04:47:16.550Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Blog/Hexo/</loc>
+        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/categories/Angular2/Webpack/</loc>
-        <lastmod>2016-10-03T04:47:16.550Z</lastmod>
+        <loc>http://maxisam.github.com/categories/Angular/Webpack/</loc>
+        <lastmod>2017-03-30T02:39:54.026Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/Dependency-Injection/</loc>
+        <lastmod>2017-03-30T02:39:54.033Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/Dependency-Injection/Providing-Value/</loc>
+        <lastmod>2017-03-30T02:39:54.033Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Automation/</loc>
+        <lastmod>2017-03-30T02:39:54.049Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/</loc>
+        <lastmod>2017-03-30T02:39:54.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Troubleshooting/VS2015/</loc>
+        <lastmod>2017-03-30T02:39:54.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Tips/VS-Code/</loc>
+        <lastmod>2017-03-30T02:39:54.172Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/AoT/</loc>
+        <lastmod>2017-03-30T02:39:54.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/TypeScript/</loc>
+        <lastmod>2017-03-30T02:39:54.180Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Webpack/</loc>
+        <lastmod>2017-03-30T02:39:54.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Webpack/loader/</loc>
+        <lastmod>2017-03-30T02:39:54.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/</loc>
+        <lastmod>2017-03-30T02:39:54.191Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Tools/Tips/</loc>
+        <lastmod>2017-03-30T02:39:54.191Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/</loc>
+        <lastmod>2017-03-30T02:39:54.200Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Angular/Form/</loc>
+        <lastmod>2017-03-30T02:39:54.200Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Git/</loc>
+        <lastmod>2017-03-30T02:39:54.204Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/Git/Tips/</loc>
+        <lastmod>2017-03-30T02:39:54.204Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/</loc>
+        <lastmod>2017-03-30T05:13:52.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/package/</loc>
+        <lastmod>2017-03-30T05:13:52.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/categories/JavaScript/package/npm/</loc>
+        <lastmod>2017-03-30T05:13:52.572Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -312,8 +312,8 @@
             
               
                 
-                <a class="post-title-link" href="/2013/01/11/access-factory-from-directive/" itemprop="url">
-                  Access factory from directive
+                <a class="post-title-link" href="/2016/09/01/CSS-namespacing-architecture-idea/" itemprop="url">
+                  CSS namespacing/ architecture idea
                 </a>
               
             
@@ -326,8 +326,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-11T23:21:00-06:00" content="2013-01-11">
-              2013-01-11
+            <time itemprop="dateCreated" datetime="2016-09-01T22:50:38-05:00" content="2016-09-01">
+              2016-09-01
             </time>
           </span>
 
@@ -340,20 +340,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
-                    <span itemprop="name">Directive</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -368,8 +356,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2013/01/11/access-factory-from-directive/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/11/access-factory-from-directive/" itemprop="commentsCount"></span>
+                <a href="/2016/09/01/CSS-namespacing-architecture-idea/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/01/CSS-namespacing-architecture-idea/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -391,15 +379,24 @@
       
         
           
-            <p>####Objective####</p>
-<ol>
-<li>Example of showing directive accesses service (factory).</li>
-<li>Example of ng-src</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/qGAvEtXmkJ3opTRvZUMQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Avatar url : <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"url"</span> <span class="attr">placeholder</span>=<span class="string">'input url'</span>/&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> result:</div><div class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">my-avatar</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng001/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, [])</div><div class="line">    .factory(<span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">var</span> user = &#123;</div><div class="line">            avatarUrl: <span class="string">''</span></div><div class="line">        &#125;, srv = &#123;&#125;;</div><div class="line">        srv.getCurrentUser = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> user;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> srv;</div><div class="line">    &#125;).directive(<span class="string">'myAvatar'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            restrict: <span class="string">'A'</span>,</div><div class="line">            replace: <span class="literal">true</span>,</div><div class="line">            template: <span class="string">'&lt;img class="avatar" ng-src="" alt="" title=""&gt; '</span>,</div><div class="line">            controller: <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line">                $scope.url = CurrentUserService.getCurrentUser().avatarUrl;</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">    app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="string">'CurrentUserService'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, CurrentUserService</span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        CurrentUserService.getCurrentUser().avatarUrl = $scope.url;</div><div class="line">    &#125;]);</div></pre></td></tr></table></figure></p>
+            <p>Just come across an interesting idea for CSS</p>
+<p>In a word, <strong>prefixed the class name with an indicator of the class' purpose and scope.</strong></p>
+<ul>
+<li>.o- // an object, an unstyled design pattern</li>
+<li>.c- // a component, a styled piece of UI</li>
+<li>.a- // an alteration, an UI-independent override</li>
+<li>.t- // a theme, change UI appearance based on theme</li>
+<li>.is-, .has-, .for- // state-based styles</li>
+<li>.js- // used for binding behavior to components</li>
+</ul>
+<p>In each layer of the inverted triangle, the scope of the styles get narrower and more specific.
+At the bottom of this is a layer of utility or helper classes, referred to as “trumps”, that contains high-specificity selectors (<a href="https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54#.xg8gjc766" target="_blank" rel="external">ref</a>).</p>
+<p>This probably become less important now when using Angular2 component with style attached, but still a good thought.</p>
+<p>more:</p>
+<ul>
+<li><a href="http://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731" target="_blank" rel="external">Manage large-scale web projects with new CSS architecture ITCSS</a></li>
+<li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/" target="_blank" rel="external">More Transparent UI Code with Namespaces</a></li>
+</ul>
 
           
         
@@ -449,8 +446,8 @@
             
               
                 
-                <a class="post-title-link" href="/2013/01/10/checkbox-w-slash-auto-focus-textbox/" itemprop="url">
-                  Checkbox w/ auto focus textbox
+                <a class="post-title-link" href="/2016/09/01/image-path-in-github-page/" itemprop="url">
+                  Image path in github page
                 </a>
               
             
@@ -463,421 +460,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-10T23:35:00-06:00" content="2013-01-10">
-              2013-01-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
-                    <span itemprop="name">Directive</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/10/checkbox-w-slash-auto-focus-textbox/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/10/checkbox-w-slash-auto-focus-textbox/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>####Objective####</p>
-<ol>
-<li>Show the different between Controller and Directive</li>
-<li>Example of using instance [attributes][0] with watch in link function in directive</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/84NRZHlGeL3LqS4XgTGY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng004/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'row'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span4'</span>&gt;</span></div><div class="line">      controller version</div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span8'</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">'checkbox'</span> <span class="attr">ng-model</span>=<span class="string">"isChecked"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'row'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span4'</span>&gt;</span></div><div class="line">      directive version</div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">'span8'</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-model</span>=<span class="string">"isChecked2"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">xng-focus</span>=<span class="string">'isChecked2'</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng004/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'ngApp'</span>, [])</div><div class="line">    .directive(<span class="string">'xngFocus'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">        "use strict"</span>;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, iattrs</span>) </span>&#123;</div><div class="line">            scope.$watch(iattrs.xngFocus,</div><div class="line">                <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">                    newValue &amp;&amp; element.focus();</div><div class="line">                &#125;, <span class="literal">true</span>);</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.$watch(<span class="string">'isChecked'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">newV</span>) </span>&#123;</div><div class="line">        newV &amp;&amp; $(<span class="string">'#name'</span>).focus();</div><div class="line">    &#125;, <span class="literal">true</span>);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
-[0]:http://docs.angularjs.org/api/ng.$compile.directive.Attributes</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/10/using-directive-to-indicate-a-textbox-become-a-required-field/" itemprop="url">
-                  Using directive to indicate a textbox become a required field
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-10T00:54:00-06:00" content="2013-01-10">
-              2013-01-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Directive/" itemprop="url" rel="index">
-                    <span itemprop="name">Directive</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/10/using-directive-to-indicate-a-textbox-become-a-required-field/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/10/using-directive-to-indicate-a-textbox-become-a-required-field/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>####Objective####</p>
-<ol>
-<li>Example of ng-required</li>
-<li>Example of using instance <a href="http://docs.angularjs.org/api/ng.$compile.directive.Attributes" target="_blank" rel="external">attributes</a> in link function in directive</li>
-<li>Example of having key:element mapping attribute</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin: 20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/83wZy086dHDl1r9EDAcS&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Markup</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng003/index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">ng-submit</span>=<span class="string">"submit()"</span> <span class="attr">name</span>=<span class="string">"form"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-model</span>=<span class="string">"partner"</span> <span class="attr">checked</span>/&gt;</span></div><div class="line">    Are you bringing along a partner?<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    Partner name:</div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"partnerName"</span> <span class="attr">xng-placeholder</span>=<span class="string">"&#123; 'required': partner &#125;"</span> <span class="attr">ng-required</span>=<span class="string">"partner"</span>/&gt;</span> <span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"save"</span> <span class="attr">ng-disabled</span>=<span class="string">"form.$invalid"</span> <span class="attr">class</span>=<span class="string">"btn"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng003/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app.directive(<span class="string">'xngPlaceholder'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        restrict: <span class="string">'A'</span>,</div><div class="line">        link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, attrs</span>) </span>&#123;</div><div class="line">            scope.$watch(attrs.xngPlaceholder, <span class="function"><span class="keyword">function</span> (<span class="params">newVal</span>) </span>&#123;</div><div class="line">                element.removeAttr(<span class="string">'placeholder'</span>);</div><div class="line">                <span class="keyword">var</span> att = <span class="string">''</span>;</div><div class="line">                angular.forEach(newVal, <span class="function"><span class="keyword">function</span> (<span class="params">elm, key</span>) </span>&#123;</div><div class="line">                    att += elm ? (key + <span class="string">' '</span>) : <span class="string">''</span>;</div><div class="line">                &#125;);</div><div class="line">                element.attr(<span class="string">'placeholder'</span>, att);</div><div class="line">            &#125;, <span class="literal">true</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/09/using-tabs-reorder-table/" itemprop="url">
-                  Using tabs reorder table
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-09T22:49:00-06:00" content="2013-01-09">
-              2013-01-09
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS/Filter/" itemprop="url" rel="index">
-                    <span itemprop="name">Filter</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2013/01/09/using-tabs-reorder-table/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/09/using-tabs-reorder-table/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>####Objective:####</p>
-<ol>
-<li>Example for using filter to set order by certain column with tab UI.</li>
-<li>Exampe for using ng-class to switch twitter bootstrap tabs.</li>
-</ol>
-<p>&lt;!-- more --&gt;
-&lt;iframe style=&quot;margin:20px 0; width: 100%; height: 300px&quot; src=&quot;http://embed.plnkr.co/fMrhagVKl2nehzTOHriF&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;</p>
-<p><figure class="highlight html"><figcaption><span>Mark up for Twitter bootstrap tab</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/Index.html" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-controller</span>=<span class="string">"MainCtrl"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav nav-pills"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='name'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('name')"</span>&gt;</span>name<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>  <span class="attr">ng-class</span>=<span class="string">"&#123;'active': order=='phone'&#125;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">ng-click</span>=<span class="string">"setOrder('phone')"</span>&gt;</span>phone<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-ng-repeat</span>=<span class="string">"friend in friends|orderBy:order"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"phone"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><figure class="highlight javascript"><figcaption><span>AngularJS controller</span><a href="https://github.com/maxisam/AngularJSExample/blob/master/ng002/app.js" target="_blank" rel="external">Github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">'MainCtrl'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"><span class="meta">    'use strict'</span>;</div><div class="line">    $scope.order = <span class="string">'name'</span>;</div><div class="line">    $scope.friends = [</div><div class="line">        &#123;name: <span class="string">'John'</span>, phone: <span class="string">'555-1276'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mary'</span>, phone: <span class="string">'800-BIG-MARY'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Mike'</span>, phone: <span class="string">'555-4321'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Adam'</span>, phone: <span class="string">'555-5678'</span>&#125;,</div><div class="line">        &#123;name: <span class="string">'Julie'</span>, phone: <span class="string">'555-8765'</span>&#125;</div><div class="line">    ];</div><div class="line">    $scope.setOrder = <span class="function"><span class="keyword">function</span> (<span class="params">order</span>) </span>&#123;</div><div class="line">        $scope.order = order;</div><div class="line">    &#125;;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2013/01/07/code-block-in-octopress/" itemprop="url">
-                  Code block in Octopress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2013-01-07T11:12:00-06:00" content="2013-01-07">
-              2013-01-07
+            <time itemprop="dateCreated" datetime="2016-09-01T00:18:03-05:00" content="2016-09-01">
+              2016-09-01
             </time>
           </span>
 
@@ -902,8 +486,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/Setup/" itemprop="url" rel="index">
-                    <span itemprop="name">Setup</span>
+                  <a href="/categories/Blog/Github-page/" itemprop="url" rel="index">
+                    <span itemprop="name">Github page</span>
                   </a>
                 </span>
 
@@ -918,8 +502,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2013/01/07/code-block-in-octopress/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2013/01/07/code-block-in-octopress/" itemprop="commentsCount"></span>
+                <a href="/2016/09/01/image-path-in-github-page/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/01/image-path-in-github-page/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -941,30 +525,389 @@
       
         
           
-            <p>One of the highlight feature of Octopress is <a href="http://octopress.org/docs/plugins/codeblock/" target="_blank" rel="external">Code block</a></p>
-<p>It can let you share the code with syntax highlight easily.</p>
-<p>However, it doesn't work on my Windows 7 machine.</p>
-<p>It always throw out the following error</p>
-<p>&lt;!-- more --&gt;
-<figure class="highlight plain"><figcaption><span>Error message</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$ rake generate</div><div class="line">## Generating Site with Jekyll</div><div class="line">unchanged sass/screen.scss</div><div class="line">Configuration from d:/MyProject/Git/octopress/_config.yml</div><div class="line">Building site: source -&gt; public</div><div class="line">Liquid Exception: No such file or directory - python c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/mentos.py in 2013-01-06-octopress.markdown</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162:in &apos;spawn&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:307:in &apos;popen4&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:41:in &apos;start&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:203:in &apos;mentos&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/pygments.rb-0.3.7/lib/pygments/popen.rb:192:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:24:in &apos;pygments&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/pygments_code.rb:14:in &apos;highlight&apos;</div><div class="line">d:/MyProject/Git/octopress/plugins/code_block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:94:in &apos;block in render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;collect&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:92:in &apos;render_all&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/block.rb:82:in &apos;render&apos;</div><div class="line">c:/Ruby193/lib/ruby/gems/1.9.1/gems/liquid-2.3.0/lib/liquid/template.rb:124:in &apos;render&apos;</div></pre></td></tr></table></figure></p>
-<p>I followed exactly the steps of installation that I found. No one mentions this problem.</p>
-<p>Moreover, I can't find anyone else having this issue.</p>
-<p>I guess I am on my own.</p>
-<p>First I need to figure out how Octopress does this feature.</p>
-<p>It seems like Octopress use <a href="http://octopress.org/docs/blogging/code/" target="_blank" rel="external">Pygments</a> from this error message.</p>
-<p>So I tried to update pyments to the latest version. But it doesn't work.</p>
-<p>Then I found out <a href="http://pygments.org/docs/installation/" target="_blank" rel="external">Pygments</a> uses Python to work.</p>
-<p>And I didn't have Python installed.</p>
-<p>Well, I guess that should be it.</p>
-<p>But thing doesn't seem like that easy. It still doesn't work after I installed <a href="http://www.python.org/download/" target="_blank" rel="external">Python 2.7 / 3.3</a>.</p>
-<p>After hours and hours thinking, I noticed I can't run Python beside its folder.</p>
-<p>OMG ! It is PATH !</p>
-<p>After I add correct path to windows environment, IT STILL REFUSED WORK.</p>
-<p>I entered <code>path</code> in the cmd. It doesn't show the path I just added.</p>
-<p>Apparently, I need to reboot my machine to get it to work.</p>
-<p>(another way is use SET PATH=%PATH%;C:\pathoftheprogram to avoid reboot.)</p>
-<p>Finally ! It works like a charm after reboot.</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">helloWorld</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"Hello World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+            <p>Another detail.</p>
+<p>I was woundering why some images were missing on my github page generated by Hexo but showed correctly on local Hexo server.</p>
+<p>It turns out the image path for Githut page is <strong>case-sensitive</strong> !</p>
+<p>case closed.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/" itemprop="url">
+                  ionic2 with Visual Studio + IIS Express
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-31T17:45:32-05:00" content="2016-08-31">
+              2016-08-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Ionic2/" itemprop="url" rel="index">
+                    <span itemprop="name">Ionic2</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/31/ionic2-with-Visual-Studio-IIS-Express/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          Developing Ionic2 on VS2015 with IIS Express
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/31/ionic2-with-Visual-Studio-IIS-Express/">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/29/changing-styl-in-Hexo/" itemprop="url">
+                  Changing Stylus in Hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-29T10:26:14-05:00" content="2016-08-29">
+              2016-08-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Blog/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/29/changing-styl-in-Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/29/changing-styl-in-Hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          facebook like button not align with other social button and the way Hexo transpile Stylus
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/29/changing-styl-in-Hexo/">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/28/gitignore/" itemprop="url">
+                  Updating gitignore
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-28T00:55:27-05:00" content="2016-08-28">
+              2016-08-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/28/gitignore/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/28/gitignore/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>How to refresh the file index so the files I want ignored get ignored ?</p>
+<h4>Signal file</h4>
+<p><code>git rm --cached filename</code></p>
+<p>to undo <code>use git add filename</code></p>
+<hr>
+<h4>Redo the whole .gitignore</h4>
+<p><strong>First commit any outstanding code changes</strong>, and then, run this command:</p>
+<p><code>git rm -r --cached .</code></p>
+<p>This removes any changed files from the index(staging area), then just run:</p>
+<p><code>git add .</code></p>
+<p>Commit it:</p>
+<p><code>git commit -m &quot;redo .gitignore&quot;</code></p>
+<p>kudos to <a href="http://stackoverflow.com/a/1139797/667767" target="_blank" rel="external">takeshin@stackoverflow</a></p>
 
           
         
@@ -997,7 +940,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1038,7 +981,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-count">46</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1046,7 +989,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1055,7 +998,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1133,7 +1076,7 @@
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

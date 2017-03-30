@@ -4,6 +4,274 @@
   
     
     <entry>
+      <title><![CDATA[fix semantic-release always push a new major version]]></title>
+      <url>http://maxisam.github.com/2017/03/29/fix-semantic-release-always-push-a-new-major-version/</url>
+      <content type="html"><![CDATA[<p>Symptom: semantic-release always bump a new major version</p>
+<p>The way semantic-release determines a new version is basing on <a href="https://github.com/semantic-release/semantic-release#analyzecommits" target="_blank" rel="external">analyzeCommits</a></p>
+<p>But it is based on the commits between last release to this release.</p>
+<p>To locate last release, it relies on <a href="https://github.com/semantic-release/semantic-release#getlastrelease" target="_blank" rel="external">getLastRelease</a>.</p>
+<p>And getLastRelease relies on <a href="https://github.com/semantic-release/last-release-npm/blob/next/src/index.js#L43" target="_blank" rel="external">gitHead</a></p>
+<p>So if <strong>gitHead</strong> is not set properly in package.json, semantic-release will determine the version base on commits between the very first one to the current one. And most likely, it would find a commit with <code>Breaking Changes</code>, which will trigger a new major version.</p>
+<p>There are several situations will lead to missing gitHead in package.json.</p>
+<p>The case I have is deploy a package that is not directly under project root.</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm publish ./dist</div></pre></td></tr></table></figure></p>
+<p>The above code will confuse npm.</p>
+<p>Therefore, use <a href="http://stackoverflow.com/a/37421736/667767" target="_blank" rel="external">npmignore or files field</a> to trim your project instead of copying files to dist folder.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[publish beta to npm]]></title>
+      <url>http://maxisam.github.com/2017/03/29/publish-beta-to-npm/</url>
+      <content type="html"><![CDATA[<p>Sometime we want to try out a new build. We don't want to release to everyone and cause a ciaos.</p>
+<p>We want to release a beta version and only for people specific want to try it.</p>
+<p><a href="https://docs.npmjs.com/cli/dist-tag" target="_blank" rel="external">dist-tag</a> is for this purpose.</p>
+<p>Create this following task in package.json
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;publish-npm:beta&quot;: &quot;npm publish --tag=next&quot;</div></pre></td></tr></table></figure></p>
+<p>if the testing goes well, we can change the tag to <code>latest</code>. And everyone will see this officially on npm site.</p>
+<p><code>latest</code> is a special tag</p>
+<blockquote>
+<p>Typically, projects only use the latest tag for stable release versions, and use other tags for unstable versions such as prereleases.</p>
+</blockquote>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag rm &lt;pkg&gt; &lt;tag&gt;</div></pre></td></tr></table></figure></p>
+<p>To list all tags
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag ls [&lt;pkg&gt;]</div></pre></td></tr></table></figure></p>
+<p>To add tag to a certain version
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm dist-tag add &lt;pkg&gt;@&lt;version&gt; [&lt;tag&gt;]</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Commit on detached HEAD in Git]]></title>
+      <url>http://maxisam.github.com/2017/01/30/commit-on-detached-HEAD-in-Git/</url>
+      <content type="html"><![CDATA[<p>First of all, <strong>don't commit on detached Head</strong>.</p>
+<p><blockquote><p>A &quot;detached head&quot; in git isn't the same as Mercurial's concept of a &quot;head&quot;. Git has exactly one HEAD, which is just the currently checked-out commit. &quot;Detached&quot; just means that you don't currently have a branch checked out. So when you create a commit, it won't be associated with a branch, and it'll be lost when you checkout a different commit.</p>
+<p>In Git, every commit that you care about should be reachable from some branch. There's no such thing as an &quot;anonymous branch&quot;, which is why git warns you when committing on a detached head. Committing on a detached head is like allocating an object and then throwing away the pointer; it's possible, but almost never what you want to do. Remember, branches in git are lightweight and can be ephemeral. Just create a branch before committing so that you can find your commits again.</p>
+<footer><strong>David@StackOverflow</strong><cite><a href="http://stackoverflow.com/a/16368880/667767" target="_blank" rel="external">stackoverflow.com/a/16368880/667767</a></cite></footer></blockquote></p>
+<p>But it's too late, how to get it back ?</p>
+<p><code>git reflog</code></p>
+<p>It will show all commit with hash.</p>
+<p>And create a new branch with the hash by</p>
+<p><code>git branch &lt;new-branch&gt; &lt;hash&gt;</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Angular2 Form: Get Specific Error Type for Multiple Validators]]></title>
+      <url>http://maxisam.github.com/2017/01/26/Angular2-Form-Get-Specific-Error-Type/</url>
+      <content type="html"><![CDATA[<p>There are 2 ways</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">myFormCtrl: FormControl;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">this.myFormCtrl = new FormControl(&apos;&apos;, [Validators.required, Validators.maxLength(25)]);</div></pre></td></tr></table></figure></p>
+<p>you can either use safe-navigation (Elvis) operator .?</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input class=&quot;form-control&quot; type=&quot;text&quot;  [formControl]=&quot;myFormCtrl&quot; /&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.errors?.maxlength&quot;&gt; too long &lt;/span&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.errors?.required&quot;&gt; required &lt;/span&gt;</div></pre></td></tr></table></figure></p>
+<p>or</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input class=&quot;form-control&quot; type=&quot;text&quot;  [formControl]=&quot;myFormCtrl&quot; /&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.hasError(&apos;maxlength&apos;)&quot;&gt; too long &lt;/span&gt;</div><div class="line">&lt;span class=&quot;alert alert-danger&quot; *ngIf=&quot;myFormCtrl.hasError(&apos;required&apos;)&quot;&gt; required &lt;/span&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ngModel in FormGroup]]></title>
+      <url>http://maxisam.github.com/2017/01/26/ngModel-in-FormGroup/</url>
+      <content type="html"><![CDATA[<p>In short <strong>ngModel can't be used by itself within FormGroup</strong></p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div [formGroup]=&quot;myGroup&quot;&gt;</div><div class="line">   &lt;input name=&quot;firstName&quot; [(ngModel)]=&quot;firstName&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>The above code will throw an error like</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">TypeError: Cannot set property stack of [object Object] which has only a getter at assignAll</div></pre></td></tr></table></figure></p>
+<p>Why ? kara@Github explained it very well at Github</p>
+<p><blockquote><p>formGroup expects you to create your own FormControl instances, whereas ngModel creates FormControl instances implicitly for you. You can't have two conflicting FormControl instances on the same form control element. When you use formControlName, ngModel does not activate or create a control (it's simply used as an @Input). formControlName just links to the existing input you created in your class.</p>
+<footer><strong>kara</strong><cite><a href="https://github.com/angular/angular/pull/10314#issuecomment-242230874" target="_blank" rel="external">Github</a></cite></footer></blockquote></p>
+<p>Therefore, to make above code work, here is the correct code</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div [formGroup]=&quot;myGroup&quot;&gt;</div><div class="line">   &lt;input formControlName=&quot;firstName&quot; [(ngModel)]=&quot;firstName&quot;&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[How to analyze your HDD usage]]></title>
+      <url>http://maxisam.github.com/2017/01/20/How-to-analyze-your-HDD-usage/</url>
+      <content type="html"><![CDATA[<p>Want to know what eat the HDD space ?</p>
+<p>Try <a href="https://windirstat.net/" target="_blank" rel="external">Windirstat</a> !</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Clean Windows Installer to free up your HDD]]></title>
+      <url>http://maxisam.github.com/2017/01/20/Clean-Windows-Installer-to-free-up-your-HDD/</url>
+      <content type="html"><![CDATA[<p>After a long time of usage, the space in system drive just getting low.</p>
+<p>One big thing can be remove is Windows Installer File</p>
+<p>But it is not safe to remove all.</p>
+<p>Here is a great tool called <a href="http://www.homedev.com.au/Free/PatchCleaner" target="_blank" rel="external">PatchCleaner</a> to save your day.</p>
+<p>More discussion can be found <a href="http://superuser.com/questions/707767/how-can-i-free-up-drive-space-from-the-windows-installer-folder-without-killing" target="_blank" rel="external">here</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Include and Exclude in Webpack Loader]]></title>
+      <url>http://maxisam.github.com/2017/01/09/Include-and-Exclude-in-webpack-loader/</url>
+      <content type="html"><![CDATA[<p>Kinda surprises me.</p>
+<p>Exclude and Include DO NOT support relative path.</p>
+<p>Here is the detail from <a href="http://webpack.github.io/docs/configuration.html#module-loaders" target="_blank" rel="external">doc</a>.</p>
+<blockquote>
+<p><strong>module.loaders</strong></p>
+<p>A array of automatically applied loaders.</p>
+<p>Each item can have these properties:</p>
+<p>test: A condition that must be met
+exclude: A condition that must not be met
+include: A condition that must be met
+loader: A string of &quot;!&quot; separated loaders
+loaders: A array of loaders as string</p>
+<p>A condition can be a <strong>RegExp</strong>, an <strong>absolute path start</strong>, or <strong>an array of one of these combined with &quot;and&quot;</strong>.</p>
+</blockquote>
+<p>RegExp example</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exclude: [/bower_components/, /node_modules/]</div></pre></td></tr></table></figure></p>
+<p><strong>Performance tip</strong></p>
+<p>Use exclude and include properly, since Webpack is likely traveling through the files in the project.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[rootDirs, rootDir and baseUrl in tsconfig]]></title>
+      <url>http://maxisam.github.com/2017/01/03/rootDirs-in-tsconfig/</url>
+      <content type="html"><![CDATA[<p>rootDirs &amp; rootDir are two totally different thing, despite the names are similar.</p>
+<p>Here is the example structure</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root</div><div class="line"> └── compiled</div><div class="line"> └── dist</div><div class="line"> └── src</div><div class="line"> └── node_modules</div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#concatenate-amd-and-system-modules-with---outfile" target="_blank" rel="external">rootDir</a> is for the location of the source code, which is <code>src</code>.</p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#virtual-directories-with-rootdirs" target="_blank" rel="external">rootDirs</a> is for Virtual Directories.</p>
+<p>Sometime a project might generate code for certain usage. Like in Angular AoT build, it will generate compiled code that is set by <a href="https://github.com/angular/angular/tree/master/modules/@angular/compiler-cli" target="_blank" rel="external">genDir</a></p>
+<p>if we set genDir = &quot;compiled&quot;, we should add <code>compiled</code> to rootDirs so we can reference it as it is inside src.</p>
+<p><a href="https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#base-url" target="_blank" rel="external">baseUrl</a> is for non-relative modules import.</p>
+<p>so it should be set as <code>node_modules</code></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AoT's no no list]]></title>
+      <url>http://maxisam.github.com/2016/12/27/AoT-s-no-no-list/</url>
+      <content type="html"><![CDATA[<p>Just make my project build in AOT mode. Here is the list I discovered during the process.</p>
+<ol>
+<li>
+<p>No destructured variable or constant.</p>
+<blockquote>
+<p>Referencing an exported destructured variable or constant is not supported by the template compiler</p>
+</blockquote>
+<p>Not support: <code>const {var1, ver2} = generate();</code></p>
+</li>
+<li>
+<p>Function calls are not supported.</p>
+<blockquote>
+<p>Function calls are not supported. Consider replacing the function or lambda with a reference to an exported function</p>
+</blockquote>
+<p>Not supported <code>export const var1 = () =&gt; {}</code>
+Support <code>export function fun1 { }</code></p>
+</li>
+<li>
+<p>Could not resolve type Window.</p>
+<p>Not supported Window type directly from <code>lib.dom.d.ts</code>
+<figure class="highlight javascript"><figcaption><span>injuct Window service</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> windowSrv = <span class="keyword">new</span> OpaqueToken(<span class="string">'WindowSrv'</span>);</div><div class="line"></div><div class="line"><span class="keyword">constructor</span> (</div><div class="line"> @Inject(windowSrv) private _Window: any</div><div class="line">) &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>Here is the proper way to do it <a href="http://juristr.com/blog/2016/09/ng2-get-window-ref/" target="_blank" rel="external">Angular 2: How do I get a reference to the window object?</a></p>
+</li>
+<li>
+<p>No support for Sass or Less</p>
+<p>Compile them first. ngc does not support anything other than css. So the best bet right now is</p>
+<p>a. compile scss first and run ngc. <a href="https://github.com/qdouble/angular-webpack2-starter/issues/112" target="_blank" rel="external">angular-webpack2-starter</a></p>
+<p>b. use loader chain for resources when compiling AOT <a href="https://github.com/AngularClass/angular2-webpack-starter/pull/1307" target="_blank" rel="external">angular2-webpack-starter</a></p>
+<p>c. use <a href="https://www.npmjs.com/package/@ngtools/webpack" target="_blank" rel="external">@ngtools/webpack</a>, which is still under development.</p>
+</li>
+<li>
+<p>Typescript version.</p>
+<p>Check ngc (compiler-cli) support typescript version on <a href="https://github.com/angular/angular/tree/master/modules/@angular/compiler-cli" target="_blank" rel="external">github</a></p>
+</li>
+<li>
+<p>Don't use enum for router path. It just doesn't work.</p>
+</li>
+</ol>
+<p>Here is the list from  <a href="https://github.com/AngularClass/angular2-webpack-starter/blob/master/README.md#aot--donts" target="_blank" rel="external">angular2-webpack-starter</a></p>
+<p>The following are some things that will make AoT compile fail.</p>
+<ol>
+<li>
+<p>Don’t use require statements for your templates or styles, use styleUrls and templateUrls, the angular2-template-loader plugin will change it to require at build time.</p>
+</li>
+<li>
+<p>Don’t use default exports.</p>
+</li>
+<li>
+<p>Don’t use form.controls.controlName, use form.get(‘controlName’)</p>
+</li>
+<li>
+<p>Don’t use control.errors?.someError, use control.hasError(‘someError’)</p>
+</li>
+<li>
+<p>Don’t use functions in your providers, routes or declarations, export a function and then reference that function name</p>
+</li>
+<li>
+<p>Inputs, Outputs, View or Content Child(ren), Hostbindings, and any field you use from the template or annotate for Angular should be public</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[How to do negative pattern for VS Code files exclude]]></title>
+      <url>http://maxisam.github.com/2016/12/09/how-to-do-negative-pattern-for-VS-code-files-exclude/</url>
+      <content type="html"><![CDATA[<p>The short answer is No, VS Code have not support it yet. (2016-12-09)</p>
+<p>So is this the end ? No</p>
+<p>Here is the work around.</p>
+<p><figure class="highlight javascript"><figcaption><span>files.exclude</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">"files.exclude"</span>: &#123;</div><div class="line">   <span class="string">"**/node_modules"</span>: <span class="literal">false</span>,</div><div class="line">   <span class="string">"**/node_modules/.*"</span>: <span class="literal">true</span>,</div><div class="line">   <span class="comment">// hide all folders that doesn't start with letter 'a'</span></div><div class="line">   <span class="string">"**/node_modules/[bcdefghijklmnopqrstuvwxyz]*"</span>: <span class="literal">true</span>,</div><div class="line">   <span class="comment">// hide all folders that doesn't start with 'ap'</span></div><div class="line">   <span class="string">"**/node_modules/a[abcdefghijklmnoqrstuvwxyz]*"</span>: <span class="literal">true</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>Kudos to 1-9@<a href="https://github.com/Microsoft/vscode/issues/869#issuecomment-263006643%5D" target="_blank" rel="external">Github</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Figure out build error in Visual studio 2015]]></title>
+      <url>http://maxisam.github.com/2016/10/10/Figure-out-build-error-in-Visual-studio-2015/</url>
+      <content type="html"><![CDATA[<p>Sometime Visual Studio spit out an error that doesn't really tell what error is about.</p>
+<p>For example, <code>tsc.exe exited with code 1</code></p>
+<p>There is just not much clue from this error message.</p>
+<p>Here is the saver:</p>
+<p><code>Visual Studio -&gt; Tools -&gt; Options -&gt; Projects and Solutions -&gt; Build and Run -&gt; MSBuild project build output verbosity</code></p>
+<p>Change it to <code>Detailed</code></p>
+<p>And it will show more detail in output window.</p>
+<p>Kudos to <a href="http://stackoverflow.com/a/39162173/667767" target="_blank" rel="external">thoean@stackoverflow</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Add automatically releasing to Github project]]></title>
+      <url>http://maxisam.github.com/2016/10/06/Add-automatically-releasing-to-Github-project/</url>
+      <content type="html"><![CDATA[<p><strong><a href="https://github.com/semantic-release/semantic-release" target="_blank" rel="external">semantic-release</a></strong></p>
+<ol>
+<li>
+<p><code>npm i -g semantic-release cli</code></p>
+</li>
+<li>
+<p>semantic-release-cli setup</p>
+<ul>
+<li>it will add <code>travis.yml</code> to the project</li>
+<li>package.json changes
+<ul>
+<li>version is removed</li>
+<li>add semantic-release task</li>
+<li>add semantic-release to devDependencies</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong><a href="https://github.com/commitizen/cz-cli" target="_blank" rel="external">commitizen</a></strong></p>
+<p>Since semantic-release uses <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit" target="_blank" rel="external">conventional commit message</a> to determine version, this tool will make it easier.</p>
+<ol>
+<li><code>npm install -D commitizen cz-conventional-changelog</code>
+<ul>
+<li>add <code>commitizen</code> &amp; <code>cz-conventional-changelog</code> to package.json</li>
+</ul>
+</li>
+<li>run <code>commitizen init cz-conventional-changelog --save-dev --save-exact</code></li>
+<li>add task &quot;commit&quot;: &quot;git-cz&quot; to package.json</li>
+</ol>
+<p><strong><a href="https://travis-ci.org/" target="_blank" rel="external">TravisCI</a></strong></p>
+<p>The <code>.travis.yml</code> should probably look like</p>
+<p><figure class="highlight yml"><figcaption><span>.travis.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="attr">sudo:</span> <span class="literal">false</span></div><div class="line"><span class="attr">language:</span> node_js</div><div class="line"><span class="attr">cache:</span></div><div class="line"><span class="attr">  directories:</span></div><div class="line"><span class="bullet">    -</span> node_modules</div><div class="line"><span class="attr">branches:</span></div><div class="line"><span class="attr">  only:</span></div><div class="line"><span class="bullet">    -</span> master    </div><div class="line"><span class="attr">notifications:</span></div><div class="line"><span class="attr">  email:</span> <span class="literal">false</span></div><div class="line"><span class="attr">node_js:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">'4'</span></div><div class="line"><span class="attr">before_install:</span></div><div class="line"><span class="bullet">  -</span> npm i -g npm@^<span class="number">2.0</span><span class="number">.0</span></div><div class="line"><span class="attr">before_script:</span></div><div class="line"><span class="bullet">  -</span> npm prune</div><div class="line"><span class="attr">script:</span></div><div class="line"><span class="bullet">  -</span> npm run build</div><div class="line"><span class="attr">after_success:</span></div><div class="line"><span class="bullet">  -</span> npm run semantic-release</div></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Unexpected value 'xxx' imported by the module 'AppModule']]></title>
       <url>http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/</url>
       <content type="html"><![CDATA[<p>When building an app with custom libraries pulling from npm, sometime it shows the following error</p>
@@ -196,7 +464,7 @@ Remember to <strong>import</strong> this token as well.</p>
 <p>Google it, most of people handle it by switching to SSH.</p>
 <p>But it actually can be fixed by 2 simple steps</p>
 <ul>
-<li>Git Credential Manager for Windows</li>
+<li><a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases" target="_blank" rel="external">Git Credential Manager for Windows</a></li>
 <li>run command <code>git config --global credential.helper wincred</code> <a href="https://help.github.com/enterprise/2.7/user/articles/caching-your-github-password-in-git/" target="_blank" rel="external">link</a></li>
 </ul>
 ]]></content>

@@ -7,8 +7,104 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</loc>
-        <lastmod>2016-10-03T04:47:16.550Z</lastmod>
+        <loc>http://maxisam.github.com/2017/03/29/fix-semantic-release-always-push-a-new-major-version/</loc>
+        <lastmod>2017-03-30T05:13:52.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/03/29/publish-beta-to-npm/</loc>
+        <lastmod>2017-03-30T04:37:00.154Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/30/commit-on-detached-HEAD-in-Git/</loc>
+        <lastmod>2017-03-30T02:39:54.204Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/26/ngModel-in-FormGroup/</loc>
+        <lastmod>2017-03-30T02:39:54.200Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/26/Angular2-Form-Get-Specific-Error-Type/</loc>
+        <lastmod>2017-03-30T02:39:54.196Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/20/How-to-analyze-your-HDD-usage/</loc>
+        <lastmod>2017-03-30T02:39:54.191Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/20/Clean-Windows-Installer-to-free-up-your-HDD/</loc>
+        <lastmod>2017-03-30T02:39:54.187Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/09/Include-and-Exclude-in-webpack-loader/</loc>
+        <lastmod>2017-03-30T02:39:54.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2017/01/03/rootDirs-in-tsconfig/</loc>
+        <lastmod>2017-03-30T02:39:54.180Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/12/27/AoT-s-no-no-list/</loc>
+        <lastmod>2017-03-30T02:39:54.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/12/09/how-to-do-negative-pattern-for-VS-code-files-exclude/</loc>
+        <lastmod>2017-03-30T02:39:54.172Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/10/10/Figure-out-build-error-in-Visual-studio-2015/</loc>
+        <lastmod>2017-03-30T02:39:54.167Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/10/06/Add-automatically-releasing-to-Github-project/</loc>
+        <lastmod>2017-03-30T02:39:54.049Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +112,39 @@
 
     <url>
         <loc>http://maxisam.github.com/2016/10/02/Unexpected-value-xxx-imported-by-the-module-AppModule/</loc>
-        <lastmod>2016-10-02T06:56:34.836Z</lastmod>
+        <lastmod>2017-03-30T02:39:54.045Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</loc>
+        <lastmod>2017-03-30T02:39:54.039Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/14/use-window-as-a-provider-in-Angular2/</loc>
+        <lastmod>2017-03-30T02:39:54.033Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/06/Build-an-Angular2-Library/</loc>
+        <lastmod>2017-03-30T02:39:54.026Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</loc>
+        <lastmod>2017-03-30T02:39:54.019Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -55,24 +183,8 @@
     </url>
 
     <url>
-        <loc>http://maxisam.github.com/2016/09/16/VS2015-update3-Typescript-Invalid-module-name-Error/</loc>
-        <lastmod>2016-10-02T04:08:21.870Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://maxisam.github.com/2016/09/16/How-to-fix-VS-Code-Error-Extension-host-terminated-unexpectedly/</loc>
         <lastmod>2016-10-02T04:08:21.868Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/2016/09/14/use-window-as-a-provider-in-Angular2/</loc>
-        <lastmod>2016-10-02T04:08:21.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -113,14 +225,6 @@
     <url>
         <loc>http://maxisam.github.com/2016/08/29/changing-styl-in-Hexo/</loc>
         <lastmod>2016-09-04T06:46:08.287Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://maxisam.github.com/2016/09/02/Hexo-got-error-on-deploying-to-github/</loc>
-        <lastmod>2016-09-04T01:54:41.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
